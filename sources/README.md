@@ -20,6 +20,6 @@ python3 sources/BUILD.py
 
 ### Building fonts and updating specimens
 
-When building the font, the specimen can also be updated and regenerated. Just install the above dependencies, plus `drawbot`:
+When building the fonts, the specimen can also be updated with any new changes to the fonts. Just install the above dependencies, plus `drawbot`:
 
  - [drawbot](http://drawbot.com)
