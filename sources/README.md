@@ -4,19 +4,21 @@
 
 The font files and specimens in this repo can be built all at once with the `BUILD.py` script in this directory.
 
-Open a UNIX terminal and run the following command from the root directory of this repo:
+`BUILD.py` requiers a few dependencies. These can be installed all at once with the included `requierments.txt` file.
 
-```
-python3 sources/BUILD.py
-```
-
-Dependencies installed should include:
+Open a UNIX terminal and run `pip install -r requierments.txt`, or install each requierment individually:
 
  - [fontmake](https://github.com/googlei18n/fontmake)
  - [gftools](https://github.com/googlefonts/gftools)
  - [ttfautohint](https://www.freetype.org/ttfautohint/)
 
-### Building fonts and updating the specimen
+Once requierments are installed, run the following command from the root directory of this repo:
+
+```
+python3 sources/BUILD.py
+```
+
+### Building fonts and updating specimens
 
 When building the font, the specimen can also be updated and regenerated. Just install the above dependencies, plus `drawbot`:
 
