@@ -10,14 +10,15 @@ ROOT = "titillium-web-vf"
 try:
     print("\n**** Running Fontmake")
     print("     [+] Run: fontmake -g sources/%s.glyphs -o variable" %FONT)
-    subprocess.call("fontmake -g sources/%s.glyphs -o variable > /dev/null 2>&1" %FONT, shell=True)
+    subprocess.call("fontmake -g sources/%s-Regular.glyphs -o variable" %FONT, shell=True)
+    #subprocess.call("fontmake -g sources/%s.glyphs -o variable > /dev/null 2>&1" %FONT, shell=True)
     print("     [+] Done")
 except:
     print("     [!] Error! Try installing Fontmake: https://github.com/googlei18n/fontmake")
 
 # MOVE FONTS
 print("\n**** Moving fonts to fonts directory")
-subprocess.call("cp variable_ttf/%s-VF.ttf fonts/%s-Regular.ttf" % (FONT, FONT), shell=True)
+subprocess.call("cp variable_ttf/%s-VF.ttf fonts/%s-VF.ttf" % (FONT, FONT), shell=True)
 print("     [+] Done")
 
 # CLEANUP
@@ -31,9 +32,9 @@ print("\n**** Run: ttfautohint")
 os.chdir('fonts')
 cwd = os.getcwd()
 print("     [+] In Directory:", cwd)
-subprocess.call("ttfautohint -I %s-Regular.ttf %s-Regular-Fix.ttf" %(FONT, FONT), shell=True)
-subprocess.call("cp %s-Regular-Fix.ttf %s-Regular.ttf" %(FONT, FONT), shell=True)
-subprocess.call("rm -rf %s-Regular-Fix.ttf" %FONT, shell=True)
+subprocess.call("ttfautohint -I %s-VF.ttf %s-VF-Fix.ttf" %(FONT, FONT), shell=True)
+subprocess.call("cp %s-VF-Fix.ttf %s-VF.ttf" %(FONT, FONT), shell=True)
+subprocess.call("rm -rf %s-VF-Fix.ttf" %FONT, shell=True)
 print("     [+] Done")
 
 # GFTOOLS
