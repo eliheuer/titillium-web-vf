@@ -5,7 +5,7 @@ Build With `python sources/BUILD.py` from the root directory of this repo.
 
 # Specimen
 
-![basic specimen](https://github.com/eliheuer/titillium-web-vf/blob/master/docs/specimens/basic-specimen.png)
+![basic specimen](https://github.com/eliheuer/titillium-web-vf/blob/master/docs/specimens/basic-specimen.gif)
 
 # License
 
