@@ -1,23 +1,34 @@
 import os
+import time
 import subprocess
 from fontTools.ttLib import TTFont
 
 # STATIC VARIABLES
-FONT = "Titillium-Web"
-ROOT = "titillium-web-vf"
+# SOURCES is a list of the source names you want to build, without file extensions:
+#SOURCES = ['Titillium-Web-Regular', 'Titillium-Web-Italic']
+SOURCES = ['Titillium-Web-Regular']
+
+# START SCRIPT
+print("\n**** Starting FAFR (Fully Automated Font Repository) build process:")
+for source in SOURCES:
+    time.sleep(0.5)
+    print("     [+] Sources: Preparing to build ", source)
 
 # FONTMAKE
-try:
-    print("\n**** Running Fontmake")
-    print("     [+] Run: fontmake -g sources/%s.glyphs -o variable" %FONT)
-    subprocess.call("fontmake -g sources/%s-Regular.glyphs -o variable" %FONT, shell=True)
-    #subprocess.call("fontmake -g sources/%s.glyphs -o variable > /dev/null 2>&1" %FONT, shell=True)
-    print("     [+] Done")
-except:
-    print("     [!] Error! Try installing Fontmake: https://github.com/googlei18n/fontmake")
+for source in SOURCES:
+    try:
+        print("\n**** Building %s font files with Fontmake:" %source)
+        print("     [+] Run: fontmake -g sources/%s.glyphs -o variable" %source)
+        subprocess.call("fontmake -g sources/%s.glyphs -o variable" %source, shell=True)
+        subprocess.call("fontmake -g sources/%s.glyphs -o variable > /dev/null 2>&1" %source, shell=True)
+        print("     [!] Done")
+    except:
+        print("     [?] Error! Try installing Fontmake: https://github.com/googlei18n/fontmake")
+
+quit()
 
 # MOVE FONTS
-print("\n**** Moving fonts to fonts directory")
+print("\n**** Moving %s font to the fonts directory" %source)
 subprocess.call("cp variable_ttf/%s-VF.ttf fonts/%s-VF.ttf" % (FONT, FONT), shell=True)
 print("     [+] Done")
 
