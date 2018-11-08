@@ -1,5 +1,5 @@
 {
-.appVersion = "1173";
+.appVersion = "1176";
 classes = (
 {
 automatic = 1;
@@ -77,8 +77,48 @@ code = "A Aacute Abreve Acircumflex Adieresis Agrave Amacron Aogonek Aring Aring
 name = Uppercase;
 }
 );
-copyright = "Copyright 2017 The Titillium Web Project Authors (https://github.com/Gue3bara/Cairo)";
+copyright = "Copyright 2017 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
 customParameters = (
+{
+name = openTypeOS2StrikeoutPosition;
+value = 250;
+},
+{
+name = openTypeOS2StrikeoutSize;
+value = 50;
+},
+{
+name = openTypeOS2SubscriptXOffset;
+value = 0;
+},
+{
+name = openTypeOS2SubscriptXSize;
+value = 700;
+},
+{
+name = openTypeOS2SubscriptYOffset;
+value = 140;
+},
+{
+name = openTypeOS2SubscriptYSize;
+value = 650;
+},
+{
+name = openTypeOS2SuperscriptXOffset;
+value = 0;
+},
+{
+name = openTypeOS2SuperscriptXSize;
+value = 700;
+},
+{
+name = openTypeOS2SuperscriptYOffset;
+value = 477;
+},
+{
+name = openTypeOS2SuperscriptYSize;
+value = 650;
+},
 {
 name = fsType;
 value = (
@@ -107,22 +147,13 @@ value = 1;
 {
 name = "Use Line Breaks";
 value = 1;
-},
-{
-name = Axes;
-value = (
-{
-Name = Weight;
-Tag = wght;
-}
-);
 }
 );
 date = "2018-05-03 22:27:51 +0000";
 designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino and others";
 designerURL = "http://gaber.design/";
 disablesNiceNames = 1;
-familyName = "Titillium Web";
+familyName = Cairo;
 featurePrefixes = (
 {
 automatic = 1;
@@ -68484,12 +68515,6 @@ width = 50;
 );
 instances = (
 {
-customParameters = (
-{
-name = weightClass;
-value = 275;
-}
-);
 interpolationWeight = 35;
 interpolationWidth = 0;
 instanceInterpolations = {
