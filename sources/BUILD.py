@@ -5,33 +5,41 @@ from fontTools.ttLib import TTFont
 
 # STATIC VARIABLES
 # SOURCES is a list of the source names you want to build, without file extensions:
-#SOURCES = ['Titillium-Web-Regular', 'Titillium-Web-Italic']
-SOURCES = ['Titillium-Web-Roman']
+SOURCES = ['Titillium-Web-Regular', 'Titillium-Web-Italic']
+sources_styles = []
+#SOURCES = ['Titillium-Web-Roman']
 OUTPUT = "TitilliumWeb"
 NEWFONT_ONE = "Titillium-Web-Roman"
 NEWFONT_TWO = "Titillium-Web-Italic"
 
-# START SCRIPT
+# Get Source info
 print("\n**** Starting FAFR (Fully Automated Font Repository) build process:")
 for source in SOURCES:
     time.sleep(0.5)
-    print("     [+] Sources: Preparing to build", source)
+    print("\n     [+] SOURCES: Preparing to build", source)
+    print("     [+] SOURCES: Style =", source.rpartition('-')[2])
+    sources_style = str(source.rpartition('-')[2])
+    sources_styles.append(sources_style)
+print("\n     [+] SOURCES: Styles =", sources_styles)
 
 # FONTMAKE
 for source in SOURCES:
     try:
         print("\n**** Building %s font files with Fontmake:" %source)
         print("     [+] Run: fontmake -g sources/%s.glyphs -o variable" %source)
-        subprocess.call("fontmake -g sources/%s.glyphs -o variable" %source, shell=True)
+        #subprocess.call("fontmake -g sources/%s.glyphs -o variable" %source, shell=True)
         #subprocess.call("fontmake -g sources/%s.glyphs -o variable > /dev/null 2>&1" %source, shell=True)
         print("     [!] Done")
     except:
         print("     [?] Error! Try installing Fontmake: https://github.com/googlei18n/fontmake")
 
 # MOVE FONTS
-print("\n**** Moving %s font to the fonts directory" %source)
-subprocess.call("cp variable_ttf/%s-VF.ttf fonts/%s-VF.ttf" % (OUTPUT, NEWFONT_ONE), shell=True)
+for i in range( len(sources_styles) ):
+    print("\n**** Moving %s font to the fonts directory" %SOURCES[i])
+    #subprocess.call("cp variable_ttf/%s-VF.ttf fonts/%s-VF.ttf" % (OUTPUT, NEWFONT_ONE), shell=True)
 print("     [+] Done")
+
+quit()
 
 # CLEANUP
 print("\n**** Removing build directories")
@@ -60,7 +68,7 @@ for source in SOURCES:
 print("     [+] Done")
 
 # FONTTOOLS
-print("\n**** Run: fonttools -- edit xAvgCharWidth")
+print("\n**** Run: fonttools -- edit sAgCharWidth")
 cwd = os.getcwd()
 print("     [+] In Directory:", cwd)
 #font = TTFont('fonts/$font-VF.ttf')
