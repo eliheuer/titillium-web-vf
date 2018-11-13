@@ -80,6 +80,17 @@ text(" ذ د خ ح ج ث ت ب ا "[::-1],         (M+26,  (START_POS+92)-( 6*80
 text(" ﻅ ظ ط ض ص ش س  "[::-1],             (M+2, (START_POS+92)-( 7*80)))
 text(" ن م ل ك ق ف غ ع "[::-1],           (M+60, (START_POS+92)-( 8*80)))
 
+
+# SET FONT
+font("fonts/Titillium-Web-Italic-VF.ttf")
+for axis, data in listFontVariations().items():
+    print((axis, data))
+
+# ITALIC
+text("A B C D E F G H I J K L M ",            (M+400, (START_POS-M)-( 13*40)))
+text("N O P Q R S T U V W X Y",               (M+400, (START_POS-M)-( 14*40)))
+
+
 # Save GIF
 os.chdir("docs")
 os.chdir("specimens")
