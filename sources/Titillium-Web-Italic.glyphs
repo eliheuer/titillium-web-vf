@@ -90,44 +90,12 @@ name = Uppercase;
 copyright = "Copyright 2017 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
 customParameters = (
 {
-name = openTypeOS2StrikeoutPosition;
-value = 250;
+name = license;
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL";
 },
 {
-name = openTypeOS2StrikeoutSize;
-value = 50;
-},
-{
-name = openTypeOS2SubscriptXOffset;
-value = 0;
-},
-{
-name = openTypeOS2SubscriptXSize;
-value = 700;
-},
-{
-name = openTypeOS2SubscriptYOffset;
-value = 140;
-},
-{
-name = openTypeOS2SubscriptYSize;
-value = 650;
-},
-{
-name = openTypeOS2SuperscriptXOffset;
-value = 0;
-},
-{
-name = openTypeOS2SuperscriptXSize;
-value = 700;
-},
-{
-name = openTypeOS2SuperscriptYOffset;
-value = 477;
-},
-{
-name = openTypeOS2SuperscriptYSize;
-value = 650;
+name = licenseURL;
+value = "http://scripts.sil.org/OFL";
 },
 {
 name = fsType;
@@ -137,14 +105,6 @@ value = (
 {
 name = vendorID;
 value = "1KTF";
-},
-{
-name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL";
-},
-{
-name = licenseURL;
-value = "http://scripts.sil.org/OFL";
 },
 {
 name = "Use Typo Metrics";
@@ -157,6 +117,15 @@ value = 1;
 {
 name = "Use Line Breaks";
 value = 1;
+},
+{
+name = Axes;
+value = (
+{
+Name = Weight;
+Tag = wght;
+}
+);
 }
 );
 date = "2018-05-03 22:27:51 +0000";
@@ -2009,61 +1978,6 @@ ascender = 1240;
 capHeight = 700;
 customParameters = (
 {
-name = TTFStems;
-value = (
-{
-horizontal = 1;
-name = "Y: 31";
-width = 31;
-},
-{
-horizontal = 1;
-name = "Y: 34";
-width = 34;
-},
-{
-horizontal = 1;
-name = "Y: 39";
-width = 39;
-},
-{
-horizontal = 1;
-name = Vstem;
-width = 50;
-},
-{
-horizontal = 1;
-name = Hstem;
-width = 100;
-}
-);
-},
-{
-name = TTFZones;
-value = (
-{
-name = caps;
-position = 700;
-size = 9;
-},
-{
-name = xhgt;
-position = 500;
-size = 9;
-},
-{
-name = base;
-position = 0;
-size = -9;
-},
-{
-name = "b: 1";
-position = -230;
-size = -9;
-}
-);
-},
-{
 name = typoAscender;
 value = 1303;
 },
@@ -2094,6 +2008,15 @@ value = 1312;
 {
 name = winDescent;
 value = 571;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = Weight;
+Location = 200;
+}
+);
 }
 );
 descender = -520;
@@ -2132,61 +2055,6 @@ ascender = 1240;
 capHeight = 680;
 customParameters = (
 {
-name = TTFStems;
-value = (
-{
-horizontal = 1;
-name = "Y: 31";
-width = 31;
-},
-{
-horizontal = 1;
-name = "Y: 34";
-width = 34;
-},
-{
-horizontal = 1;
-name = "Y: 39";
-width = 39;
-},
-{
-horizontal = 1;
-name = Vstem;
-width = 50;
-},
-{
-horizontal = 1;
-name = Hstem;
-width = 100;
-}
-);
-},
-{
-name = TTFZones;
-value = (
-{
-name = asc;
-position = 700;
-size = 9;
-},
-{
-name = xhgt;
-position = 500;
-size = 9;
-},
-{
-name = base;
-position = 0;
-size = -9;
-},
-{
-name = "b: 1";
-position = -230;
-size = -9;
-}
-);
-},
-{
 name = typoAscender;
 value = 1303;
 },
@@ -2217,6 +2085,15 @@ value = 1312;
 {
 name = winDescent;
 value = 571;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = Weight;
+Location = 700;
+}
+);
 }
 );
 descender = -520;
