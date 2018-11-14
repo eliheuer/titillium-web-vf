@@ -1,20 +1,33 @@
 import os
 import time
+import glob
 import subprocess
 from fontTools.ttLib import TTFont
 
-# STATIC VARIABLES
-# SOURCES is a list of the source names you want to build, without file extensions:
-SOURCES = ['Titillium-Web-Regular', 'Titillium-Web-Italic']
-sources_styles = []
-#SOURCES = ['Titillium-Web-Roman']
-OUTPUT = "TitilliumWeb"
-NEWFONT_ONE = "Titillium-Web-Roman"
-NEWFONT_TWO = "Titillium-Web-Italic"
+
+# Check to make sure script is run from the root directory
+print("\n**** Checking to make sure the build script is working in the font repo root directory:")
+REPO_ROOT = ['.gitignore', '.git']
+repo_test = os.listdir(path='.')
+repo_test_result =  all(elem in repo_test for elem in REPO_ROOT)
+if repo_test_result:
+    print("\n     [+] OK: Looks good")
+else:
+    print("\n     [!] ERROR: Please run this script from the root directory of a git repo.")
+
+# Get a list of source files
+print("\n**** Making a list of Glyphsapp source files:")
+sources = []
+os.chdir('sources')
+for name in glob.glob('*.glyphs'):
+    sources.append(os.path.splitext(name)[0])
+os.chdir('..')
+print("\n     [+] SOURCES: List of sources =", sources)
 
 # Get Source info
 print("\n**** Starting FAFR (Fully Automated Font Repository) build process:")
-for source in SOURCES:
+sources_styles = []
+for source in sources:
     time.sleep(0.5)
     print("\n     [+] SOURCES: Preparing to build", source)
     print("     [+] SOURCES: Style =", source.rpartition('-')[2])
@@ -22,16 +35,19 @@ for source in SOURCES:
     sources_styles.append(sources_style)
 print("\n     [+] SOURCES: Styles =", sources_styles)
 
+
 # FONTMAKE
-for source in SOURCES:
+for source in sources:
     try:
         print("\n**** Building %s font files with Fontmake:" %source)
         print("     [+] Run: fontmake -g sources/%s.glyphs -o variable" %source)
-        #subprocess.call("fontmake -g sources/%s.glyphs -o variable" %source, shell=True)
+        subprocess.call("fontmake -g sources/%s.glyphs -o variable" %source, shell=True)
         #subprocess.call("fontmake -g sources/%s.glyphs -o variable > /dev/null 2>&1" %source, shell=True)
         print("     [!] Done")
     except:
         print("     [?] Error! Try installing Fontmake: https://github.com/googlei18n/fontmake")
+
+quit()
 
 # MOVE FONTS
 for i in range( len(sources_styles) ):
