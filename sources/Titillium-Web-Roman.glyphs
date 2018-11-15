@@ -1,7 +1,8 @@
 {
 .appVersion = "1176";
 DisplayStrings = (
-"¸"
+"¸",
+"¢"
 );
 classes = (
 {
