@@ -1,28 +1,31 @@
 # Titillium Web Variable Font
-Fork of Cairo: https://github.com/Gue3bara/Cairo
+This repo contains the fonts and source files for a remastered variable font containing the full Titillium Web font family. It started as a fork of [Cario](https://github.com/Gue3bara/Cairo) by [Mohamed Gaber](https://gaber.design/), which is a fork of Titillium Web that adds support the Arabic script.
 
-Build With `python sources/BUILD.py` from the root directory of this repo.
+Titillium Web is a contemporary Arabic and Latin typeface family. Mohamed Gaber extended the famous Latin typeface family [Titillum Web](https://www.google.com/fonts/specimen/Titillium+Web) to support the Arabic script, with a design that is based on the Kufi calligraphic style. It balances classic and contemporary tastes with wide open counters and short ascenders and descenders that minimize length while maintaining easy readability. The lighter weights can be used for body text while the heavier weights are perfect for headlines and display typography. Each font includes stylistic ligatures and the Arabic component has a wide glyph set that supports the Arabic, Farsi and Urdu languages. 
 
-# Specimen
+## Building From Source
+To build the fonts and update the specimens, run `python sources/BUILD.py` from the root directory of this repo. A few dependancies are requiered for this to work, please see the source documentation [here](https://github.com/eliheuer/titillium-web-vf/tree/master/sources).
+
+## Specimen
 
 ![basic specimen](https://github.com/eliheuer/titillium-web-vf/blob/master/docs/specimens/basic-specimen.gif)
 
-# License
+## License
 
 Titillium Web is licensed under the SIL Open Font License v1.1 (<http://scripts.sil.org/OFL>).
 To view the copyright and specific terms and conditions please refer to [OFL.txt](https://github.com/googlefonts/titillium-web-vf/blob/master/OFL.txt)
 
-# Downloading Font Files (TTF)
+## Downloading Font Files (TTF)
 
 Font files are located in the `fonts` directory: <https://github.com/eliheuer/titillium-web-vf/tree/master/fonts>
 
-# Installation Instructions
+## Installation Instructions
 
 - [GNU+Linux](https://wiki.archlinux.org/index.php/fonts#Manual_installation)
 - [MacOS](https://support.apple.com/en-us/HT201749)
 - [Windows](https://support.microsoft.com/en-us/help/314960/how-to-install-or-remove-a-font-in-windows)
 
-# Getting Involved
+## Getting Involved
 
 Would you like to contribute to the development of this font? Here is how **you** can help:
 
