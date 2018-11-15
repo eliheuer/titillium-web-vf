@@ -161,7 +161,7 @@ date = "2018-07-07 21:43:37 +0000";
 designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino and others";
 designerURL = "http://gaber.design/";
 disablesNiceNames = 1;
-familyName = "Titillium Web";
+familyName = Cairo;
 featurePrefixes = (
 {
 automatic = 1;
