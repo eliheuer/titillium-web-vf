@@ -67902,8 +67902,22 @@ instances = (
 {
 customParameters = (
 {
-name = weightClass;
-value = 275;
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
 }
 );
 interpolationWeight = 35;
@@ -67917,6 +67931,26 @@ name = "ExtraLight Italic";
 weightClass = ExtraLight;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 59;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -67929,6 +67963,26 @@ name = "Light Italic";
 weightClass = Light;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 75;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -67939,6 +67993,26 @@ isItalic = 1;
 name = Italic;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 109;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -67951,6 +68025,26 @@ name = "SemiBold Italic";
 weightClass = SemiBold;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 134;
 interpolationWidth = 0;
 instanceInterpolations = {

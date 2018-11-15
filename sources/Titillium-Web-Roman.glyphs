@@ -2068,6 +2068,15 @@ value = 1312;
 {
 name = winDescent;
 value = 571;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = Weight;
+Location = 200;
+}
+);
 }
 );
 descender = -520;
@@ -2136,6 +2145,15 @@ value = 1312;
 {
 name = winDescent;
 value = 571;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = Weight;
+Location = 600;
+}
+);
 }
 );
 descender = -520;
@@ -2203,6 +2221,15 @@ value = 1312;
 {
 name = winDescent;
 value = 571;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = Weight;
+Location = 900;
+}
+);
 }
 );
 descender = -520;
@@ -78252,6 +78279,26 @@ width = 50;
 );
 instances = (
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 35;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -78261,6 +78308,26 @@ name = ExtraLight;
 weightClass = ExtraLight;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 59;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -78271,6 +78338,26 @@ name = Light;
 weightClass = Light;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 75;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -78280,6 +78367,26 @@ instanceInterpolations = {
 name = Regular;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 109;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -78290,6 +78397,26 @@ name = SemiBold;
 weightClass = SemiBold;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 134;
 interpolationWidth = 0;
 instanceInterpolations = {
@@ -78300,6 +78427,26 @@ name = Bold;
 weightClass = Bold;
 },
 {
+customParameters = (
+{
+name = "Instance Preview";
+value = (
+T,
+i,
+t,
+i,
+l,
+l,
+i,
+u,
+m,
+space,
+W,
+e,
+b
+);
+}
+);
 interpolationWeight = 224;
 interpolationWidth = 0;
 instanceInterpolations = {
