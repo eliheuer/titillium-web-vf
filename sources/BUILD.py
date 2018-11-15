@@ -7,6 +7,7 @@ from fontTools.ttLib import TTFont
 
 # Globals
 sources = []
+sources_styles = []
 
 def check_root_dir():
     """
@@ -37,7 +38,6 @@ def get_style_list():
     Gets a list of styles from the source list.
     """
     print("\n**** Starting FAFR (Fully Automated Font Repository) build process:")
-    sources_styles = []
     for source in sources:
         time.sleep(0.5)
         print("\n     [+] SOURCES: Preparing to build", source)
@@ -53,23 +53,11 @@ def run_fontmake():
     Builds ttf fonts files with font make.
     """
     for source in sources:
-        try:
-            print("\n**** Building %s font files with Fontmake:" %source)
-            print("     [+] Run: fontmake -g sources/%s.glyphs -o variable" %source)
-            subprocess.call("fontmake -g sources/%s.glyphs -o variable" %source, shell=True)
-            #subprocess.call("fontmake -g sources/%s.glyphs -o variable > /dev/null 2>&1" %source, shell=True)
-            print("\n     [!] Done")
-        except:
-            print("     [?] Error! Try installing Fontmake: https://github.com/googlei18n/fontmake")
-
-def move_fonts():
-    """
-    Moves fonts to the `fonts` dir.
-    """
-    for i in range( len(sources_styles) ):
-        print("\n**** Moving %s font to the fonts directory" %SOURCES[i])
-        #subprocess.call("cp variable_ttf/%s-VF.ttf fonts/%s-VF.ttf" % (OUTPUT, NEWFONT_ONE), shell=True)
-    print("     [+] Done")
+        print("\n**** Building %s font files with Fontmake:" %source)
+        print("     [+] Run: fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf" %(source, source) )
+        subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf" %(source, source), shell=True)
+        #subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf > /dev/null 2>&1" %(source, source), shell=True)
+        print("\n     [!] Done")
 
 def rm_build_dirs():
     """
@@ -88,7 +76,7 @@ def ttfautohint():
     os.chdir('fonts')
     cwd = os.getcwd()
     print("     [+] In Directory:", cwd)
-    for source in SOURCES:
+    for source in sources:
         subprocess.call("ttfautohint -I %s-VF.ttf %s-VF-Fix.ttf" %(source, source), shell=True)
         subprocess.call("cp %s-VF-Fix.ttf %s-VF.ttf" %(source, source), shell=True)
         subprocess.call("rm -rf %s-VF-Fix.ttf" %source, shell=True)
@@ -102,7 +90,7 @@ def fix_dsig():
     os.chdir("..")
     cwd = os.getcwd()
     print("     [+] In Directory:", cwd)
-    for source in SOURCES:
+    for source in sources:
         subprocess.call("gftools fix-dsig fonts/%s-VF.ttf --autofix" %source, shell=True)
     print("     [+] Done")
 
@@ -119,5 +107,8 @@ if __name__ == '__main__':
     get_source_list()
     get_style_list()
     run_fontmake()
-    # move_fonts()
-    # rm_build_dirs()
+    rm_build_dirs()
+    ttfautohint()
+    fix_dsig()
+    render_specimens()
+    quit()
