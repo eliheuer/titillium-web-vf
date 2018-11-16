@@ -2,7 +2,8 @@
 .appVersion = "1176";
 DisplayStrings = (
 "¸",
-"¢"
+"¢",
+"/behDotless-ar"
 );
 classes = (
 {
@@ -23242,8 +23243,7 @@ nodes = (
 "671 0 LINE",
 "671 500 LINE",
 "636 500 LINE",
-"636 20 LINE",
-"651 34 LINE",
+"636 34 LINE",
 "337 34 LINE SMOOTH",
 "154 34 OFFCURVE",
 "75 90 OFFCURVE",
@@ -23282,8 +23282,7 @@ nodes = (
 "758 0 LINE",
 "758 500 LINE",
 "624 500 LINE",
-"624 70 LINE",
-"688 120 LINE",
+"624 120 LINE",
 "337 120 LINE SMOOTH",
 "202 120 OFFCURVE",
 "174 143 OFFCURVE",
@@ -23322,8 +23321,7 @@ nodes = (
 "887 0 LINE",
 "887 505 LINE",
 "663 505 LINE",
-"663 66 LINE",
-"809 188 LINE",
+"663 188 LINE",
 "438 188 LINE SMOOTH",
 "348 188 OFFCURVE",
 "264 199 OFFCURVE",
