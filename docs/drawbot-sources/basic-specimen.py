@@ -3,7 +3,7 @@ from drawBot import *
 import math
 import os
 
-# STATIC VARIABLE
+# STATIC VARIABLES
 W,H,M = 1000,1000,20  # WIDTH, HEIGHT, MARGIN
 VAR_WGHT = 100        # VARIABLE FONT WEIGHT
 U = 32                # ONE GRID UNIT
@@ -73,18 +73,18 @@ stroke(1)
 strokeWidth(1)
 for i in range(4):
     fontVariations(wght=wght_var)
-    text("a",      (M+(U*2)+(U*(i*2.3)), (M+(U*20))))
+    text("a",      (M+(U*2)+(U*(i*2.3)), (M+5+(U*20))))
     wght_var += 200
 
 stroke(0)
-fontSize(60)
+fontSize(57)
 fontVariations(wght=200)
-textBox("مشكین قلم", 
+textBox("الخط العربي", 
         (M+(U*0), M+(U*12), M+10+(U*12), M+(U*8)), align="right")
 
 fontVariations(wght=800)
-textBox("مشكین قلم", 
-        (M+(U*0), M+(U*10), M+10+(U*12), M+(U*8)), align="right")
+textBox("الخط العربي", 
+        (M+(U*0), M+(U*10.1), M+10+(U*12), M+(U*8)), align="right")
 
 fontSize(30)
 stroke(None)
@@ -102,6 +102,19 @@ text("P Q R S T U V W X Y Z  a b c ",         (M+(U*17), M+(U*11)))
 text("d e f g h i j k l m n o p q r s t u",   (M+(U*17), M+(U*10)))
 text("v w x y z  1 2 3 4 5 6 7 8 9 0",        (M+(U*17), M+(U*9 )))
 
+stroke(None)
+fontSize(29)
+fontVariations(wght=400)
+textBox(" ا ب ت ث ج ح خ د ذ ر ز س ش ",
+        (M+12+(U*0),   M+17+(U*6), M+10+(U*12), M+(U*6)), align="right")
+textBox(" ص ض ط ظ ع غ ف ق ك ل م ",
+        (M+12+(U*0),   M+20+(U*4.5), M+10+(U*12), M+(U*6)), align="right")
+textBox(" ه ن و ي ؤ ئ ",
+        (M+12+(U*0),   M+20+(U*3), M+10+(U*12), M+(U*6)), align="right")
+textBox(" ٩ ٨ ٧ ٦ ٥ ٤ ٣ ٢ ١ ",
+        (M-155+(U*0), M+18+(U*3), M+10+(U*12), M+(U*6)), align="right")
+
+fontSize(30)
 font("fonts/TitilliumWeb-Italic-VF.ttf")
 for axis, data in listFontVariations().items():
     print((axis, data))
@@ -110,24 +123,17 @@ text("P Q R S T U V W X Y Z  a b c ",         (M+(U*17), M+(U*4)))
 text("d e f g h i j k l m n o p q r s t u",   (M+(U*17), M+(U*3)))
 text("v w x y z  1 2 3 4 5 6 7 8 9 0",        (M+(U*17), M+(U*2)))
 
-
 stroke(None)
-fontSize(30)
+fontSize(29)
 fontVariations(wght=400)
-
 textBox(" ا ب ت ث ج ح خ د ذ ر ز س ش ",
-        (M+4+(U*0), M+17+(U*6), M+10+(U*12), M+(U*6)), align="right")
-
+        (M+12+(U*0),   M+17+((U*-1)), M+10+(U*12), M+(U*6)), align="right")
 textBox(" ص ض ط ظ ع غ ف ق ك ل م ",
-        (M+4+(U*0), M+17+(U*5), M+10+(U*12), M+(U*6)), align="right")
-
-textBox(" ﺁ ﺃ ﺇ ه ن و ي ؤ ئ ",
-        (M+4+(U*0), M+17+(U*4), M+10+(U*12), M+(U*6)), align="right")
-
-# ٠١٢٣٤٥٦٧٨٩
-# ٩٨٧٦٥٤٣٢١٠
-textBox(" ٩ ٨ ٧ ٦ ٥ ٤ ٣ ٢ ١ ٠ ",
-        (M+4+(U*0), M+17+(U*3), M+10+(U*12), M+(U*6)), align="right")
+        (M+12+(U*0),   M+20+(U*(-2.5)), M+10+(U*12), M+(U*6)), align="right")
+textBox(" ه ن و ي ؤ ئ ",
+        (M+12+(U*0),   M+20+(U*(-4)), M+10+(U*12), M+(U*6)), align="right")
+textBox(" ٩ ٨ ٧ ٦ ٥ ٤ ٣ ٢ ١ ",
+        (M-155+(U*0), M+18+(U*(-4)), M+10+(U*12), M+(U*6)), align="right")
 
 # Save GIF
 os.chdir("docs")
