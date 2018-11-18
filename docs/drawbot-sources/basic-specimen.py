@@ -4,24 +4,24 @@ import math
 import os
 
 # STATIC VARIABLE
-W,H,M,F = 1000,1000,20,30     # WIDTH, HEIGHT, MARGIN, FRAMES
-VAR_WGHT = 100                # VARIABLE FONT WEIGHT
-LINE_H = H/10                 # LINE HEIGHT
-U = 32
-START_POS = (U*28)+M 
+W,H,M = 1000,1000,20  # WIDTH, HEIGHT, MARGIN
+VAR_WGHT = 100        # VARIABLE FONT WEIGHT
+U = 32                # ONE GRID UNIT
 
-# SET FONT
-font("fonts/Titillium-Web-Roman-VF.ttf")
-for axis, data in listFontVariations().items():
-    print((axis, data))
+def set_font_roman():
+    font("fonts/TitilliumWeb-Roman-VF.ttf")
+    for axis, data in listFontVariations().items():
+        print((axis, data))
 
-# GRID DRAWING FUNCTION
+def set_font_italic():
+    font("fonts/TitilliumWeb-Roman-VF.ttf")
+    for axis, data in listFontVariations().items():
+        print((axis, data))
+
 def grid(inc):
-    stroke(0.9,0.1,0)
+    stroke(0)
     stpX, stpY = 0, 0
-    incX = (W-(M*2))/inc
-    incY = (W-(M*2))/inc
-    print("incX=", incX)
+    incX, incY = (W-(M*2))/inc, (H-(M*2))/inc
     for x in range(inc+1):
         polygon((M+stpX, M), (M+stpX, H-M))
         stpX += incX
@@ -30,42 +30,26 @@ def grid(inc):
         stpY += incY
 
 def set_box_style_a():
-    fill(0.9,0.1,0)
-    stroke(0.9,0.1,0)
+    fill(0)
+    stroke(0)
 
 def set_box_style_b():
     fill(1)
-    stroke(0.9,0.1,0)
+    stroke(0)
 
 def draw_boxes():
     # HEADLINE
-    set_box_style_a()
+    set_box_style_b()
     rect(M, M+(U*26), (U*30), (U*4))
-
     # ROW 1
-    set_box_style_a()
-    rect(M,        M+(U*24),  (U*14), (U))
-    rect(M+(U*16), M+(U*24),  (U*14), (U))
-    text("Titillium Web VF",      (M+(U*16), (START_POS)-(0*LINE_H)))
-    set_box_style_b()
-    rect(M,       M+(U*16),  (U*14), (U*8))
-    rect(M+(U*16), M+(U*16),  (U*14), (U*8))
-
+    rect(M+(U*1),  M+(U*15), (U*13), (U*10))
+    rect(M+(U*16), M+(U*15), (U*13), (U*10))
     # ROW 2
-    set_box_style_a()
-    rect(M,        M+(U*14),  (U*14), (U))
-    rect(M+(U*16), M+(U*14),  (U*14), (U))
-    set_box_style_b()
-    rect(M,        M+(U*6),  (U*14), (U*8))
-    rect(M+(U*16), M+(U*7),  (U*14), (U*7))
-
+    rect(M+(U*1),  M+(U*8), (U*13), (U*6))
+    rect(M+(U*16), M+(U*8), (U*13), (U*6))
     # ROW 3
-    set_box_style_a()
-    rect(M,        M+(U*4),  (U*14), (U))
-    rect(M+(U*16), M+(U*4),  (U*14), (U))
-    set_box_style_b()
-    rect(M,        M+(U*0),  (U*14), (U*4))
-    rect(M+(U*16), M+(U*0),  (U*14), (U*4))
+    rect(M+(U*1),  M+(U*1), (U*13), (U*6))
+    rect(M+(U*16), M+(U*1), (U*13), (U*6))
 
 # DRAW NEW PAGE
 newPage(W, H)
@@ -73,71 +57,82 @@ fill(1)
 rect(0, 0, W, H)
 grid(30)
 draw_boxes()
-
+set_font_roman()
 fill(0)
 
 # HEADLINE
 fontSize(100)
 fontVariations(wght=800)
-fill(1)
 stroke(None)
-text("Titillium Web VF",      (M+U, (START_POS)-(0*LINE_H)))
+text("Titillium Web VF", ( M+(U*1), M+(U*27) ))
 
-fill(0)
+# ART
 fontSize(240)
 wght_var = 200
 stroke(1)
 strokeWidth(1)
 for i in range(4):
     fontVariations(wght=wght_var)
-    text("a",      (M+20+(U*(i*2.8)), (START_POS-(U*7)-14)))
+    text("a",      (M+(U*2)+(U*(i*2.3)), (M+(U*20))))
     wght_var += 200
-    #fontSize(i*100)
-# Draw large type
+
+stroke(0)
+fontSize(60)
+fontVariations(wght=200)
+textBox("مشكین قلم", 
+        (M+(U*0), M+(U*12), M+10+(U*12), M+(U*8)), align="right")
+
+fontVariations(wght=800)
+textBox("مشكین قلم", 
+        (M+(U*0), M+(U*10), M+10+(U*12), M+(U*8)), align="right")
+
 fontSize(30)
 stroke(None)
-for i in range(6):
+for i in range(8):
     VAR_WGHT += 100
     fontVariations(wght=VAR_WGHT)
     print("VAR_WGHT=", VAR_WGHT) 
-    text("Variable Font Weight: %s" %VAR_WGHT, ( M+(U*17), ((START_POS-(U*5)-M)-(U*i)) ))
+    text("Variable Font Weight: %s" %VAR_WGHT, ( M+(U*17), ((M+(U*23))-(U*i)) ))
 tracking(0)
 
-
-# Dot
-fill(1,0,0)
-oval(M, M, (W-(M*2))/20, (W-(M*2))/20)
-
-# Draw small type
 fill(0)
 fontVariations(wght=400)
-text("A B C D E F G H I J K L M N O P ",      (M+(U*17), (START_POS-M)-(U*15)))
-text("Q R S T U V W X Y Z a b c d e f",       (M+(U*17), (START_POS-M)-(U*16)))
-text("g h i j k l m n o p q r s t u v",       (M+(U*17), (START_POS-M)-(U*17)))
-text("w x y z 1 2 3 4 5 6 7 8 9 0 ! ?",       (M+(U*17), (START_POS-M)-(U*18)))
-text("@ # $ % ^ & * : ; ' < > , .",           (M+(U*17), (START_POS-M)-(U*19)))
-tracking(-2)
-#fontSize(40)
-text(" ذ د خ ح ج ث ت ب ا "[::-1],   (M+(M/2+2)+(U*7),  (START_POS-M-9)-(U*15)))
-text(" ﻅ ظ ط ض ص ش س  "[::-1],      (M+(M/2)+(U*6),  (START_POS-M-9)-(U*16)))
-text(" ن م ل ك ق ف غ ع "[::-1],     (M+(M/2+2)+(U*7),  (START_POS-M-9)-(U*17)))
+text("A B C D E F G H I J K L M N O ",        (M+(U*17), M+(U*12)))
+text("P Q R S T U V W X Y Z  a b c ",         (M+(U*17), M+(U*11)))
+text("d e f g h i j k l m n o p q r s t u",   (M+(U*17), M+(U*10)))
+text("v w x y z  1 2 3 4 5 6 7 8 9 0",        (M+(U*17), M+(U*9 )))
 
-
-# SET FONT
-font("fonts/Titillium-Web-Italic-VF.ttf")
+font("fonts/TitilliumWeb-Italic-VF.ttf")
 for axis, data in listFontVariations().items():
     print((axis, data))
+text("A B C D E F G H I J K L M N O ",        (M+(U*17), M+(U*5)))
+text("P Q R S T U V W X Y Z  a b c ",         (M+(U*17), M+(U*4)))
+text("d e f g h i j k l m n o p q r s t u",   (M+(U*17), M+(U*3)))
+text("v w x y z  1 2 3 4 5 6 7 8 9 0",        (M+(U*17), M+(U*2)))
 
-# ITALIC
-# text("A B C D E F G H I J K L M ",            (M+400, (START_POS-M)-( 16*40)))
-# text("N O P Q R S T U V W X Y",               (M+400, (START_POS-M)-( 17*40)))
 
+stroke(None)
+fontSize(30)
+fontVariations(wght=400)
+
+textBox(" ا ب ت ث ج ح خ د ذ ر ز س ش ",
+        (M+4+(U*0), M+17+(U*6), M+10+(U*12), M+(U*6)), align="right")
+
+textBox(" ص ض ط ظ ع غ ف ق ك ل م ",
+        (M+4+(U*0), M+17+(U*5), M+10+(U*12), M+(U*6)), align="right")
+
+textBox(" ﺁ ﺃ ﺇ ه ن و ي ؤ ئ ",
+        (M+4+(U*0), M+17+(U*4), M+10+(U*12), M+(U*6)), align="right")
+
+# ٠١٢٣٤٥٦٧٨٩
+# ٩٨٧٦٥٤٣٢١٠
+textBox(" ٩ ٨ ٧ ٦ ٥ ٤ ٣ ٢ ١ ٠ ",
+        (M+4+(U*0), M+17+(U*3), M+10+(U*12), M+(U*6)), align="right")
 
 # Save GIF
 os.chdir("docs")
 os.chdir("specimens")
 saveImage("basic-specimen.gif")
 # saveImage("basic-specimen.pdf")
-# saveImage("basic-specimen.png")
 os.chdir("..")
 os.chdir("..")
