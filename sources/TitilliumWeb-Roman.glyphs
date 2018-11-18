@@ -1,9 +1,10 @@
 {
-.appVersion = "1176";
+.appVersion = "1179";
 DisplayStrings = (
 "¸",
 "¢",
-"/behDotless-ar"
+"/behDotless-ar",
+"Titillium Web VF"
 );
 classes = (
 {
@@ -78775,7 +78776,7 @@ bracketright.cap = -20;
 "@MMK_R_hyphen" = -22;
 "@MMK_R_hyphen.cap" = -20;
 "@MMK_R_n" = -16;
-"@MMK_R_o" = -21;
+"@MMK_R_o" = -60;
 "@MMK_R_period" = -41;
 "@MMK_R_s" = -15;
 "@MMK_R_u" = -14;
@@ -80385,7 +80386,7 @@ bracketright.cap = 0;
 "@MMK_R_hyphen" = -15;
 "@MMK_R_hyphen.cap" = -12;
 "@MMK_R_n" = -13;
-"@MMK_R_o" = -19;
+"@MMK_R_o" = -60;
 "@MMK_R_period" = -29;
 "@MMK_R_s" = -14;
 "@MMK_R_u" = -10;
@@ -82368,7 +82369,7 @@ a = -10;
 c = -13;
 d = -14;
 dotlessi = -7;
-e = -15;
+e = -30;
 eth = -9;
 g = -12;
 hbar = 16;
