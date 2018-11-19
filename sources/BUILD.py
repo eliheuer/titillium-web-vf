@@ -5,9 +5,9 @@ import subprocess
 from fontTools.ttLib import TTFont
 
 
-# Globals
 sources = []
 sources_styles = []
+ 
 
 def check_root_dir():
     """
@@ -46,8 +46,6 @@ def get_style_list():
         sources_styles.append(sources_style)
     print("\n     [+] SOURCES: Styles =", sources_styles)
 
-
-# FONTMAKE
 def run_fontmake():
     """
     Builds ttf fonts files with font make.
@@ -55,8 +53,8 @@ def run_fontmake():
     for source in sources:
         print("\n**** Building %s font files with Fontmake:" %source)
         print("     [+] Run: fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf" %(source, source) )
-        subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf" %(source, source), shell=True)
-        #subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf > /dev/null 2>&1" %(source, source), shell=True)
+        #subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf" %(source, source), shell=True)
+        subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf > /dev/null 2>&1" %(source, source), shell=True)
         print("\n     [!] Done")
 
 def rm_build_dirs():
