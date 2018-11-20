@@ -52,9 +52,9 @@ def run_fontmake():
     """
     for source in sources:
         print("\n**** Building %s font files with Fontmake:" %source)
-        print("     [+] Run: fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf" %(source, source) )
+        print("     [+] Run: fontmake -g sources/%s.glyphs -o variable --overlaps-backend booleanOperations --output-path fonts/%s-VF.ttf" %(source, source) )
         #subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf" %(source, source), shell=True)
-        subprocess.call("fontmake -g sources/%s.glyphs -o variable --output-path fonts/%s-VF.ttf > /dev/null 2>&1" %(source, source), shell=True)
+        subprocess.call("fontmake -g sources/%s.glyphs -o variable --overlaps-backend booleanOperations --output-path fonts/%s-VF.ttf > /dev/null 2>&1" %(source, source), shell=True)
         print("\n     [!] Done")
 
 def rm_build_dirs():
@@ -75,9 +75,10 @@ def ttfautohint():
     cwd = os.getcwd()
     print("     [+] In Directory:", cwd)
     for source in sources:
-        subprocess.call("ttfautohint -I %s-VF.ttf %s-VF-Fix.ttf" %(source, source), shell=True)
+        subprocess.call("ttfautohint -c -I -W -x 0 -D latn -f arab -a qsq %s-VF.ttf %s-VF-Fix.ttf" %(source, source), shell=True)
         subprocess.call("cp %s-VF-Fix.ttf %s-VF.ttf" %(source, source), shell=True)
         subprocess.call("rm -rf %s-VF-Fix.ttf" %source, shell=True)
+        print("     [+] Done:", source)
     print("     [+] Done")
 
 def fix_dsig():
@@ -90,6 +91,7 @@ def fix_dsig():
     print("     [+] In Directory:", cwd)
     for source in sources:
         subprocess.call("gftools fix-dsig fonts/%s-VF.ttf --autofix" %source, shell=True)
+        print("     [+] Done:", source)
     print("     [+] Done")
 
 def render_specimens():
