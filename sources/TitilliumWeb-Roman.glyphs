@@ -1,10 +1,13 @@
 {
-.appVersion = "1179";
+.appVersion = "1181";
 DisplayStrings = (
 "¸",
 "¢",
 "/behDotless-ar",
-"Titillium Web VF"
+"Titillium Web VF",
+"/.notdef",
+"/notequal",
+"/.notdef"
 );
 classes = (
 {
@@ -80,46 +83,6 @@ name = frac4;
 );
 copyright = "Copyright 2017 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
 customParameters = (
-{
-name = openTypeOS2StrikeoutPosition;
-value = 250;
-},
-{
-name = openTypeOS2StrikeoutSize;
-value = 50;
-},
-{
-name = openTypeOS2SubscriptXOffset;
-value = 0;
-},
-{
-name = openTypeOS2SubscriptXSize;
-value = 700;
-},
-{
-name = openTypeOS2SubscriptYOffset;
-value = 140;
-},
-{
-name = openTypeOS2SubscriptYSize;
-value = 650;
-},
-{
-name = openTypeOS2SuperscriptXOffset;
-value = 0;
-},
-{
-name = openTypeOS2SuperscriptXSize;
-value = 700;
-},
-{
-name = openTypeOS2SuperscriptYOffset;
-value = 477;
-},
-{
-name = openTypeOS2SuperscriptYSize;
-value = 650;
-},
 {
 name = fsType;
 value = (
@@ -2191,6 +2154,7 @@ alignmentZones = (
 );
 ascender = 1240;
 capHeight = 670;
+custom = Black;
 customParameters = (
 {
 name = typoAscender;
@@ -2241,6 +2205,7 @@ horizontalStems = (
 189,
 188
 );
+iconName = Bold;
 id = "2D07D9D6-DD7A-4EF1-82E8-8B18836F0AAC";
 userData = {
 GSOffsetHorizontal = 0;
@@ -2253,7 +2218,6 @@ verticalStems = (
 232,
 234
 );
-weight = Bold;
 weightValue = 224;
 xHeight = 505;
 }
@@ -64571,14 +64535,74 @@ glyphname = .notdef;
 layers = (
 {
 layerId = "F1BADE0A-D307-4A55-B1D9-DEBA981FCD10";
+paths = (
+{
+closed = 1;
+nodes = (
+"21 0 LINE",
+"207 0 LINE",
+"207 709 LINE",
+"21 709 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"187 689 LINE",
+"187 20 LINE",
+"41 20 LINE",
+"41 689 LINE"
+);
+}
+);
 width = 235;
 },
 {
 layerId = "D02A7F20-5372-446E-84B7-8F4B885083B2";
+paths = (
+{
+closed = 1;
+nodes = (
+"21 0 LINE",
+"207 0 LINE",
+"207 709 LINE",
+"21 709 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"187 689 LINE",
+"187 20 LINE",
+"41 20 LINE",
+"41 689 LINE"
+);
+}
+);
 width = 235;
 },
 {
 layerId = "2D07D9D6-DD7A-4EF1-82E8-8B18836F0AAC";
+paths = (
+{
+closed = 1;
+nodes = (
+"21 0 LINE",
+"207 0 LINE",
+"207 709 LINE",
+"21 709 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"187 689 LINE",
+"187 20 LINE",
+"41 20 LINE",
+"41 689 LINE"
+);
+}
+);
 width = 235;
 }
 );
