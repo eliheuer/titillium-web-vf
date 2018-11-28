@@ -110,5 +110,5 @@ if __name__ == '__main__':
     rm_build_dirs()
     ttfautohint()
     fix_dsig()
-    render_specimens()
+#    render_specimens()
     quit()
