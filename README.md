@@ -8,7 +8,7 @@ Titillium Web is a contemporary Arabic and Latin typeface family. Mohamed Gaber 
 ![basic specimen](https://github.com/eliheuer/titillium-web-vf/blob/master/docs/specimens/basic-specimen.gif)
 
 ## Building From Source
-To build the fonts and update the specimens, run `python sources/BUILD.py` from the root directory of this repo. A few dependancies are requiered for this to work, please see the source documentation [here](https://github.com/eliheuer/titillium-web-vf/tree/master/sources).
+To build the fonts and update the specimens, run `python sources/BUILD.py` from the root directory of this repo. A few dependancies are requiered for this to work, please see the source documentation [here](https://github.com/eliheuer/titillium-web-vf/tree/master/sources). A video demo showing how to use the build script is available [here](https://www.youtube.com/watch?v=ysZaqfD7Yfs&t=731s).
 
 ## License
 
