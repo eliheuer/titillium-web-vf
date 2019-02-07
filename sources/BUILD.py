@@ -15,32 +15,39 @@
 #
 # See AUTHORS.txt for the list of Authors and LICENSE.txt for the License.
 """
-BUILD VF: Automated build process for variable font onboarding.
+Automated build process for variable font onboarding to:
+https://github.com/google/fonts
 
 
 BASIC USE:
 
-This script is designed for use with the Fully Automated Font Repository
-standard, FAFR for short. Please see the git repo for redrence:
+This script is used to build variable fonts from the command line of a
+UNIX system (MacOS, GNU+Linux, Windows Subsystem for Linux (WSL)).
 
--> https://github.com/eliheuer/fully-automated-font-repository
+To start the build process, navigate to the root directory of a font repo
+and run the following:
+
+python3 sources/BUILD.py
+
+For additional build features, the script can be run with flags, like so:
+
+python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/$FONTNAME --static
 
 
 FLAGS:
 
-[1]  --googlefonts ~/Google/fonts/ofl/foo    Gives upstream location
-[2]  --drawbot                               Render the specimen with DrawBot
-[3]  --ttfautohint "-args"                   Autohints fonts given args
+--googlefonts ~/Google/fonts/ofl/foo    Sets upstream repo location
 
+--drawbot                               Render the specimen with DrawBot
 
-[1]: --googlefonts ~/Google/fonts/ofl/foo
+--ttfautohint "-args"                   Autohints fonts given args
 
-This argument lets the skript know where the upstream location of the fonts
-is in the Google Fonts upstream repository.
+--fontbakery                            Run QA tests on fonts in upstream
 
+--static                                Output static fonts from VF source
 
+--fixnonhinting                         Run if --ttfautohint is not used
 
-Builds variable fonts using flags for input.
 """
 import argparse
 import glob
