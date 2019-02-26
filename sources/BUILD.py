@@ -48,6 +48,7 @@ FLAGS:
 
 --fixnonhinting                         Run if --ttfautohint is not used
 
+--addfont                               Update font metadata
 """
 import argparse
 import glob
@@ -76,6 +77,9 @@ parser.add_argument(
 )
 parser.add_argument(
     "--fixnonhinting", help="Fix nonhinting with gs tools", action="store_true"
+)
+parser.add_argument(
+    "--addfont", help="Update metadata", action="store_true"
 )
 args = parser.parse_args()
 
@@ -110,31 +114,67 @@ def intro():
     """
     Gives basic script info.
     """
-    printG("#    # #####                    #####    ################")
-    printG("#    # #                        #   #    #   ##         #")
-    printG(" #  #  ####                      #   #  #   # #   #######")
-    printG(" #  #  #     <---------------->  #    ##    # #      #")
-    printG("  ##   #                          #        #  #   ####")
-    printG("  ##   #                          ##########  #####")
+    printG("#    # #####        #####    ################")
+    printG("#    # #            #   #    #   ##         #")
+    printG(" #  #  ####          #   #  #   # #   #######")
+    printG(" #  #  #     <---->  #    ##    # #      #")
+    printG("  ##   #              #        #  #   ####")
+    printG("  ##   #              ##########  #####")
     print("\n**** Starting variable font build script:")
     print("     [+]", time.ctime())
     printG("    [!] Done")
-    time.sleep(4)
 
 
 def display_args():
     """
-    Gives info about the flags.
+    Prints info about argparse flag use.
     """
     print("\n**** Settings:")
-    print("     [+] --drawbot\t\t", args.drawbot)
-    print("     [+] --googlefonts\t\t", args.googlefonts)
-    print("     [+] --ttfautohint\t\t", args.ttfautohint)
-    print("     [+] --fontbakery\t\t", args.fontbakery)
-    print("     [+] --static\t\t", args.static)
-    print("     [+] --fixnonhinting\t", args.fixnonhinting)
+
+    print("     [+] --drawbot\t\t", end="")
+    if args.drawbot == True:
+        printG(args.drawbot)
+    else:
+        printR(args.drawbot)
+
+    print("     [+] --googlefonts\t\t", end="")
+    if args.googlefonts is not None:
+        printG(args.googlefonts)
+    else:
+        printR(args.googlefonts)
+
+    print("     [+] --ttfautohint\t\t", end="")
+    if args.ttfautohint is not None:
+        printG(args.ttfautohint)
+    else:
+        printR(args.ttfautohint)
+
+    print("     [+] --fontbakery\t\t", end="")
+    if args.fontbakery == True:
+        printG(args.fontbakery)
+    else:
+        printR(args.fontbakery)
+
+    print("     [+] --static\t\t", end="")
+    if args.static == True:
+        printG(args.static)
+    else:
+        printR(args.static)
+
+    print("     [+] --fixnonhinting\t", end="")
+    if args.fixnonhinting == True:
+        printG(args.fixnonhinting)
+    else:
+        printR(args.fixnonhinting)
+
+    print("     [+] --addfont\t\t", end="")
+    if args.addfont == True:
+        printG(args.addfont)
+    else:
+        printR(args.addfont)
+
     printG("    [!] Done")
-    time.sleep(4)
+    time.sleep(8)
 
 
 def check_root_dir():
@@ -194,7 +234,6 @@ def run_fontmake_variable():
             "fontmake \
                       -g sources/%s.glyphs \
                       -o variable \
-                      --verbose DEBUG \
                       --output-path fonts/%s-VF.ttf"
             % (source, source),
             shell=True,
@@ -214,7 +253,7 @@ def run_fontmake_static():
             "fontmake \
                       -g sources/%s.glyphs \
                       -o ttf \
-                      --keep-overlaps -i --verbose DEBUG"
+                      --keep-overlaps -i"
             % (source),
             shell=True,
         )
@@ -369,6 +408,22 @@ def google_fonts():
     time.sleep(1)
 
 
+def add_font():
+    """
+    Build new metadata file for font if gf flag is used.
+    """
+    print("\n**** Making new metadata file for font.")
+    if args.googlefonts is not None:
+        subprocess.call(
+                "gftools add-font %s" % args.googlefonts, shell=True
+        )
+        print("     [+] Done:")
+    else:
+        printR("    [!] Error: Use Google Fonts Flag (--googlefonts)")
+    printG("    [!] Done")
+    time.sleep(1)
+
+
 def fontbakery():
     """
     Run FontBakery on the GoogleFonts repo.
@@ -387,8 +442,7 @@ def render_specimens():
     """
     print("\n**** Run: DrawBot")
     subprocess.call(
-        "python3 docs/drawbot-sources/basic-specimen.py \
-        > /dev/null 2>&1",
+        "python3 docs/drawbot-sources/basic-specimen.py",
         shell=True,
     )
     printG("    [!] Done")
@@ -431,6 +485,12 @@ def main():
     # GoogleFonts
     if args.googlefonts is not None:
         google_fonts()
+    else:
+        pass
+
+    # AddFont
+    if args.addfont == True:
+        add_font()
     else:
         pass
 
