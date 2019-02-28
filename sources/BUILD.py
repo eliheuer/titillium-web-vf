@@ -267,7 +267,6 @@ def prep_static_fonts():
     Run ttfautohint on all fonts and fix missing dsig
     """
     print("\n**** Moving static fonts:")
-
     for path in glob.glob("instance_ttf/*.ttf"):
         print(path)
         subprocess.call("cp %s fonts/static-fonts/" % path, shell=True)
@@ -275,14 +274,27 @@ def prep_static_fonts():
 
     for static_font in glob.glob("fonts/static-fonts/*.ttf"):
         print(static_font)
-        subprocess.call("gftools fix-dsig %s --autofix" % static_font, shell=True)
-
+        subprocess.call(
+                "gftools fix-dsig %s --autofix"
+                % static_font, shell=True
+                )
         if args.fixnonhinting == True:
             print("FIXING NONHINTING")
-            subprocess.call("gftools fix-nonhinting %s %s.fix" % (static_font, static_font), shell=True)
-            subprocess.call("mv %s.fix %s" % (static_font, static_font), shell=True)
-            subprocess.call("rm -rf %s.fix" % static_font, shell=True)
-            subprocess.call("rm -rf fonts/static-fonts/*gasp.ttf", shell=True)
+            subprocess.call(
+                    "gftools fix-nonhinting %s %s.fix"
+                    % (static_font, static_font), shell=True
+                    )
+            subprocess.call(
+                    "mv %s.fix %s"
+                    % (static_font, static_font), shell=True
+                    )
+            subprocess.call(
+                    "rm -rf %s.fix"
+                    % static_font, shell=True
+                    )
+            subprocess.call(
+                    "rm -rf fonts/static-fonts/*gasp.ttf", shell=True
+                    )
             print("     [+] Done:", static_font)
 
         if args.ttfautohint == True:
@@ -303,7 +315,9 @@ def rm_build_dirs():
     """
     print("\n**** removing build directories")
     print("     [+] run: rm -rf variable_ttf master_ufo instance_ufo")
-    subprocess.call("rm -rf variable_ttf master_ufo instance_ufo", shell=True)
+    subprocess.call(
+            "rm -rf variable_ttf master_ufo instance_ufo", shell=True
+            )
     printG("    [!] Done")
     time.sleep(1)
 
@@ -331,10 +345,21 @@ def fix_nonhinting():
     print("\n**** Run: gftools: fix nonhinting")
     for path in glob.glob("fonts/*.ttf"):
         print(path)
-        subprocess.call("gftools fix-nonhinting %s %s.fix" % (path, path), shell=True)
-        subprocess.call("mv %s.fix %s" % (path, path), shell=True)
-        subprocess.call("rm -rf %s.fix" % path, shell=True)
-        subprocess.call("rm -rf fonts/*gasp.ttf", shell=True)
+        subprocess.call(
+                "gftools fix-nonhinting %s %s.fix"
+                % (path, path), shell=True
+                )
+        subprocess.call(
+                "mv %s.fix %s"
+                % (path, path), shell=True
+                )
+        subprocess.call(
+                "rm -rf %s.fix"
+                % path, shell=True
+                )
+        subprocess.call(
+            "rm -rf fonts/*gasp.ttf", shell=True
+            )
         print("     [+] Done:", path)
     printG("    [!] Done")
     time.sleep(1)
@@ -342,7 +367,7 @@ def fix_nonhinting():
 
 def ttfautohint():
     """
-    Runs ttfautohint with various flags set. For more info run: ttfautohint --help
+    Runs ttfautohint with flags set. For more info run: ttfautohint --help
     """
     print("\n**** Run: ttfautohint")
     os.chdir("fonts")
@@ -354,8 +379,14 @@ def ttfautohint():
             % (args.ttfautohint, source, source),
             shell=True,
         )
-        subprocess.call("cp %s-VF-Fix.ttf %s-VF.ttf" % (source, source), shell=True)
-        subprocess.call("rm -rf %s-VF-Fix.ttf" % source, shell=True)
+        subprocess.call(
+            "cp %s-VF-Fix.ttf %s-VF.ttf"
+            % (source, source), shell=True
+            )
+        subprocess.call(
+                "rm -rf %s-VF-Fix.ttf"
+                % source, shell=True
+        )
         print("     [+] Done:", source)
     os.chdir("..")
     cwd = os.getcwd()
@@ -366,7 +397,7 @@ def ttfautohint():
 
 def ttfautohint_static():
     """
-    Runs ttfautohint with various flags set. For more info run: ttfautohint --help
+    Runs ttfautohint with flags set. For more info run: ttfautohint --help
     """
     print("\n**** Run: ttfautohint")
     os.chdir("fonts")
@@ -378,8 +409,14 @@ def ttfautohint_static():
             % (args.ttfautohint, source, source),
             shell=True,
         )
-        subprocess.call("cp %s-VF-Fix.ttf %s-VF.ttf" % (source, source), shell=True)
-        subprocess.call("rm -rf %s-VF-Fix.ttf" % source, shell=True)
+        subprocess.call(
+                "cp %s-VF-Fix.ttf %s-VF.ttf"
+                % (source, source), shell=True
+                )
+        subprocess.call(
+                "rm -rf %s-VF-Fix.ttf"
+                % source, shell=True
+                )
         print("     [+] Done:", source)
     os.chdir("..")
     cwd = os.getcwd()
@@ -396,12 +433,16 @@ def google_fonts():
     if args.googlefonts is not None:
         for source in sources:
             subprocess.call(
-                "cp fonts/%s-VF.ttf %s/" % (source, args.googlefonts), shell=True
+                "cp fonts/%s-VF.ttf %s/"
+                % (source, args.googlefonts), shell=True
             )
             print("     [+] Done:", source)
     for path in glob.glob("fonts/static-fonts/*.ttf"):
         print(path)
-        subprocess.call("cp %s %s/static/" % (path, args.googlefonts), shell=True)
+        subprocess.call(
+                "cp %s %s/static/"
+                % (path, args.googlefonts), shell=True
+        )
     else:
         pass
     printG("    [!] Done")
@@ -415,7 +456,8 @@ def add_font():
     print("\n**** Making new metadata file for font.")
     if args.googlefonts is not None:
         subprocess.call(
-                "gftools add-font %s" % args.googlefonts, shell=True
+                "gftools add-font %s"
+                % args.googlefonts, shell=True
         )
         print("     [+] Done:")
     else:
@@ -430,7 +472,11 @@ def fontbakery():
     """
     print("\n**** Run: FontBakery:")
     for source in sources:
-        subprocess.call("fontbakery check-googlefonts %s/%s-VF.ttf --ghmarkdown docs/FONTBAKERY-REPORT-%s.md" % (args.googlefonts, source, source), shell=True, )
+        subprocess.call(
+            "fontbakery check-googlefonts %s/%s-VF.ttf \
+            --ghmarkdown docs/FONTBAKERY-REPORT-%s.md"
+            % (args.googlefonts, source, source), shell=True,
+        )
         print("     [+] Done:", source)
     printG("    [!] Done")
     time.sleep(1)
