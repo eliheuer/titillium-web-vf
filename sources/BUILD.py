@@ -81,6 +81,9 @@ parser.add_argument(
 parser.add_argument(
     "--addfont", help="Update metadata", action="store_true"
 )
+parser.add_argument(
+    "--ufosrc", help="Build from ufo source and not glyphs", action="store_true"
+)
 args = parser.parse_args()
 
 
@@ -173,6 +176,12 @@ def display_args():
     else:
         printR(args.addfont)
 
+    print("     [+] --ufosrc\t\t", end="")
+    if args.ufosrc == True:
+        printG(args.ufosrc)
+    else:
+        printR(args.ufosrc)
+
     printG("    [!] Done")
     time.sleep(8)
 
@@ -230,14 +239,24 @@ def run_fontmake_variable():
     for source in sources:
         print("\n**** Building %s variable font files with FontMake:" % source)
         print("     [+] Run: fontmake ")
-        subprocess.call(
-            "fontmake \
-                      -g sources/%s.glyphs \
-                      -o variable \
-                      --output-path fonts/%s-VF.ttf"
-            % (source, source),
-            shell=True,
-        )
+        if args.ufosrc == True:
+            subprocess.call(
+                "fontmake \
+                          -g sources/master_ufo/%s.designspace \
+                          -o variable \
+                          --output-path fonts/%s-VF.ttf"
+                % (source, source),
+                shell=True,
+            )
+        else:
+            subprocess.call(
+                "fontmake \
+                          -g sources/%s.glyphs \
+                          -o variable \
+                          --output-path fonts/%s-VF.ttf"
+                % (source, source),
+                shell=True,
+            )
         print("     [!] Done")
     printG("    [!] Done")
 
