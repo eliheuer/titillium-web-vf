@@ -8,7 +8,9 @@ Titillium Web is a contemporary Arabic and Latin typeface family. Mohamed Gaber 
 ## Building From Source
 To build new fonts from the source files, run `./BUILD.sh` from the root directory of this repo. This will start the automated build process with a few default flags enabled. To run just the build script or to set flags manually from the command line run the script directly: `python3 sources/BUILD.py`.
 
-A few dependancies are requiered for the build script to work, from the root directory of this repo run: `pip install -r requirements.txt`. For more information on the requirements, please see the source documentation [here](https://github.com/eliheuer/titillium-web-vf/tree/master/sources).
+A few dependancies are requiered for the build script to work, from the root directory of this repo run: `pip install -r requirements.txt`.
+
+For more information on the requirements, please see the source documentation [here](https://github.com/eliheuer/titillium-web-vf/tree/master/sources).
 
 ## License
 
