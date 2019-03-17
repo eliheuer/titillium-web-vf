@@ -524,53 +524,44 @@ def main():
     get_source_list()
     get_style_list()
     run_fontmake_variable()
-
     # fix non-hinting
     if args.fixnonhinting == True:
         fix_nonhinting()
     else:
         pass
-
     # make static fonts
     if args.static == True:
         run_fontmake_static()
         prep_static_fonts()
     else:
         pass
-
     rm_build_dirs()
     fix_dsig()
-
     # ttfautohint
     if args.ttfautohint is not None:
         ttfautohint()
     else:
         pass
-
     # GoogleFonts
     if args.googlefonts is not None:
         google_fonts()
     else:
         pass
-
     # AddFont
     if args.addfont == True:
         add_font()
     else:
         pass
-
     # FontBakery
     if args.fontbakery == True:
         fontbakery()
     else:
         pass
-
     # DrawBot
     if args.drawbot == True:
         render_specimens()
     else:
         pass
-
 
 if __name__ == "__main__":
     main()
