@@ -5,6 +5,100 @@ Fontbakery version: 0.6.7
 <details>
 <summary><b>[26] Family checks</b></summary>
 <details>
+<summary>:broken_heart: <b>ERROR:</b> METADATA.pb: Fontfamily is listed on Google Fonts API?</summary>
+
+* [com.google.fonts/check/081](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/081)
+* :broken_heart: **ERROR** The check <FontBakeryCheck:com.google.fonts/check/081> had an error: FailedConditionError: The condition <FontBakeryCondition:listed_on_gfonts_api> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104cca390>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Do we have the latest version of FontBakery installed?</summary>
+
+* [com.google.fonts/check/fontbakery_version](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/fontbakery_version)
+* :broken_heart: **ERROR** Running 'pip search fontbakery' returned an error code. Output follows :
+
+Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a71860>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a711d0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a710f0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a5f588>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a5f358>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Exception:
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+pip._vendor.urllib3.exceptions.NewConnectionError: <pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a5fa20>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  [Previous line repeated 1 more times]
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+pip._vendor.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi (Caused by NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a5fa20>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 179, in main
+    status = self.run(options, args)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/commands/search.py", line 48, in run
+    pypi_hits = self.search(query, options)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/commands/search.py", line 65, in search
+    hits = pypi.search({'name': query, 'summary': query}, 'or')
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xmlrpc/client.py", line 1112, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xmlrpc/client.py", line 1452, in __request
+    verbose=self.__verbose
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/download.py", line 823, in request
+    headers=headers, stream=True)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/download.py", line 403, in request
+    return super(PipSession, self).request(method, url, *args, **kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/cachecontrol/adapter.py", line 53, in send
+    resp = super(CacheControlAdapter, self).send(request, **kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+pip._vendor.requests.exceptions.ConnectionError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi (Caused by NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x102a5fa20>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+
+* :bread: **PASS** Font Bakery is up-to-date
+
+</details>
+<details>
 <summary>:fire: <b>FAIL:</b> DESCRIPTION.en_us.html must have less than 1000 bytes.</summary>
 
 * [com.google.fonts/check/006](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/006)
@@ -24,17 +118,6 @@ Fontbakery version: 0.6.7
 * [com.google.fonts/check/003](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/003)
 * :information_source: **INFO** Found an email address: mailto:segreteria@accademiadiurbino.it
 * :bread: **PASS** All links in the DESCRIPTION file look good!
-
-</details>
-<details>
-<summary>:information_source: <b>INFO:</b> Do we have the latest version of FontBakery installed?</summary>
-
-* [com.google.fonts/check/fontbakery_version](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/fontbakery_version)
-* :information_source: **INFO** fontbakery (0.6.12)  - Well designed Font QA tool, written in Python 3
-  INSTALLED: 0.6.7
-  LATEST:    0.6.12
-
-* :bread: **PASS** Font Bakery is up-to-date
 
 </details>
 <details>
@@ -70,13 +153,6 @@ Fontbakery version: 0.6.7
 
 * [com.google.fonts/check/028](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/028)
 * :bread: **PASS** Found license at '/Users/Air/Google/fonts/ofl/titilliumweb/OFL.txt'
-
-</details>
-<details>
-<summary>:bread: <b>PASS:</b> METADATA.pb: Fontfamily is listed on Google Fonts API?</summary>
-
-* [com.google.fonts/check/081](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/081)
-* :bread: **PASS** Font is properly listed via Google Fonts API.
 
 </details>
 <details>
@@ -195,6 +271,36 @@ Fontbakery version: 0.6.7
 </details>
 <details>
 <summary><b>[117] TitilliumWeb-Roman-VF.ttf</b></summary>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Version number has increased since previous release on Google Fonts?</summary>
+
+* [com.google.fonts/check/117](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/117)
+* :broken_heart: **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x105eb26d8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Glyphs are similiar to Google Fonts version?</summary>
+
+* [com.google.fonts/check/118](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/118)
+* :broken_heart: **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x105eb26d8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Check font has same encoded glyphs as version hosted on fonts.google.com</summary>
+
+* [com.google.fonts/check/154](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/154)
+* :broken_heart: **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x105eb26d8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Familyname must be unique according to namecheck.fontdata.com </summary>
+
+* [com.google.fonts/check/165](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/165)
+* :broken_heart: **ERROR** Failed to access: 'http://namecheck.fontdata.com/?q=TitilliumWeb'.
+Please report this issue at:
+https://github.com/googlefonts/fontbakery/issues
+
+</details>
 <details>
 <summary>:fire: <b>FAIL:</b> Checks METADATA.pb font.name field matches family name declared on the name table.</summary>
 
@@ -374,20 +480,6 @@ This happens a lot when points are not extremes, which is usually bad. However, 
 
 </details>
 <details>
-<summary>:zzz: <b>SKIP:</b> Version number has increased since previous release on Google Fonts?</summary>
-
-* [com.google.fonts/check/117](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/117)
-* :zzz: **SKIP** Unfulfilled Conditions: api_gfonts_ttFont, github_gfonts_ttFont
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Glyphs are similiar to Google Fonts version?</summary>
-
-* [com.google.fonts/check/118](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/118)
-* :zzz: **SKIP** Unfulfilled Conditions: api_gfonts_ttFont
-
-</details>
-<details>
 <summary>:zzz: <b>SKIP:</b> Checking OS/2 fsSelection value.</summary>
 
 * [com.google.fonts/check/129](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/129)
@@ -413,13 +505,6 @@ This happens a lot when points are not extremes, which is usually bad. However, 
 
 * [com.google.fonts/check/153](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/153)
 * :zzz: **SKIP** Unfulfilled Conditions: not is_variable_font
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Check font has same encoded glyphs as version hosted on fonts.google.com</summary>
-
-* [com.google.fonts/check/154](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/154)
-* :zzz: **SKIP** Unfulfilled Conditions: api_gfonts_ttFont
 
 </details>
 <details>
@@ -592,7 +677,7 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 <summary>:information_source: <b>INFO:</b> Font contains all required tables?</summary>
 
 * [com.google.fonts/check/052](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/052)
-* :information_source: **INFO** This font contains the following optional tables [DSIG, prep, loca, gasp, GPOS, fpgm, cvt ]
+* :information_source: **INFO** This font contains the following optional tables [cvt , DSIG, loca, gasp, fpgm, prep, GPOS]
 * :bread: **PASS** Font contains all required tables.
 
 </details>
@@ -755,13 +840,6 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 * [com.google.fonts/check/164](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/164)
 * :bread: **PASS** All copyright notice name entries on the 'name' table are shorter than 500 characters.
-
-</details>
-<details>
-<summary>:bread: <b>PASS:</b> Familyname must be unique according to namecheck.fontdata.com </summary>
-
-* [com.google.fonts/check/165](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/165)
-* :bread: **PASS** Font familyname seems to be unique.
 
 </details>
 <details>
@@ -1051,5 +1129,5 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 | :broken_heart: ERROR | :fire: FAIL | :warning: WARN | :zzz: SKIP | :information_source: INFO | :bread: PASS |
 |:-----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 15 | 4 | 32 | 7 | 85 |
-| 0% | 10% | 3% | 22% | 5% | 59% |
+| 6 | 15 | 4 | 29 | 6 | 83 |
+| 4% | 10% | 3% | 20% | 4% | 58% |

@@ -5,6 +5,100 @@ Fontbakery version: 0.6.7
 <details>
 <summary><b>[26] Family checks</b></summary>
 <details>
+<summary>:broken_heart: <b>ERROR:</b> METADATA.pb: Fontfamily is listed on Google Fonts API?</summary>
+
+* [com.google.fonts/check/081](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/081)
+* :broken_heart: **ERROR** The check <FontBakeryCheck:com.google.fonts/check/081> had an error: FailedConditionError: The condition <FontBakeryCondition:listed_on_gfonts_api> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x105926470>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Do we have the latest version of FontBakery installed?</summary>
+
+* [com.google.fonts/check/fontbakery_version](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/fontbakery_version)
+* :broken_heart: **ERROR** Running 'pip search fontbakery' returned an error code. Output follows :
+
+Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x106966860>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x106966240>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x106966208>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x1069597b8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x106959780>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /pypi
+Exception:
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+pip._vendor.urllib3.exceptions.NewConnectionError: <pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x1069595c0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  [Previous line repeated 1 more times]
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+pip._vendor.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi (Caused by NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x1069595c0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 179, in main
+    status = self.run(options, args)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/commands/search.py", line 48, in run
+    pypi_hits = self.search(query, options)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/commands/search.py", line 65, in search
+    hits = pypi.search({'name': query, 'summary': query}, 'or')
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xmlrpc/client.py", line 1112, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xmlrpc/client.py", line 1452, in __request
+    verbose=self.__verbose
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/download.py", line 823, in request
+    headers=headers, stream=True)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_internal/download.py", line 403, in request
+    return super(PipSession, self).request(method, url, *args, **kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/cachecontrol/adapter.py", line 53, in send
+    resp = super(CacheControlAdapter, self).send(request, **kw)
+  File "/Users/Air/Py/Venvs/type/lib/python3.7/site-packages/pip/_vendor/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+pip._vendor.requests.exceptions.ConnectionError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi (Caused by NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x1069595c0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+
+* :bread: **PASS** Font Bakery is up-to-date
+
+</details>
+<details>
 <summary>:fire: <b>FAIL:</b> DESCRIPTION.en_us.html must have less than 1000 bytes.</summary>
 
 * [com.google.fonts/check/006](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/006)
@@ -24,17 +118,6 @@ Fontbakery version: 0.6.7
 * [com.google.fonts/check/003](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/003)
 * :information_source: **INFO** Found an email address: mailto:segreteria@accademiadiurbino.it
 * :bread: **PASS** All links in the DESCRIPTION file look good!
-
-</details>
-<details>
-<summary>:information_source: <b>INFO:</b> Do we have the latest version of FontBakery installed?</summary>
-
-* [com.google.fonts/check/fontbakery_version](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/fontbakery_version)
-* :information_source: **INFO** fontbakery (0.6.12)  - Well designed Font QA tool, written in Python 3
-  INSTALLED: 0.6.7
-  LATEST:    0.6.12
-
-* :bread: **PASS** Font Bakery is up-to-date
 
 </details>
 <details>
@@ -70,13 +153,6 @@ Fontbakery version: 0.6.7
 
 * [com.google.fonts/check/028](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/028)
 * :bread: **PASS** Found license at '/Users/Air/Google/fonts/ofl/titilliumweb/OFL.txt'
-
-</details>
-<details>
-<summary>:bread: <b>PASS:</b> METADATA.pb: Fontfamily is listed on Google Fonts API?</summary>
-
-* [com.google.fonts/check/081](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/081)
-* :bread: **PASS** Font is properly listed via Google Fonts API.
 
 </details>
 <details>
@@ -196,6 +272,36 @@ Fontbakery version: 0.6.7
 <details>
 <summary><b>[117] TitilliumWeb-Italic-VF.ttf</b></summary>
 <details>
+<summary>:broken_heart: <b>ERROR:</b> Version number has increased since previous release on Google Fonts?</summary>
+
+* [com.google.fonts/check/117](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/117)
+* :broken_heart: **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106aeedd8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Glyphs are similiar to Google Fonts version?</summary>
+
+* [com.google.fonts/check/118](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/118)
+* :broken_heart: **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106aeedd8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Check font has same encoded glyphs as version hosted on fonts.google.com</summary>
+
+* [com.google.fonts/check/154](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/154)
+* :broken_heart: **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: ConnectionError: HTTPConnectionPool(host='fonts.googleapis.com', port=80): Max retries exceeded with url: /css?family=Titillium+Web (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106aeedd8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> Familyname must be unique according to namecheck.fontdata.com </summary>
+
+* [com.google.fonts/check/165](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/165)
+* :broken_heart: **ERROR** Failed to access: 'http://namecheck.fontdata.com/?q=TitilliumWeb'.
+Please report this issue at:
+https://github.com/googlefonts/fontbakery/issues
+
+</details>
+<details>
 <summary>:fire: <b>FAIL:</b> METADATA.pb font.filename field contains font name in right format?</summary>
 
 * [com.google.fonts/check/100](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/100)
@@ -224,13 +330,6 @@ Fontbakery version: 0.6.7
 * [com.google.fonts/check/131](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/131)
 * :fire: **FAIL** head macStyle ITALIC bit should be set. [code: bad-ITALIC]
 * :bread: **PASS** head macStyle BOLD bit is properly set.
-
-</details>
-<details>
-<summary>:fire: <b>FAIL:</b> Check font has same encoded glyphs as version hosted on fonts.google.com</summary>
-
-* [com.google.fonts/check/154](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/154)
-* :fire: **FAIL** Font is missing the following glyphs from the previous release [0xF6BE]
 
 </details>
 <details>
@@ -300,13 +399,6 @@ Failed to sanitize file!
 
 * [com.google.fonts/check/116](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/116)
 * :warning: **WARN** Even though unitsPerEm (1000) in this font is reasonable. It is strongly advised to consider changing it to 2000, since it will likely improve the quality of Variable Fonts by avoiding excessive rounding of coordinates on interpolations.
-
-</details>
-<details>
-<summary>:warning: <b>WARN:</b> Glyphs are similiar to Google Fonts version?</summary>
-
-* [com.google.fonts/check/118](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/118)
-* :warning: **WARN** Following glyphs differ greatly from Google Fonts version: [summation, oacute, itilde, AE, jcircumflex, Sacute, comma, Ebreve, aogonek, Aringacute, acute, emacron, C, ugrave, trademark, ycircumflex, six, multiply, Z, ellipsis, tcaron, ebreve, nine, uni1EB0, ogonek, oslashacute, Omacron, k, logicalnot, l, emdash, semicolon, Egrave, uring, hyphen, B, Scaron, L, eng, asciitilde, Oslash, Racute, dcaron, breve, parenleft.cap, ordfeminine, dotlessi, omacron, Uhungarumlaut, guilsinglleft, g, Umacron, registered, Q, Atilde, otilde, atilde, uni1EF9, E, W, grave, parenleft, Hcircumflex, Scedilla, bracketright, guilsinglright, adieresis, Ncaron, y, cdotaccent, udieresis, Aogonek, c, quotedblleft, rcaron, uni1EF8, w, guillemotright, emdash.cap, Dcaron, tbar, D, t, questiondown, R, ohungarumlaut, Zdotaccent, eogonek, ecaron, quotedblbase, five, Ycircumflex, p, AEacute, Zcaron, V, infinity, wcircumflex, greater, quoteleft, oslash, u, macron, uacute, e, Iacute, bracketleft.cap, asterisk, dieresis, cent, Imacron, endash, Gdotaccent, h, zero, exclamdown.cap, Eth, Ecircumflex, degree, ograve, pi, a, perthousand, ygrave, Obreve, Edotaccent, uhungarumlaut, bracketleft, fraction, amacron, quotesingle, braceleft, Wdieresis, threequarters, ydieresis, cedilla, divide, Amacron, Eogonek, aacute, bracketright.cap, braceleft.cap, OE, cacute, Ograve, zdotaccent, ordmasculine, x, Otilde, lcaron, f, tilde, G, Hbar, thorn, hbar, notequal, lessequal, Yacute, numbersign, edotaccent, quoteright, j, parenright.cap, s, abreve, bar, ampersand, braceright.cap, ecircumflex, Gbreve, racute, ccircumflex, Ygrave, Ocircumflex, Idieresis, seven, gbreve, integral, hcircumflex, florin, T, idieresis, wgrave, Cacute, lacute, copyright, ocircumflex, Idotaccent, Jcircumflex, sterling, odieresis, Thorn, d, eacute, partialdiff, b, aring, Icircumflex, Edieresis, Wacute, eight, onehalf, yacute, Oacute, H, Zacute, approxequal, v, dcroat, uogonek, ae, ncaron, N, Eacute, Tcaron, guillemotleft, plusminus, four, Aacute, imacron, Oslashacute, sacute, question, M, egrave, underscore, Scircumflex, backslash, Agrave, Uacute, i, questiondown.cap, Ohungarumlaut, Wcircumflex, equal, acircumflex, one, O, iogonek, Wgrave, greaterequal, yen, gdotaccent, Nacute, aeacute, Ecaron, P, section, obreve, Odieresis, Ntilde, ubreve, Ubreve, Ibreve, Lslash, currency, igrave, radical, germandbls, Ugrave, Dcroat, lslash, brokenbar, Gcircumflex, daggerdbl, Iogonek, quotesinglbase, at, onequarter, Utilde, z, Rcaron, Abreve, K, paragraph, less, Cdotaccent, ccedilla, dagger, A, plus, o, Lacute, n, Ccaron, S, hungarumlaut, Euro, gcircumflex, F, Y, wacute, minus, asciicircum, percent, colon, iacute, oe, parenright, uni1EC5, eth, ucircumflex, Uogonek, slash, icircumflex, uni1ED7, Udieresis, Ydieresis, Igrave, scaron, dollar, Ccircumflex, utilde, product, Ucircumflex, zcaron, exclam, wdieresis, U, q, Tbar, ring, two, Uring, ccaron, J, braceright, Emacron, lozenge, three, edieresis, zacute, uni1EAB, ntilde, r, exclamdown, Ccedilla, nacute, scircumflex, scedilla, Acircumflex, ibreve, quotedblright, I, agrave, Adieresis, umacron, m, Eng, endash.cap, X, Lcaron, caron, Itilde, aringacute, Aring, circumflex]
 
 </details>
 <details>
@@ -501,13 +593,6 @@ This happens a lot when points are not extremes, which is usually bad. However, 
 
 </details>
 <details>
-<summary>:zzz: <b>SKIP:</b> Version number has increased since previous release on Google Fonts?</summary>
-
-* [com.google.fonts/check/117](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/117)
-* :zzz: **SKIP** Unfulfilled Conditions: github_gfonts_ttFont
-
-</details>
-<details>
 <summary>:zzz: <b>SKIP:</b> Check if each glyph has the recommended amount of contours.</summary>
 
 * [com.google.fonts/check/153](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/153)
@@ -656,7 +741,7 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 <summary>:information_source: <b>INFO:</b> Font contains all required tables?</summary>
 
 * [com.google.fonts/check/052](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/052)
-* :information_source: **INFO** This font contains the following optional tables [gasp, GPOS, loca, fpgm, DSIG, cvt , prep]
+* :information_source: **INFO** This font contains the following optional tables [DSIG, fpgm, loca, cvt , gasp, GPOS, prep]
 * :bread: **PASS** Font contains all required tables.
 
 </details>
@@ -777,13 +862,6 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 * [com.google.fonts/check/164](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/164)
 * :bread: **PASS** All copyright notice name entries on the 'name' table are shorter than 500 characters.
-
-</details>
-<details>
-<summary>:bread: <b>PASS:</b> Familyname must be unique according to namecheck.fontdata.com </summary>
-
-* [com.google.fonts/check/165](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/165)
-* :bread: **PASS** Font familyname seems to be unique.
 
 </details>
 <details>
@@ -1052,5 +1130,5 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 | :broken_heart: ERROR | :fire: FAIL | :warning: WARN | :zzz: SKIP | :information_source: INFO | :bread: PASS |
 |:-----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 15 | 6 | 39 | 7 | 76 |
-| 0% | 10% | 4% | 27% | 5% | 53% |
+| 6 | 14 | 5 | 38 | 6 | 74 |
+| 4% | 10% | 3% | 27% | 4% | 52% |
