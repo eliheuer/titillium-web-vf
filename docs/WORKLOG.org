@@ -1,57 +1,53 @@
-#+TITLE:     DevLog: Titillium Web VF
+#+TITLE:     Worklog: Titillium Web Variable Fonts
 #+AUTHOR:    Eli H
 #+EMAIL:     elih@member.fsf.org
 #+LANGUAGE:  en
 
-A NOTE TO GITHUB USERS:
-This file is formatted for use with Emacs Org-mode.
-Web rendering on GitHub may be hard to understand.
+This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs Org-mode]].
 
 * Titillium Web VF
-
-** DONE Build UFOs from Glyphs
+** Build Helpers
+*** Build Commands
+**** Fontmake
+     fontmake -g sources/TitilliumWeb-Roman.glyphs -o variable --output-path fonts/font-VF.ttf
+     fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --output-path sources/
+     fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --verbose DEBUG && rm -rf instance_ufo && cp -r master_ufo sources/ && rm -rf master_ufo
+*** Build Info
+    python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/titilliumweb --fontbakery --ttfautohint "-I -W"
+** FontBakery Status
+*** Roman
+**** Fails *********************
+***** TODO Fail: Check 001
+      This is a bug in font bakery. Wont Fix.
+***** TODO Fail: Check 042
+     This is fixable.
+**** Warns *********************
+***** TODO Warn: Check 018
+      Nothing I can do here, wont fix.
+***** TODO Warn: Check 041
+      This is fixable.
+*** Italic
+**** Fails *********************
+***** TODO Fail: Check 001
+      This is a bug in font bakery. Wont Fix.
+***** TODO Fail: Check 042
+      This is fixable.
+**** Warns *********************
+***** TODO Warn: Check 018
+      Nothing I can do here, wont fix.
+***** TODO Warn: Check 041
+      This is fixable.
+** TODOs
+*** DONE Build UFOs from Glyphs
   CLOSED: [2019-03-05 Tue 12:06]
-** DONE Sync Glyphs source with UFOs
+*** DONE Sync Glyphs source with UFOs
   CLOSED: [2019-03-05 Tue 12:37]
-** DONE Make sure files are Clean. 
+*** DONE Make sure files are Clean. 
   CLOSED: [2019-03-13 Wed 20:46]
-** DONE Get build script working
+*** DONE Get build script working
   CLOSED: [2019-03-21 Thu 12:49]
-** TODO Update PR
-** TODO EMAIL v-fonts
+*** TODO Update PR
+*** TODO EMAIL v-fonts
    When font is done.
 
 
-** Build Commands
-*** Fontmake
-    fontmake -g sources/TitilliumWeb-Roman.glyphs -o variable --output-path fonts/font-VF.ttf
-    fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --output-path sources/
-    fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --verbose DEBUG && rm -rf instance_ufo && cp -r master_ufo sources/ && rm -rf master_ufo
-** Build Info
-   python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/titilliumweb --fontbakery --ttfautohint "-I -W"
-
-FONTS:
-
-
-** Roman
-*** Fails *********************
-**** TODO Fail: Check 001
-This is a bug in font bakery. Wont Fix.
-**** TODO Fail: Check 042
-This is fixable.
-*** Warns *********************
-**** TODO Warn: Check 018
-Nothing I can do here, wont fix.
-**** TODO Warn: Check 041
-This is fixable.
-** Italic
-*** Fails *********************
-**** TODO Fail: Check 001
-This is a bug in font bakery. Wont Fix.
-**** TODO Fail: Check 042
-This is fixable.
-*** Warns *********************
-**** TODO Warn: Check 018
-Nothing I can do here, wont fix.
-**** TODO Warn: Check 041
-This is fixable.
