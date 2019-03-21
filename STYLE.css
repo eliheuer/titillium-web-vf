@@ -47,6 +47,7 @@ hr {
 
 .grid-container {
     direction: rtl;
+    text-align: right;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 32px;
@@ -90,7 +91,9 @@ hr {
     box-shadow: 8px 8px 0px #000000;
 }
 
-.left { 
+.left {
+    direction: rtl;
+    text-align: right;
     grid-column-start: 1; 
     grid-column-end: 3; 
     border-color: #000000;
