@@ -7,6 +7,7 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 
 * Titillium Web VF
 ** Build Helpers
+*** Addfont
 *** Build Commands
 **** Fontmake
      fontmake -g sources/TitilliumWeb-Roman.glyphs -o variable --output-path fonts/font-VF.ttf
@@ -28,10 +29,19 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
       This is fixable.
 *** Italic
 **** Fails *********************
-***** TODO Fail: Check 001
-      This is a bug in font bakery. Wont Fix.
-***** TODO Fail: Check 042
-      This is fixable.
+***** DONE [#C] :: com.google.fonts/check/006
+      CLOSED: [2019-03-21 Thu 16:17]
+      I edited the description file to fix this  -- Eli H
+      
+***** DONE [#C] :: com.google.fonts/check/058
+      CLOSED: [2019-03-21 Thu 20:31]
+      This can be fixed but it's not top priority
+***** DONE [#C] :: com.google.fonts/check/090
+      CLOSED: [2019-03-21 Thu 20:31]
+      Temp not an issue
+***** DONE [#C] :: com.google.fonts/check/092
+      CLOSED: [2019-03-22 Fri 07:06]
+      Fixed in source, no longer getting issue.
 **** Warns *********************
 ***** TODO Warn: Check 018
       Nothing I can do here, wont fix.
