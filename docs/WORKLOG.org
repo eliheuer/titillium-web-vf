@@ -6,9 +6,143 @@
 This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs Org-mode]].
 
 * Titillium Web VF
+** FontBakery Status
+*** Roman
+**** Fails 00 ****
+**** Warns 00 ****
+*** Italic
+**** Fails 25 ****
+******* TODO [#A] :: canonical_filename 
+
+	Will fix 
+
+******* TODO [#A] :: metadata/nameid/post_script_name 
+
+	Will fix
+
+******* TODO [#A] :: metadata/nameid/full_name
+
+	Will fix
+
+******* TODO [#A] :: metadata/nameid/font_name
+
+	Will fix
+
+******* TODO [#A] :: metadata/valid_name_values
+
+	Will fix
+
+******* TODO [#A] :: metadata/valid_full_name_values
+
+	Will fix
+
+******* TODO [#A] :: metadata/valid_post_script_name_values
+
+      Easy fix
+
+******* TODO [#A] :: metadata/canonical_filename
+
+	Easy fix
+
+******* TODO [#A] :: metadata/italic_style
+
+	Easy fix
+
+******* TODO [#A] :: metadata/nameid/family_and_full_names
+      Neeeds to be fixed
+******* TODO [#A] :: metatada/canonical_style_names
+      Needs to be fixed
+******* TODO [#A] :: fsselection
+
+      Fix in Glyphs
+
+******* TODO [#A] :: italic_angle
+
+      Easy fix
+
+******* TODO [#A] :: mac_style
+
+      Easy fix
+
+******* TODO [#A] :: production_encoded_glyphs
+
+      Easy fix
+
+******* TODO [#C] :: copyright
+
+      Easy fix
+
+******* TODO [#A] :: familyname
+      
+      Needs to be fixed
+
+******* TODO [#A] :: subfamilyname 
+      
+      Needs to be fixed
+
+******* TODO [#A] :: fullfontname
+      
+      Needs to be fixed
+      
+******* TODO [#B] :: postscriptname
+      
+      Needs to be fixed
+
+******* TODO [#B] :: typographicfamilyname
+      
+      Needs to be fixed, should be easy
+
+******* TODO [#B] :: typographicsubfamilynametypographicsubfamilyname
+      
+      Needs to be fixed, should be easy
+
+******* TODO [#A] :: integer_ppem_if_hinted
+      
+      This needs to be fixed
+
+******* TODO [#A] :: ots
+      
+      This needs to be fixed
+
+******* TODO [#C] :: valid_glyphnames
+      
+      This can be fixed but it's not top priority
+      Need to move the Glyphs XML file
+      
+**** Warns 05 ****
+******* TODO [#A] :: 
+******* TODO :: unitsperem_strictunitsperem_strict
+      Not an issue, can upscale in Glyphs if needed
+
+******* TODO :: production_glyphs_similarity
+      Not a major issue, will look into it if needed
+
+******* TODO [#C] :: family_and_style_max_lengthfamily_and_style_max_length
+      This needs to be 
+
+******* TODO [#A] :: gpos_kerning_info
+      This needs to be fixed.
+
+******* TODO :: points_out_of_bounds
+      Have not looked yet, but this seems ok.
+
+** TODOs
+*** TODO [#A] Build UFOs from Glyphs
+*** DONE [#B] Sync Glyphs source with UFOs
+    CLOSED: [2019-03-05 Tue 12:37]
+*** DONE [#A] Make sure files are clean
+    CLOSED: [2019-03-13 Wed 20:46]
+*** DONE [#A] Get build script working
+    CLOSED: [2019-03-21 Thu 12:49]
+*** TODO [#A] Update PR
+*** TODO [#C] EMAIL v-fonts
+    When font is done.
+
 ** Build Helpers
+*** FontBakery
+    fontbakery check-googlefonts ~/Google/fonts/ofl/titilliumweb/TitilliumWeb-Italic.ttf
 *** Addfont
-gftools add-font ~/Google/fonts/ofl/titilliumweb
+    gftools add-font ~/Google/fonts/ofl/titilliumweb
 *** Build Commands
 **** Fontmake
      fontmake -g sources/TitilliumWeb-Roman.glyphs -o variable --output-path fonts/font-VF.ttf
@@ -16,79 +150,3 @@ gftools add-font ~/Google/fonts/ofl/titilliumweb
      fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --verbose DEBUG && rm -rf instance_ufo && cp -r master_ufo sources/ && rm -rf master_ufo
 *** Build Info
     python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/titilliumweb --fontbakery --ttfautohint "-I -W"
-** FontBakery Status
-*** Roman
-**** Fails *********************
-***** TODO Fail: Check 001
-      This is a bug in font bakery. Wont Fix.
-***** TODO Fail: Check 042
-     This is fixable.
-**** Warns *********************
-***** TODO Warn: Check 018
-      Nothing I can do here, wont fix.
-***** TODO Warn: Check 041
-      This is fixable.
-*** Italic
-**** Fails 23 ****
-***** [#C] :: com.google.fonts/check/006
-      I edited the description file to fix this
-      
-***** [#C] :: com.google.fonts/check/090
-      Temp not an issue
-***** [#C] :: com.google.fonts/check/092
-      Fixed in source, no longer getting issue.
-***** [#C] :: com.google.fonts/check/093
-      Unmatched postscript name in font: Fixable
-
-
-
-
-***** TODO [#A] :: com.google.fonts/check/157
-      Needs to be fixed
-***** TODO [#A] :: com.google.fonts/check/158
-      Needs to be fixed
-***** TODO [#A] :: com.google.fonts/check/159
-      Needs to be fixed
-***** TODO [#A] :: com.google.fonts/check/160
-      Needs to be fixed
-***** TODO [#A] :: com.google.fonts/check/161
-      Needs to be fixed, should be easy
-***** TODO [#A] :: com.google.fonts/check/162
-      Needs to be fixed, should be easy
-***** TODO [#A] :: com.google.fonts/check/integer_ppem_if_hinted
-      This needs to be fixed
-***** TODO [#A] :: com.google.fonts/check/036
-      This needs to be fixed
-***** TODO [#C] :: com.google.fonts/check/058
-      This can be fixed but it's not top priority
-      Need to move the Glyphs XML file
-***** [#C] ::
-**** Warns 05 ****
-***** DONE :: com.google.fonts/check/046
-      CLOSED: [2019-03-22 Fri 17:16]
-      Fixed in source
-***** TODO :: com.google.fonts/check/116
-      Not an issue, can upscale in glyphs if needed.
-***** TODO :: com.google.fonts/check/118
-      Not a major issue, will look into it if needed
-***** TODO [#C] :: com.google.fonts/check/163
-      This needs to be fixed
-***** TODO [#A] :: com.google.fonts/check/063
-      This needs to be fixed.
-***** TODO :: com.google.fonts/check/075
-      Have not looked yet, but this seems ok.
-***** [#C] ::
-** TODOs
-*** DONE Build UFOs from Glyphs
-  CLOSED: [2019-03-05 Tue 12:06]
-*** DONE Sync Glyphs source with UFOs
-  CLOSED: [2019-03-05 Tue 12:37]
-*** DONE Make sure files are clean. 
-  CLOSED: [2019-03-13 Wed 20:46]
-*** DONE Get build script working
-  CLOSED: [2019-03-21 Thu 12:49]
-*** TODO Update PR
-*** TODO EMAIL v-fonts
-   When font is done.
-
-
