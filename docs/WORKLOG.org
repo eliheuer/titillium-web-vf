@@ -8,10 +8,111 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 * Titillium Web VF
 ** FontBakery Status
 *** Roman
-**** Fails 00 ****
-**** Warns 00 ****
+**** Fails 20 ****
+******* TODO [#A] :: 
+******* TODO [#A] :: canonical_filename 
+
+	Will fix 
+
+******* TODO [#A] :: metadata/nameid/post_script_name 
+
+	Will fix
+
+******* TODO [#A] :: metadata/nameid/full_name
+
+	Will fix
+
+******* TODO [#A] :: metadata/nameid/font_name
+
+	Will fix
+
+******* TODO [#A] :: metadata/match_fullname_postscript
+******* TODO [#A] :: metadata/valid_name_values
+
+	Will fix
+
+******* TODO [#A] :: metadata/valid_full_name_values
+
+	Will fix
+
+******* TODO [#A] :: metadata/valid_post_script_name_values
+
+	Easy fix
+
+******* TODO [#A] :: metatada/canonical_filename
+
+	Needs to be fixed
+
+******* TODO [#A] :: metadata/nameid/family_and_full_names
+
+	Neeeds to be fixed
+
+******* TODO [#A] :: production_encoded_glyphs
+
+      Easy fix
+
+******* TODO [#C] :: copyright
+
+      Easy fix
+
+******* TODO [#A] :: familyname
+      
+      Needs to be fixed
+
+******* TODO [#A] :: fullfontname
+      
+      Needs to be fixed
+      
+******* TODO [#B] :: postscriptname
+      
+      Needs to be fixed
+
+******* TODO [#B] :: typographicfamilyname
+      
+      Needs to be fixed, should be easy
+
+******* TODO [#B] :: typographicsubfamilyname
+      
+      Needs to be fixed, should be easy
+
+******* TODO [#A] :: integer_ppem_if_hinted
+      
+      This needs to be fixed
+
+******* TODO [#A] :: ots
+      
+      This needs to be fixed
+
+******* TODO [#C] :: valid_glyphnames
+      
+      This can be fixed but it's not top priority
+      Need to move the Glyphs XML file
+      
+**** Warns 05 ****
+******* TODO [#A] :: 
+******* TODO [#C] :: unitsperem_strictunitsperem_strict
+
+	Not an issue, can upscale in Glyphs if needed
+
+******* TODO [#C] :: production_glyphs_similarity
+
+	Not a major issue, will look into it if needed
+
+******* TODO [#C] :: family_and_style_max_lengthfamily_and_style_max_length
+
+	This needs to be fixed 
+
+******* TODO [#A] :: gpos_kerning_info
+
+	This needs to be fixed.
+
+******* TODO [#B] :: points_out_of_bounds
+
+	Have not looked yet, but this seems ok.
+
 *** Italic
 **** Fails 25 ****
+******* TODO [#A] :: 
 ******* TODO [#A] :: canonical_filename 
 
 	Will fix 
@@ -111,23 +212,29 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
       
 **** Warns 05 ****
 ******* TODO [#A] :: 
-******* TODO :: unitsperem_strictunitsperem_strict
-      Not an issue, can upscale in Glyphs if needed
+******* TODO [#C] :: unitsperem_strictunitsperem_strict
 
-******* TODO :: production_glyphs_similarity
-      Not a major issue, will look into it if needed
+	Not an issue, can upscale in Glyphs if needed
+
+******* TODO [#C] :: production_glyphs_similarity
+
+	Not a major issue, will look into it if needed
 
 ******* TODO [#C] :: family_and_style_max_lengthfamily_and_style_max_length
-      This needs to be 
+
+	This needs to be 
 
 ******* TODO [#A] :: gpos_kerning_info
-      This needs to be fixed.
 
-******* TODO :: points_out_of_bounds
-      Have not looked yet, but this seems ok.
+	This needs to be fixed.
+
+******* TODO [#B] :: points_out_of_bounds
+
+	Have not looked yet, but this seems ok.
 
 ** TODOs
-*** TODO [#A] Build UFOs from Glyphs
+*** DONE [#A] Build UFOs from Glyphs
+    CLOSED: [2019-03-24 Sun 17:57]
 *** DONE [#B] Sync Glyphs source with UFOs
     CLOSED: [2019-03-05 Tue 12:37]
 *** DONE [#A] Make sure files are clean
@@ -144,9 +251,8 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 *** Addfont
     gftools add-font ~/Google/fonts/ofl/titilliumweb
 *** Build Commands
-**** Fontmake
-     fontmake -g sources/TitilliumWeb-Roman.glyphs -o variable --output-path fonts/font-VF.ttf
-     fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --output-path sources/
-     fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --verbose DEBUG && rm -rf instance_ufo && cp -r master_ufo sources/ && rm -rf master_ufo
+    fontmake -g sources/TitilliumWeb-Roman.glyphs -o variable --output-path fonts/font-VF.ttf
+    fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --output-path sources/
+    fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --verbose DEBUG && rm -rf instance_ufo && cp -r master_ufo sources/ && rm -rf master_ufo
 *** Build Info
     python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/titilliumweb --fontbakery --ttfautohint "-I -W"
