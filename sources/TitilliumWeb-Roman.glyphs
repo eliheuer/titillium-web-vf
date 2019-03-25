@@ -1,5 +1,8 @@
 {
 .appVersion = "1220";
+DisplayStrings = (
+"/Abreve"
+);
 copyright = "Copyright 2019 The Titillium Web VF Project Authors (https://github.com/eliheuer/titillium-web-vf)";
 customParameters = (
 {

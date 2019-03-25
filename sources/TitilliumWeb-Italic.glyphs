@@ -1,8 +1,5 @@
 {
 .appVersion = "1220";
-DisplayStrings = (
-"/.notdef"
-);
 copyright = "Copyright 2017 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
 customParameters = (
 {
@@ -46305,6 +46302,12 @@ width = 50;
 );
 instances = (
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web ExtraLight Italic";
+}
+);
 interpolationWeight = 35;
 instanceInterpolations = {
 "459CA063-FA7D-4205-A795-7B6CE244EAAB" = 1;
@@ -46313,6 +46316,12 @@ name = "ExtraLight Italic";
 weightClass = ExtraLight;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web Light Italic";
+}
+);
 interpolationWeight = 59;
 instanceInterpolations = {
 "459CA063-FA7D-4205-A795-7B6CE244EAAB" = 0.75758;
@@ -46322,14 +46331,27 @@ name = "Light Italic";
 weightClass = Light;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web Italic";
+}
+);
 interpolationWeight = 75;
 instanceInterpolations = {
 "459CA063-FA7D-4205-A795-7B6CE244EAAB" = 0.59596;
 "6F771D6B-58AC-4073-A542-FF52B938F09A" = 0.40404;
 };
+isItalic = 1;
 name = Italic;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web SemiBold Italic";
+}
+);
 interpolationWeight = 109;
 instanceInterpolations = {
 "459CA063-FA7D-4205-A795-7B6CE244EAAB" = 0.25253;
@@ -46339,6 +46361,12 @@ name = "SemiBold Italic";
 weightClass = SemiBold;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web Bold Italic";
+}
+);
 interpolationWeight = 134;
 instanceInterpolations = {
 "6F771D6B-58AC-4073-A542-FF52B938F09A" = 1;
