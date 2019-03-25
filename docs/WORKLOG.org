@@ -8,65 +8,7 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 * Titillium Web VF
 ** FontBakery Status
 *** Roman
-**** Fails 20 ****
-******* TODO [#A] :: canonical_filename 
-
-	Will fix 
-
-******* TODO [#C] :: metadata/nameid/post_script_name 
-
-	Will fix
-
-******* TODO [#C] :: metadata/nameid/full_name
-
-	Will fix
-
-******* TODO [#C] :: metadata/nameid/font_name
-
-	Will fix
-
-******* TODO [#C] :: metadata/match_fullname_postscript
-	
-	Info here
-
-******* TODO [#C] :: metadata/valid_name_values
-
-	Will fix
-
-******* TODO [#C] :: metadata/valid_full_name_values
-
-	Will fix
-
-******* TODO [#B] :: metadata/valid_post_script_name_values
-
-	Easy fix
-
-******* TODO [#B] :: metatada/canonical_filename
-
-	Needs to be fixed
-
-******* TODO :: familyname
-      
-	Needs to be fixed
-
-******* TODO :: fullfontname
-      
-	Needs to be fixed
-
-******* TODO :: postscriptname
-      
-	This is a bug, will not fix
-
-******* TODO :: typographicfamilyname
-      
-	Needs to be fixed, should be easy
-
-******* TODO :: typographicsubfamilyname
-      
-	Needs to be fixed, should be easy
-	https://glyphsapp.com/tutorials/naming
-	Not sure how to fix ATM
-	
+**** Fails 03 ****
 ******* TODO :: integer_ppem_if_hinted
       
 	This needs to be fixed:
@@ -83,38 +25,14 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 ******* TODO [#A] :: valid_glyphnames
       
 	This can be fixed but it's not top priority
-	Need to move the Glyphs XML file
+	Need to use a custom Glyphs XML file
       
-******* DONE :: metadata/nameid/family_and_full_names
-	CLOSED: [2019-03-25 Mon 09:01]
-
-	Fixed by renaming file
-
-******* DONE :: production_encoded_glyphs
-	CLOSED: [2019-03-25 Mon 08:57]
-
-	I think this is fixed?
-
-******* DONE :: copyright
-	CLOSED: [2019-03-25 Mon 08:55]
-
-	Fixed in the source file
-
-**** Warns 05 **** 
-******* TODO :: unitsperem_strictunitsperem_strict
+**** Warns 04 **** 
+******* TODO :: unitsperem_strict
 
 	Not an issue, can upscale in Glyphs if needed
 
-******* TODO :: production_glyphs_similarity
-
-	Not a major issue, will look into it if needed
-
-******* TODO :: fullfontname
-      
-	Needs to be fixed 
-	Not sure how to fix
-      
-******* TODO :: family_and_style_max_lengthfamily_and_style_max_length
+******* TODO :: family_and_style_max_length
 
 	This needs to be fixed 
 
@@ -128,55 +46,18 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 	Have not looked yet, but this seems ok.
 
 *** Italic
-**** Fails 25 ****
-******* TODO [#A] :: 
-******* TODO [#A] :: canonical_filename 
+**** Fails 14 ****
+******* TODO [#A] :: metadata/valid_filename_values
 
 	Will fix 
 
-******* TODO [#A] :: metadata/nameid/post_script_name 
-
-	Will fix
-
-******* TODO [#A] :: metadata/nameid/full_name
-
-	Will fix
-
-******* TODO [#A] :: metadata/nameid/font_name
-
-	Will fix
-
-******* TODO [#A] :: metadata/valid_name_values
-
-	Will fix
-
-******* TODO [#A] :: metadata/valid_full_name_values
-
-	Will fix
-
-******* TODO [#A] :: metadata/valid_post_script_name_values
-
-      Easy fix
-
-******* TODO [#A] :: metadata/canonical_filename
-
-	Easy fix
-
-******* TODO [#A] :: metadata/italic_style
-
-	Easy fix
-
-******* TODO [#A] :: metadata/nameid/family_and_full_names
-      Neeeds to be fixed
-******* TODO [#A] :: metatada/canonical_style_names
-      Needs to be fixed
 ******* TODO [#A] :: fsselection
 
       Fix in Glyphs
 
 ******* TODO [#A] :: italic_angle
 
-      Easy fix
+	Easy fix
 
 ******* TODO [#A] :: mac_style
 
@@ -186,50 +67,45 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 
       Easy fix
 
-******* TODO [#C] :: copyright
-
-      Easy fix
-
-******* TODO [#A] :: familyname
+******* TODO [#C] :: familyname
       
       Needs to be fixed
 
-******* TODO [#A] :: subfamilyname 
+******* TODO [#C] :: subfamilyname 
       
       Needs to be fixed
 
-******* TODO [#A] :: fullfontname
+******* TODO [#C] :: fullfontname
       
       Needs to be fixed
       
-******* TODO [#B] :: postscriptname
+******* TODO [#C] :: postscriptname
       
       Needs to be fixed
 
-******* TODO [#B] :: typographicfamilyname
+******* TODO [#C] :: typographicfamilyname
       
       Needs to be fixed, should be easy
 
-******* TODO [#B] :: typographicsubfamilynametypographicsubfamilyname
+******* TODO [#C] :: typographicsubfamilyname
       
       Needs to be fixed, should be easy
 
-******* TODO [#A] :: integer_ppem_if_hinted
+******* TODO :: integer_ppem_if_hinted
+      
+	This needs to be fixed?
+
+******* TODO :: ots
       
       This needs to be fixed
 
-******* TODO [#A] :: ots
-      
-      This needs to be fixed
-
-******* TODO [#C] :: valid_glyphnames
+******* TODO [#A] :: valid_glyphnames
       
       This can be fixed but it's not top priority
       Need to move the Glyphs XML file
       
 **** Warns 05 ****
-******* TODO [#A] :: 
-******* TODO [#C] :: unitsperem_strictunitsperem_strict
+******* TODO [#C] :: unitsperem_strict
 
 	Not an issue, can upscale in Glyphs if needed
 
@@ -237,7 +113,7 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 
 	Not a major issue, will look into it if needed
 
-******* TODO [#C] :: family_and_style_max_lengthfamily_and_style_max_length
+******* TODO [#C] :: family_and_style_max_length
 
 	This needs to be 
 
