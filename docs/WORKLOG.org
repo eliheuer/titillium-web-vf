@@ -9,104 +9,121 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 ** FontBakery Status
 *** Roman
 **** Fails 20 ****
-******* TODO [#A] :: 
 ******* TODO [#A] :: canonical_filename 
 
 	Will fix 
 
-******* TODO [#A] :: metadata/nameid/post_script_name 
+******* TODO [#C] :: metadata/nameid/post_script_name 
 
 	Will fix
 
-******* TODO [#A] :: metadata/nameid/full_name
+******* TODO [#C] :: metadata/nameid/full_name
 
 	Will fix
 
-******* TODO [#A] :: metadata/nameid/font_name
+******* TODO [#C] :: metadata/nameid/font_name
 
 	Will fix
 
-******* TODO [#A] :: metadata/match_fullname_postscript
-******* TODO [#A] :: metadata/valid_name_values
+******* TODO [#C] :: metadata/match_fullname_postscript
+	
+	Info here
+
+******* TODO [#C] :: metadata/valid_name_values
 
 	Will fix
 
-******* TODO [#A] :: metadata/valid_full_name_values
+******* TODO [#C] :: metadata/valid_full_name_values
 
 	Will fix
 
-******* TODO [#A] :: metadata/valid_post_script_name_values
+******* TODO [#B] :: metadata/valid_post_script_name_values
 
 	Easy fix
 
-******* TODO [#A] :: metatada/canonical_filename
+******* TODO [#B] :: metatada/canonical_filename
 
 	Needs to be fixed
 
-******* TODO [#A] :: metadata/nameid/family_and_full_names
-
-	Neeeds to be fixed
-
-******* TODO [#A] :: production_encoded_glyphs
-
-      Easy fix
-
-******* TODO [#C] :: copyright
-
-      Easy fix
-
-******* TODO [#A] :: familyname
+******* TODO :: familyname
       
-      Needs to be fixed
+	Needs to be fixed
 
-******* TODO [#A] :: fullfontname
+******* TODO :: fullfontname
       
-      Needs to be fixed
-      
-******* TODO [#B] :: postscriptname
-      
-      Needs to be fixed
+	Needs to be fixed
 
-******* TODO [#B] :: typographicfamilyname
+******* TODO :: postscriptname
       
-      Needs to be fixed, should be easy
+	This is a bug, will not fix
 
-******* TODO [#B] :: typographicsubfamilyname
+******* TODO :: typographicfamilyname
       
-      Needs to be fixed, should be easy
+	Needs to be fixed, should be easy
 
-******* TODO [#A] :: integer_ppem_if_hinted
+******* TODO :: typographicsubfamilyname
       
-      This needs to be fixed
+	Needs to be fixed, should be easy
+	https://glyphsapp.com/tutorials/naming
+	Not sure how to fix ATM
+	
+******* TODO :: integer_ppem_if_hinted
+      
+	This needs to be fixed:
+	I tryed adding the "-t" flag to ttfautohint
+	Didn't work.
+	I also looks at other fonts with ttx, no luck
 
-******* TODO [#A] :: ots
+******* TODO :: ots
       
-      This needs to be fixed
+	Maybe this isn't and issue:
+	https://github.com/khaledhosny/ots/issues/178
+	I might still try to fix this but it's not a top priority.
 
-******* TODO [#C] :: valid_glyphnames
+******* TODO [#A] :: valid_glyphnames
       
-      This can be fixed but it's not top priority
-      Need to move the Glyphs XML file
+	This can be fixed but it's not top priority
+	Need to move the Glyphs XML file
       
-**** Warns 05 ****
-******* TODO [#A] :: 
-******* TODO [#C] :: unitsperem_strictunitsperem_strict
+******* DONE :: metadata/nameid/family_and_full_names
+	CLOSED: [2019-03-25 Mon 09:01]
+
+	Fixed by renaming file
+
+******* DONE :: production_encoded_glyphs
+	CLOSED: [2019-03-25 Mon 08:57]
+
+	I think this is fixed?
+
+******* DONE :: copyright
+	CLOSED: [2019-03-25 Mon 08:55]
+
+	Fixed in the source file
+
+**** Warns 05 **** 
+******* TODO :: unitsperem_strictunitsperem_strict
 
 	Not an issue, can upscale in Glyphs if needed
 
-******* TODO [#C] :: production_glyphs_similarity
+******* TODO :: production_glyphs_similarity
 
 	Not a major issue, will look into it if needed
 
-******* TODO [#C] :: family_and_style_max_lengthfamily_and_style_max_length
+******* TODO :: fullfontname
+      
+	Needs to be fixed 
+	Not sure how to fix
+      
+******* TODO :: family_and_style_max_lengthfamily_and_style_max_length
 
 	This needs to be fixed 
 
 ******* TODO [#A] :: gpos_kerning_info
 
 	This needs to be fixed.
+	Still having issues.
 
-******* TODO [#B] :: points_out_of_bounds
+******* TODO :: points_out_of_bounds
 
 	Have not looked yet, but this seems ok.
 
@@ -256,3 +273,8 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
     fontmake -g sources/TitilliumWeb-Roman.glyphs -o ufo --verbose DEBUG && rm -rf instance_ufo && cp -r master_ufo sources/ && rm -rf master_ufo
 *** Build Info
     python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/titilliumweb --fontbakery --ttfautohint "-I -W"
+** Post Build Steps
+   ttx name table hacking is needed for now.
+   Hopefully I can fix this in the source
+   at some point.
+   
