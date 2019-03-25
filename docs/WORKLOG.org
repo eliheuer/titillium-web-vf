@@ -53,7 +53,7 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 
 ******* TODO [#A] :: fsselection
 
-      Fix in Glyphs
+	Fix in Glyphs
 
 ******* TODO [#A] :: italic_angle
 
@@ -61,35 +61,35 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 
 ******* TODO [#A] :: mac_style
 
-      Easy fix
+	Easy fix
 
 ******* TODO [#A] :: production_encoded_glyphs
 
-      Easy fix
+	Easy fix
 
 ******* TODO [#C] :: familyname
       
-      Needs to be fixed
+	Needs to be fixed
 
 ******* TODO [#C] :: subfamilyname 
       
-      Needs to be fixed
+	Needs to be fixed
 
 ******* TODO [#C] :: fullfontname
       
-      Needs to be fixed
+	Needs to be fixed
       
 ******* TODO [#C] :: postscriptname
       
-      Needs to be fixed
+	Needs to be fixed
 
 ******* TODO [#C] :: typographicfamilyname
       
-      Needs to be fixed, should be easy
+	Needs to be fixed, should be easy
 
 ******* TODO [#C] :: typographicsubfamilyname
       
-      Needs to be fixed, should be easy
+	Needs to be fixed, should be easy
 
 ******* TODO :: integer_ppem_if_hinted
       
@@ -115,15 +115,18 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 
 ******* TODO [#C] :: family_and_style_max_length
 
-	This needs to be 
-
-******* TODO [#A] :: gpos_kerning_info
-
 	This needs to be fixed.
 
 ******* TODO [#B] :: points_out_of_bounds
 
 	Have not looked yet, but this seems ok.
+
+******* DONE :: gpos_kerning_info
+	CLOSED: [2019-03-25 Mon 18:34]
+
+	This is fixed now. I had to work on the kerning
+	in Glyphs a bit to make sure everything was the
+	same across masters.
 
 ** TODOs
 *** DONE [#A] Build UFOs from Glyphs
