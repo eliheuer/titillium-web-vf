@@ -274,7 +274,4 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 *** Build Info
     python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/titilliumweb --fontbakery --ttfautohint "-I -W"
 ** Post Build Steps
-   ttx name table hacking is needed for now.
-   Hopefully I can fix this in the source
-   at some point.
-   
+   None, for now. 
