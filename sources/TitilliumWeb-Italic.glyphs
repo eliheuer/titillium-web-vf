@@ -1,5 +1,8 @@
 {
-.appVersion = "1215";
+.appVersion = "1220";
+DisplayStrings = (
+"/.notdef"
+);
 copyright = "Copyright 2017 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
 customParameters = (
 {
@@ -35,7 +38,7 @@ value = "1KTF";
 date = "2019-02-26 02:08:06 +0000";
 designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino and others";
 designerURL = "http://gaber.design/";
-familyName = TitilliumWeb;
+familyName = "Titillium Web";
 fontMaster = (
 {
 ascender = 1240;
@@ -38298,11 +38301,51 @@ glyphname = .notdef;
 layers = (
 {
 layerId = "459CA063-FA7D-4205-A795-7B6CE244EAAB";
-width = 223;
+paths = (
+{
+closed = 1;
+nodes = (
+"50 0 LINE",
+"450 0 LINE",
+"450 700 LINE",
+"50 700 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"400 650 LINE",
+"400 50 LINE",
+"100 50 LINE",
+"100 650 LINE"
+);
+}
+);
+width = 500;
 },
 {
 layerId = "6F771D6B-58AC-4073-A542-FF52B938F09A";
-width = 223;
+paths = (
+{
+closed = 1;
+nodes = (
+"50 0 LINE",
+"450 0 LINE",
+"450 700 LINE",
+"50 700 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"400 650 LINE",
+"400 50 LINE",
+"100 50 LINE",
+"100 650 LINE"
+);
+}
+);
+width = 500;
 }
 );
 },

@@ -1,6 +1,6 @@
 {
 .appVersion = "1220";
-copyright = "Copyright 2017 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
+copyright = "Copyright 2019 The Titillium Web VF Project Authors (https://github.com/eliheuer/titillium-web-vf)";
 customParameters = (
 {
 name = "Disable Last Change";
@@ -35,7 +35,7 @@ value = "1KTF";
 date = "2019-02-26 02:08:06 +0000";
 designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino and others";
 designerURL = "http://gaber.design/";
-familyName = TitilliumWeb;
+familyName = "Titillium Web";
 fontMaster = (
 {
 ascender = 1240;
@@ -65724,6 +65724,12 @@ width = 50;
 );
 instances = (
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web ExtraLight";
+}
+);
 interpolationWeight = 36;
 instanceInterpolations = {
 "459CA063-FA7D-4205-A795-7B6CE244EAAB" = 1;
@@ -65732,6 +65738,12 @@ name = ExtraLight;
 weightClass = ExtraLight;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web Light";
+}
+);
 interpolationWeight = 64;
 instanceInterpolations = {
 "459CA063-FA7D-4205-A795-7B6CE244EAAB" = 0.72549;
@@ -65741,6 +65753,12 @@ name = Light;
 weightClass = Light;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web Regular";
+}
+);
 instanceInterpolations = {
 "459CA063-FA7D-4205-A795-7B6CE244EAAB" = 0.37255;
 "6F771D6B-58AC-4073-A542-FF52B938F09A" = 0.62745;
@@ -65748,6 +65766,12 @@ instanceInterpolations = {
 name = Regular;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web SemiBold";
+}
+);
 interpolationWeight = 138;
 instanceInterpolations = {
 "6F771D6B-58AC-4073-A542-FF52B938F09A" = 1;
@@ -65756,15 +65780,28 @@ name = SemiBold;
 weightClass = SemiBold;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web Bold";
+}
+);
 interpolationWeight = 190;
 instanceInterpolations = {
 "6F771D6B-58AC-4073-A542-FF52B938F09A" = 0.44681;
 "EA657207-4E15-4023-BA2A-6FA5407A60CD" = 0.55319;
 };
+isBold = 1;
 name = Bold;
 weightClass = Bold;
 },
 {
+customParameters = (
+{
+name = familyName;
+value = "Titillium Web Black";
+}
+);
 interpolationWeight = 232;
 instanceInterpolations = {
 "EA657207-4E15-4023-BA2A-6FA5407A60CD" = 1;
