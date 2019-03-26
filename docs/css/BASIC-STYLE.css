@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TitilliumWeb';
-    src: url('/../fonts/TitilliumWeb-Roman-VF.ttf');
+    src: url('/../../fonts/TitilliumWeb-Roman-VF.ttf');
     format("truetype");
     font-weight: bold;
 }
