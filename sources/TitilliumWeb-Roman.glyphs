@@ -66358,7 +66358,7 @@ weightClass = Bold;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Black";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 232;
