@@ -22,10 +22,14 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 	https://github.com/khaledhosny/ots/issues/178
 	I might still try to fix this but it's not a top priority.
 
-******* TODO [#C] :: valid_glyphnames
-      
-	This can be fixed but it's not top priority
-	Need to use a custom Glyphs XML file
+******* DONE :: valid_glyphnames
+	CLOSED: [2019-03-27 Wed 20:33]
+
+	This can be fixed with a fonttools script:
+	https://github.com/fonttools/fonttools/issues/149
+
+	I wrote my own script to fix this:
+	https://gist.github.com/eliheuer/f7170b55832ca2d985aad1c21ff1ee99
       
 **** Warns 03 ****
 ******* :: unitsperem_strict
@@ -38,7 +42,7 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 
 ******* :: points_out_of_bounds
 
-	Have not looked yet, but this seems ok.
+	This seems ok.
 
 ******* DONE :: gpos_kerning_info
 	CLOSED: [2019-03-26 Tue 14:09]
