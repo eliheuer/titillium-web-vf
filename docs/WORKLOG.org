@@ -9,19 +9,18 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 ** FontBakery Status
 *** Roman
 **** Fails 03 ****
-******* TODO :: integer_ppem_if_hinted
-      
-	This needs to be fixed:
-	I tryed adding the "-t" flag to ttfautohint
-	Didn't work.
-	I also looks at other fonts with ttx, no luck
-
 ******* TODO :: ots
       
 	Maybe this isn't and issue:
 	https://github.com/khaledhosny/ots/issues/178
 	I might still try to fix this but it's not a top priority.
 
+******* DONE :: integer_ppem_if_hinted
+	CLOSED: [2019-03-27 Wed 23:32]
+      
+	This in the head table fixed it:
+	<flags value="00000000 00001111"/>
+	
 ******* DONE :: valid_glyphnames
 	CLOSED: [2019-03-27 Wed 20:33]
 
