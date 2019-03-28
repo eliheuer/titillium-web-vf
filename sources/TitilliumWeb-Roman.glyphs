@@ -1,7 +1,41 @@
 {
 .appVersion = "1220";
-DisplayStrings = (
-"/Abreve"
+classes = (
+{
+automatic = 1;
+code = "questiondown.cap endash.cap emdash.cap periodcentered.cap exclamdown.cap parenleft.cap parenright.cap bracketleft.cap bracketright.cap braceleft.cap braceright.cap";
+name = cap;
+},
+{
+automatic = 1;
+code = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Agrave Aacute Acircumflex Atilde Adieresis Amacron Abreve Aring Aringacute Aogonek AE AEacute Cacute Ccircumflex Ccaron Cdotaccent Ccedilla Dcaron Dcroat Egrave Eacute Ecircumflex Ecaron Edieresis Emacron Ebreve Edotaccent Eogonek Gcircumflex Gbreve Gdotaccent Gcommaaccent Hcircumflex Hbar Igrave Iacute Icircumflex Itilde Idieresis Imacron Ibreve Idotaccent Iogonek Jcircumflex Kcommaaccent Lacute Lcaron Lcommaaccent Lslash Nacute Ncaron Ntilde Ncommaaccent Ograve Oacute Ocircumflex Otilde Odieresis Omacron Obreve Ohungarumlaut Oslash Oslashacute OE Racute Rcaron Rcommaaccent Sacute Scircumflex Scaron Scedilla Scommaaccent Tcaron Tcommaaccent Tbar Ugrave Uacute Ucircumflex Utilde Udieresis Umacron Ubreve Uring Uhungarumlaut Uogonek Wgrave Wacute Wcircumflex Wdieresis Ygrave Yacute Ycircumflex Ydieresis Zacute Zcaron Zdotaccent Eng Eth Thorn endash.cap emdash.cap periodcentered.cap parenleft.cap parenright.cap bracketleft.cap bracketright.cap braceleft.cap braceright.cap at.cap";
+name = caps;
+},
+{
+automatic = 1;
+code = "questiondown endash emdash periodcentered exclamdown parenleft parenright bracketleft bracketright braceleft braceright";
+name = cap_0;
+},
+{
+automatic = 1;
+code = "zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior";
+name = frac1;
+},
+{
+automatic = 1;
+code = "slash fraction perthousand onehalf onequarter threequarters threequarters zeroinferior oneinferior twoinferior threeinferior fourinferior fiveinferior sixinferior seveninferior eightinferior nineinferior";
+name = frac2;
+},
+{
+automatic = 1;
+code = "zero one two three four five six seven eight nine zero.pnum one.pnum two.pnum three.pnum four.pnum five.pnum six.pnum seven.pnum eight.pnum nine.pnum zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr zeroinferior oneinferior twoinferior threeinferior fourinferior fiveinferior sixinferior seveninferior eightinferior nineinferior";
+name = frac3;
+},
+{
+automatic = 1;
+code = "zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior";
+name = frac4;
+}
 );
 copyright = "Copyright 2019 The Titillium Web VF Project Authors (https://github.com/eliheuer/titillium-web-vf)";
 customParameters = (
@@ -38,6 +72,7 @@ value = "1KTF";
 date = "2019-02-26 02:08:06 +0000";
 designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino";
 designerURL = "https://gaber.design";
+disablesNiceNames = 1;
 familyName = "Titillium Web";
 featurePrefixes = (
 {
@@ -395,7 +430,6 @@ sub lam_yehHamzaabove-ar by lam_yehHamzaabove-ar.fina;
 name = fina;
 },
 {
-automatic = 1;
 code = "lookupflag IgnoreMarks RightToLeft;
 sub alef-ar lam-ar.init lam-ar.medi heh-ar.fina by allah-ar;
 	sub lam-ar.init alef-ar.fina by lam_alef-ar;
@@ -410,107 +444,102 @@ sub alef-ar lam-ar.init lam-ar.medi heh-ar.fina by allah-ar;
 	sub lam-ar.medi alefWasla-ar.fina by lam_alefWasla-ar.fina;
 	sub lam-ar.init alefMaksura-ar.fina by lam_alefMaksura-ar;
 	sub lam-ar.medi alefMaksura-ar.fina by lam_alefMaksura-ar.fina;
-";
-name = rlig;
-},
-{
-automatic = 1;
-code = "lookup dlig_RTL {
-lookupflag IgnoreMarks RightToLeft;
-	sub alefMaksura-ar.medi alefMaksura-ar.fina by alefMaksura_alefMaksura-ar.fina;
-	sub alefMaksura-ar.fina alefMaksura-ar.fina by alefMaksura_alefMaksura-ar.fina.alt;
-	sub alefMaksura-ar.medi noon-ar.fina by alefMaksura_noon-ar.fina;
-	sub alefMaksura-ar.fina noon-ar.fina by alefMaksura_noon-ar.fina.alt;
-	sub alefMaksura-ar.medi reh-ar.fina by alefMaksura_reh-ar.fina;
-	sub alefMaksura-ar.fina reh-ar.fina by alefMaksura_reh-ar.fina.alt;
-	sub alefMaksura-ar.medi zain-ar.fina by alefMaksura_zain-ar.fina;
-	sub beh-ar.medi alefMaksura-ar.fina by beh_alefMaksura-ar.fina;
-	sub beh-ar.medi noon-ar.fina by beh_noon-ar.fina;
 	sub beh-ar.medi reh-ar.fina by beh_reh-ar.fina;
+	sub beh-ar.medi zain-ar.fina by beh_zain-ar.fina;
+	sub beh-ar.medi noon-ar.fina by beh_noon-ar.fina;
+	sub beh-ar.medi alefMaksura-ar.fina by beh_alefMaksura-ar.fina;
 	sub beh-ar.medi yeh-ar.fina by beh_yeh-ar.fina;
 	sub beh-ar.medi yehHamzaabove-ar.fina by beh_yehHamzaabove-ar.fina;
-	sub beh-ar.medi zain-ar.fina by beh_zain-ar.fina;
-	sub dad-ar.init alefMaksura-ar.fina by dad_alefMaksura-ar;
-	sub dad-ar.medi alefMaksura-ar.fina by dad_alefMaksura-ar.fina;
+	sub peh-ar.medi reh-ar.fina by peh_reh-ar.fina;
+	sub peh-ar.medi zain-ar.fina by peh_zain-ar.fina;
+	sub peh-ar.medi noon-ar.fina by peh_noon-ar.fina;
+	sub peh-ar.medi alefMaksura-ar.fina by peh_alefMaksura-ar.fina;
+	sub peh-ar.medi yeh-ar.fina by peh_yeh-ar.fina;
+	sub peh-ar.medi yehHamzaabove-ar.fina by peh_yehHamzaabove-ar.fina;
+	sub teh-ar.medi reh-ar.fina by teh_reh-ar.fina;
+	sub teh-ar.medi zain-ar.fina by teh_zain-ar.fina;
+	sub teh-ar.medi noon-ar.fina by teh_noon-ar.fina;
+	sub teh-ar.medi alefMaksura-ar.fina by teh_alefMaksura-ar.fina;
+	sub teh-ar.medi yeh-ar.fina by teh_yeh-ar.fina;
+	sub teh-ar.medi yehHamzaabove-ar.fina by teh_yehHamzaabove-ar.fina;
+	sub theh-ar.medi reh-ar.fina by theh_reh-ar.fina;
+	sub theh-ar.medi zain-ar.fina by theh_zain-ar.fina;
+	sub theh-ar.medi noon-ar.fina by theh_noon-ar.fina;
+	sub theh-ar.medi alefMaksura-ar.fina by theh_alefMaksura-ar.fina;
+	sub theh-ar.medi yeh-ar.fina by theh_yeh-ar.fina;
+	sub theh-ar.medi yehHamzaabove-ar.fina by theh_yehHamzaabove-ar.fina;
+	sub seen-ar.init reh-ar.fina by seen_reh-ar;
+	sub seen-ar.medi reh-ar.fina by seen_reh-ar.fina;
+	sub seen-ar.init alefMaksura-ar.fina by seen_alefMaksura-ar;
+	sub seen-ar.medi alefMaksura-ar.fina by seen_alefMaksura-ar.fina;
+	sub seen-ar.init yeh-ar.fina by seen_yeh-ar;
+	sub seen-ar.medi yeh-ar.fina by seen_yeh-ar.fina;
+	sub seen-ar.init zain-ar.fina by seen_zain-ar;
+	sub seen-ar.medi zain-ar.fina by seen_zain-ar.fina;
+	sub seen-ar.init yehHamzaabove-ar.fina by seen_yehHamzaabove-ar;
+	sub seen-ar.medi yehHamzaabove-ar.fina by seen_yehHamzaabove-ar.fina;
+	sub sheen-ar.init reh-ar.fina by sheen_reh-ar;
+	sub sheen-ar.medi reh-ar.fina by sheen_reh-ar.fina;
+	sub sheen-ar.init zain-ar.fina by sheen_zain-ar;
+	sub sheen-ar.medi zain-ar.fina by sheen_zain-ar.fina;
+	sub sheen-ar.init alefMaksura-ar.fina by sheen_alefMaksura-ar;
+	sub sheen-ar.medi alefMaksura-ar.fina by sheen_alefMaksura-ar.fina;
+	sub sheen-ar.init yeh-ar.fina by sheen_yeh-ar;
+	sub sheen-ar.medi yeh-ar.fina by sheen_yeh-ar.fina;
+	sub sheen-ar.init yehHamzaabove-ar.fina by sheen_yehHamzaabove-ar;
+	sub sheen-ar.medi yehHamzaabove-ar.fina by sheen_yehHamzaabove-ar.fina;
+	sub sad-ar.init reh-ar.fina by sad_reh-ar;
+	sub sad-ar.medi reh-ar.fina by sad_reh-ar.fina;
+	sub sad-ar.init zain-ar.fina by sad_zain-ar;
+	sub sad-ar.medi zain-ar.fina by sad_zain-ar.fina;
+	sub sad-ar.init alefMaksura-ar.fina by sad_alefMaksura-ar;
+	sub sad-ar.medi alefMaksura-ar.fina by sad_alefMaksura-ar.fina;
+	sub sad-ar.init yeh-ar.fina by sad_yeh-ar;
+	sub sad-ar.medi yeh-ar.fina by sad_yeh-ar.fina;
+	sub sad-ar.init yehHamzaabove-ar.fina by sad_yehHamzaabove-ar;
+	sub sad-ar.medi yehHamzaabove-ar.fina by sad_yehHamzaabove-ar.fina;
 	sub dad-ar.init reh-ar.fina by dad_reh-ar;
 	sub dad-ar.medi reh-ar.fina by dad_reh-ar.fina;
+	sub dad-ar.init zain-ar.fina by dad_zain-ar;
+	sub dad-ar.medi zain-ar.fina by dad_zain-ar.fina;
+	sub dad-ar.init alefMaksura-ar.fina by dad_alefMaksura-ar;
+	sub dad-ar.medi alefMaksura-ar.fina by dad_alefMaksura-ar.fina;
 	sub dad-ar.init yeh-ar.fina by dad_yeh-ar;
 	sub dad-ar.medi yeh-ar.fina by dad_yeh-ar.fina;
 	sub dad-ar.init yehHamzaabove-ar.fina by dad_yehHamzaabove-ar;
 	sub dad-ar.medi yehHamzaabove-ar.fina by dad_yehHamzaabove-ar.fina;
-	sub dad-ar.init zain-ar.fina by dad_zain-ar;
-	sub dad-ar.medi zain-ar.fina by dad_zain-ar.fina;
 	sub lam-ar.init alefMaksura-ar.fina by lam_alefMaksura-ar;
 	sub lam-ar.medi alefMaksura-ar.fina by lam_alefMaksura-ar.fina;
 	sub lam-ar.init yeh-ar.fina by lam_yeh-ar;
 	sub lam-ar.medi yeh-ar.fina by lam_yeh-ar.fina;
 	sub lam-ar.init yehHamzaabove-ar.fina by lam_yehHamzaabove-ar;
 	sub lam-ar.medi yehHamzaabove-ar.fina by lam_yehHamzaabove-ar.fina;
-	sub noon-ar.medi alefMaksura-ar.fina by noon_alefMaksura-ar.fina;
-	sub noon-ar.medi noon-ar.fina by noon_noon-ar.fina;
 	sub noon-ar.medi reh-ar.fina by noon_reh-ar.fina;
+	sub noon-ar.medi zain-ar.fina by noon_zain-ar.fina;
+	sub noon-ar.medi noon-ar.fina by noon_noon-ar.fina;
+	sub noon-ar.medi alefMaksura-ar.fina by noon_alefMaksura-ar.fina;
 	sub noon-ar.medi yeh-ar.fina by noon_yeh-ar.fina;
 	sub noon-ar.medi yehHamzaabove-ar.fina by noon_yehHamzaabove-ar.fina;
-	sub noon-ar.medi zain-ar.fina by noon_zain-ar.fina;
-	sub peh-ar.medi alefMaksura-ar.fina by peh_alefMaksura-ar.fina;
-	sub peh-ar.medi noon-ar.fina by peh_noon-ar.fina;
-	sub peh-ar.medi reh-ar.fina by peh_reh-ar.fina;
-	sub peh-ar.medi yeh-ar.fina by peh_yeh-ar.fina;
-	sub peh-ar.medi yehHamzaabove-ar.fina by peh_yehHamzaabove-ar.fina;
-	sub peh-ar.medi zain-ar.fina by peh_zain-ar.fina;
-	sub sad-ar.init alefMaksura-ar.fina by sad_alefMaksura-ar;
-	sub sad-ar.medi alefMaksura-ar.fina by sad_alefMaksura-ar.fina;
-	sub sad-ar.init reh-ar.fina by sad_reh-ar;
-	sub sad-ar.medi reh-ar.fina by sad_reh-ar.fina;
-	sub sad-ar.init yeh-ar.fina by sad_yeh-ar;
-	sub sad-ar.medi yeh-ar.fina by sad_yeh-ar.fina;
-	sub sad-ar.init yehHamzaabove-ar.fina by sad_yehHamzaabove-ar;
-	sub sad-ar.medi yehHamzaabove-ar.fina by sad_yehHamzaabove-ar.fina;
-	sub sad-ar.init zain-ar.fina by sad_zain-ar;
-	sub sad-ar.medi zain-ar.fina by sad_zain-ar.fina;
-	sub seen-ar.init alefMaksura-ar.fina by seen_alefMaksura-ar;
-	sub seen-ar.medi alefMaksura-ar.fina by seen_alefMaksura-ar.fina;
-	sub seen-ar.init reh-ar.fina by seen_reh-ar;
-	sub seen-ar.medi reh-ar.fina by seen_reh-ar.fina;
-	sub seen-ar.init yeh-ar.fina by seen_yeh-ar;
-	sub seen-ar.medi yeh-ar.fina by seen_yeh-ar.fina;
-	sub seen-ar.init yehHamzaabove-ar.fina by seen_yehHamzaabove-ar;
-	sub seen-ar.medi yehHamzaabove-ar.fina by seen_yehHamzaabove-ar.fina;
-	sub seen-ar.init zain-ar.fina by seen_zain-ar;
-	sub seen-ar.medi zain-ar.fina by seen_zain-ar.fina;
-	sub sheen-ar.init alefMaksura-ar.fina by sheen_alefMaksura-ar;
-	sub sheen-ar.medi alefMaksura-ar.fina by sheen_alefMaksura-ar.fina;
-	sub sheen-ar.init reh-ar.fina by sheen_reh-ar;
-	sub sheen-ar.medi reh-ar.fina by sheen_reh-ar.fina;
-	sub sheen-ar.init yeh-ar.fina by sheen_yeh-ar;
-	sub sheen-ar.medi yeh-ar.fina by sheen_yeh-ar.fina;
-	sub sheen-ar.init yehHamzaabove-ar.fina by sheen_yehHamzaabove-ar;
-	sub sheen-ar.medi yehHamzaabove-ar.fina by sheen_yehHamzaabove-ar.fina;
-	sub sheen-ar.init zain-ar.fina by sheen_zain-ar;
-	sub sheen-ar.medi zain-ar.fina by sheen_zain-ar.fina;
-	sub teh-ar.medi alefMaksura-ar.fina by teh_alefMaksura-ar.fina;
-	sub teh-ar.medi noon-ar.fina by teh_noon-ar.fina;
-	sub teh-ar.medi reh-ar.fina by teh_reh-ar.fina;
-	sub teh-ar.medi yeh-ar.fina by teh_yeh-ar.fina;
-	sub teh-ar.medi yehHamzaabove-ar.fina by teh_yehHamzaabove-ar.fina;
-	sub teh-ar.medi zain-ar.fina by teh_zain-ar.fina;
-	sub theh-ar.medi alefMaksura-ar.fina by theh_alefMaksura-ar.fina;
-	sub theh-ar.medi noon-ar.fina by theh_noon-ar.fina;
-	sub theh-ar.medi reh-ar.fina by theh_reh-ar.fina;
-	sub theh-ar.medi yeh-ar.fina by theh_yeh-ar.fina;
-	sub theh-ar.medi yehHamzaabove-ar.fina by theh_yehHamzaabove-ar.fina;
-	sub theh-ar.medi zain-ar.fina by theh_zain-ar.fina;
-	sub yehHamzaabove-ar.medi alefMaksura-ar.fina by yehHamzaabove_alefMaksura-ar.fina;
-	sub yehHamzaabove-ar.medi noon-ar.fina by yehHamzaabove_noon-ar.fina;
+	sub alefMaksura-ar reh-ar.fina by alefMaksura_reh-ar.fina;
+	sub alefMaksura-ar zain-ar.fina by alefMaksura_zain-ar.fina;
+	sub alefMaksura-ar noon-ar.fina by alefMaksura_noon-ar.fina;
+	sub alefMaksura-ar alefMaksura-ar.fina by alefMaksura_alefMaksura-ar.fina;
+	sub yeh-ar.medi reh-ar.fina by yeh_reh-ar.fina;
+	sub yeh-ar.medi zain-ar.fina by yeh_zain-ar.fina;
+	sub yeh-ar.medi noon-ar.fina by yeh_noon-ar.fina;
+	sub yeh-ar.medi yeh-ar.fina by yeh_yeh-ar.fina;
 	sub yehHamzaabove-ar.medi reh-ar.fina by yehHamzaabove_reh-ar.fina;
+	sub yehHamzaabove-ar.medi zain-ar.fina by yehHamzaabove_zain-ar.fina;
+	sub yehHamzaabove-ar.medi noon-ar.fina by yehHamzaabove_noon-ar.fina;
+	sub yehHamzaabove-ar.medi alefMaksura-ar.fina by yehHamzaabove_alefMaksura-ar.fina;
 	sub yehHamzaabove-ar.medi yeh-ar.fina by yehHamzaabove_yeh-ar.fina;
 	sub yehHamzaabove-ar.medi yehHamzaabove-ar.fina by yehHamzaabove_yehHamzaabove-ar.fina;
-	sub yehHamzaabove-ar.medi zain-ar.fina by yehHamzaabove_zain-ar.fina;
-	sub yeh-ar.medi noon-ar.fina by yeh_noon-ar.fina;
-	sub yeh-ar.medi reh-ar.fina by yeh_reh-ar.fina;
-	sub yeh-ar.medi yeh-ar.fina by yeh_yeh-ar.fina;
-	sub yeh-ar.medi zain-ar.fina by yeh_zain-ar.fina;
-	sub alef-ar lam-ar.init lam-ar.medi heh-ar.fina by allah-ar;
+	sub alef-ar lam-ar.init lam-ar.medi heh-ar.fina by allah-ar;";
+name = rlig;
+},
+{
+code = "lookup dlig_RTL {
+lookupflag IgnoreMarks RightToLeft;
 } dlig_RTL;
 ";
 name = dlig;
@@ -66207,7 +66236,7 @@ instances = (
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web ExtraLight";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 36;
@@ -66221,7 +66250,7 @@ weightClass = ExtraLight;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Light";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 64;
@@ -66236,7 +66265,7 @@ weightClass = Light;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Regular";
+value = "Titillium Web";
 }
 );
 instanceInterpolations = {
@@ -66249,7 +66278,7 @@ name = Regular;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web SemiBold";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 138;
@@ -66263,7 +66292,7 @@ weightClass = SemiBold;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Bold";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 190;
@@ -66279,7 +66308,7 @@ weightClass = Bold;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Black";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 232;
