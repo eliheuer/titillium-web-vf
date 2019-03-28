@@ -1,5 +1,8 @@
 {
 .appVersion = "1220";
+DisplayStrings = (
+A
+);
 classes = (
 {
 automatic = 1;
@@ -547,6 +550,14 @@ name = dlig;
 );
 fontMaster = (
 {
+alignmentZones = (
+"{1240, 9}",
+"{700, 9}",
+"{660, 9}",
+"{500, 9}",
+"{0, -9}",
+"{-520, -9}"
+);
 ascender = 1240;
 capHeight = 700;
 custom = Extra;
@@ -585,13 +596,33 @@ value = 571;
 }
 );
 descender = -520;
+horizontalStems = (
+32,
+32,
+34,
+34
+);
 id = "459CA063-FA7D-4205-A795-7B6CE244EAAB";
 name = ExtraLight;
+verticalStems = (
+35,
+37,
+36,
+38
+);
 weight = Light;
 weightValue = 36;
 xHeight = 500;
 },
 {
+alignmentZones = (
+"{1240, 9}",
+"{700, 9}",
+"{660, 9}",
+"{500, 9}",
+"{0, -9}",
+"{-520, -9}"
+);
 ascender = 1240;
 capHeight = 680;
 customParameters = (
@@ -629,12 +660,31 @@ value = 571;
 }
 );
 descender = -520;
+horizontalStems = (
+114,
+114,
+120,
+120
+);
 id = "6F771D6B-58AC-4073-A542-FF52B938F09A";
+verticalStems = (
+136,
+136,
+138,
+142
+);
 weight = SemiBold;
 weightValue = 138;
 xHeight = 500;
 },
 {
+alignmentZones = (
+"{1240, 13}",
+"{683, -13}",
+"{505, 13}",
+"{0, -13}",
+"{-520, -25}"
+);
 ascender = 1240;
 capHeight = 700;
 custom = Black;
@@ -66308,7 +66358,7 @@ weightClass = Bold;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web";
+value = "Titillium Web Black";
 }
 );
 interpolationWeight = 232;
