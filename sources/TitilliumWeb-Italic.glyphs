@@ -1,5 +1,47 @@
 {
 .appVersion = "1220";
+classes = (
+{
+automatic = 1;
+code = "questiondown.cap endash.cap emdash.cap periodcentered.cap exclamdown.cap parenleft.cap parenright.cap bracketleft.cap bracketright.cap braceleft.cap braceright.cap";
+name = cap;
+},
+{
+automatic = 1;
+code = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Agrave Aacute Acircumflex Atilde Adieresis Amacron Abreve Aring Aringacute Aogonek AE AEacute Cacute Ccircumflex Ccaron Cdotaccent Ccedilla Dcaron Dcroat Egrave Eacute Ecircumflex Ecaron Edieresis Emacron Ebreve Edotaccent Eogonek Gcircumflex Gbreve Gdotaccent Gcommaaccent Hcircumflex Hbar Igrave Iacute Icircumflex Itilde Idieresis Imacron Ibreve Idotaccent Iogonek Jcircumflex Kcommaaccent Lacute Lcaron Lcommaaccent Lslash Nacute Ncaron Ntilde Ncommaaccent Ograve Oacute Ocircumflex Otilde Odieresis Omacron Obreve Ohungarumlaut Oslash Oslashacute OE Racute Rcaron Rcommaaccent Sacute Scircumflex Scaron Scedilla Scommaaccent Tcaron Tcommaaccent Tbar Ugrave Uacute Ucircumflex Utilde Udieresis Umacron Ubreve Uring Uhungarumlaut Uogonek Wgrave Wacute Wcircumflex Wdieresis Ygrave Yacute Ycircumflex Ydieresis Zacute Zcaron Zdotaccent Eng Eth Thorn endash.cap emdash.cap periodcentered.cap parenleft.cap parenright.cap bracketleft.cap bracketright.cap braceleft.cap braceright.cap at.cap";
+name = caps;
+},
+{
+automatic = 1;
+code = "questiondown endash emdash periodcentered exclamdown parenleft parenright bracketleft bracketright braceleft braceright";
+name = cap_0;
+},
+{
+automatic = 1;
+code = "zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior";
+name = frac1;
+},
+{
+automatic = 1;
+code = "slash fraction perthousand onehalf onequarter threequarters threequarters zeroinferior oneinferior twoinferior threeinferior fourinferior fiveinferior sixinferior seveninferior eightinferior nineinferior";
+name = frac2;
+},
+{
+automatic = 1;
+code = "zero one two three four five six seven eight nine zero.pnum one.pnum two.pnum three.pnum four.pnum five.pnum six.pnum seven.pnum eight.pnum nine.pnum zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr zeroinferior oneinferior twoinferior threeinferior fourinferior fiveinferior sixinferior seveninferior eightinferior nineinferior";
+name = frac3;
+},
+{
+automatic = 1;
+code = "zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior";
+name = frac4;
+},
+{
+automatic = 1;
+code = "A Aacute Abreve Acircumflex Adieresis Agrave Amacron Aogonek Aring Aringacute Atilde AE AEacute B C Cacute Ccaron Ccedilla Ccircumflex Cdotaccent D Eth Dcaron Dcroat E Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Egrave Emacron Eogonek F G Gbreve Gcircumflex Gcommaaccent Gdotaccent H Hbar Hcircumflex I Iacute Ibreve Icircumflex Idieresis Idotaccent Igrave Imacron Iogonek Itilde J Jcircumflex K Kcommaaccent L Lacute Lcaron Lcommaaccent Lslash M N Nacute Ncaron Ncommaaccent Eng Ntilde O Oacute Obreve Ocircumflex Odieresis Ograve Ohungarumlaut Omacron Oslash Oslashacute Otilde OE P Thorn Q R Racute Rcaron Rcommaaccent S Sacute Scaron Scedilla Scircumflex Scommaaccent T Tbar Tcaron Tcedilla Tcommaaccent U Uacute Ubreve Ucircumflex Udieresis Ugrave Uhungarumlaut Umacron Uogonek Uring Utilde V W Wacute Wcircumflex Wdieresis Wgrave X Y Yacute Ycircumflex Ydieresis Ygrave Z Zacute Zcaron Zdotaccent uni1EB0 uni1EF8";
+name = Uppercase;
+}
+);
 copyright = "Copyright 2017 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
 customParameters = (
 {
@@ -33,8 +75,9 @@ value = "1KTF";
 }
 );
 date = "2019-02-26 02:08:06 +0000";
-designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino and others";
+designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino";
 designerURL = "http://gaber.design/";
+disablesNiceNames = 1;
 familyName = "Titillium Web";
 featurePrefixes = (
 {
@@ -47,8 +90,465 @@ languagesystem arab URD;";
 name = Languagesystems;
 }
 );
+features = (
+{
+automatic = 1;
+code = "feature ccmp;
+feature locl;
+feature subs;
+feature sups;
+feature numr;
+feature dnom;
+feature frac;
+feature ordn;
+feature init;
+feature medi;
+feature fina;
+";
+name = aalt;
+},
+{
+automatic = 1;
+code = "lookup ccmp_arab_1 {
+	sub hamzaabove-ar damma-ar by hamzaaboveDamma-ar;
+	sub damma-ar hamzaabove-ar by hamzaaboveDamma-ar;
+	sub hamzaabove-ar dammatan-ar by hamzaaboveDammatan-ar;
+	sub dammatan-ar hamzaabove-ar by hamzaaboveDammatan-ar;
+	sub hamzaabove-ar fatha-ar by hamzaaboveFatha-ar;
+	sub fatha-ar hamzaabove-ar by hamzaaboveFatha-ar;
+	sub hamzaabove-ar fathatan-ar by hamzaaboveFathatan-ar;
+	sub fathatan-ar hamzaabove-ar by hamzaaboveFathatan-ar;
+	sub hamzaabove-ar sukun-ar by hamzaaboveSukun-ar;
+	sub sukun-ar hamzaabove-ar by hamzaaboveSukun-ar;
+	sub hamzabelow-ar kasra-ar by hamzabelowKasra-ar;
+	sub kasra-ar hamzabelow-ar by hamzabelowKasra-ar;
+	sub hamzabelow-ar kasratan-ar by hamzabelowKasratan-ar;
+	sub kasratan-ar hamzabelow-ar by hamzabelowKasratan-ar;
+	sub shadda-ar alefabove-ar by shaddaAlefabove-ar;
+	sub alefabove-ar shadda-ar by shaddaAlefabove-ar;
+	sub shadda-ar damma-ar by shaddaDamma-ar;
+	sub damma-ar shadda-ar by shaddaDamma-ar;
+	sub shadda-ar dammatan-ar by shaddaDammatan-ar;
+	sub dammatan-ar shadda-ar by shaddaDammatan-ar;
+	sub shadda-ar fatha-ar by shaddaFatha-ar;
+	sub fatha-ar shadda-ar by shaddaFatha-ar;
+	sub shadda-ar fathatan-ar by shaddaFathatan-ar;
+	sub fathatan-ar shadda-ar by shaddaFathatan-ar;
+	sub shadda-ar kasra-ar by shaddaKasra-ar;
+	sub kasra-ar shadda-ar by shaddaKasra-ar;
+	sub shadda-ar kasratan-ar by shaddaKasratan-ar;
+	sub kasratan-ar shadda-ar by shaddaKasratan-ar;
+} ccmp_arab_1;
+
+script arab;
+";
+name = ccmp;
+},
+{
+automatic = 1;
+code = "script latn;
+language ROM;
+sub Scedilla by Scommaaccent;
+sub scedilla by scommaaccent;
+sub Tcedilla by Tcommaaccent;
+sub tcedilla by tcommaaccent;
+language MOL;
+sub Scedilla by Scommaaccent;
+sub scedilla by scommaaccent;
+sub Tcedilla by Tcommaaccent;
+sub tcedilla by tcommaaccent;
+
+script arab;
+language URD;
+sub four-persian by four-persian.urdu;
+sub six-persian by six-ar;
+sub seven-persian by seven-persian.urdu;
+";
+name = locl;
+},
+{
+automatic = 1;
+code = "sub zero by zeroinferior;
+sub one by oneinferior;
+sub two by twoinferior;
+sub three by threeinferior;
+sub four by fourinferior;
+sub five by fiveinferior;
+sub six by sixinferior;
+sub seven by seveninferior;
+sub eight by eightinferior;
+sub nine by nineinferior;
+";
+name = subs;
+},
+{
+automatic = 1;
+code = "sub zero by zerosuperior;
+sub one by onesuperior;
+sub two by twosuperior;
+sub three by threesuperior;
+sub four by foursuperior;
+sub five by fivesuperior;
+sub six by sixsuperior;
+sub seven by sevensuperior;
+sub eight by eightsuperior;
+sub nine by ninesuperior;
+";
+name = sups;
+},
+{
+automatic = 1;
+code = "sub zero by zero.numr;
+sub one by one.numr;
+sub two by two.numr;
+sub three by three.numr;
+sub four by four.numr;
+sub five by five.numr;
+sub six by six.numr;
+sub seven by seven.numr;
+sub eight by eight.numr;
+sub nine by nine.numr;
+";
+name = numr;
+},
+{
+automatic = 1;
+code = "sub zero by zero.dnom;
+sub one by one.dnom;
+sub two by two.dnom;
+sub three by three.dnom;
+sub four by four.dnom;
+sub five by five.dnom;
+sub six by six.dnom;
+sub seven by seven.dnom;
+sub eight by eight.dnom;
+sub nine by nine.dnom;
+";
+name = dnom;
+},
+{
+automatic = 1;
+code = "lookup FRAC {
+	sub slash by fraction;
+} FRAC;
+lookup UP {
+	sub [zero one two three four five six seven eight nine] by [zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr];
+} UP;
+lookup DOWN {
+	sub fraction [zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr]' by [zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom];
+	sub [zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom] [zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr]' by [zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom];
+} DOWN;
+";
+name = frac;
+},
+{
+automatic = 1;
+code = "sub [zero one two three four five six seven eight nine] [A a]' by ordfeminine;
+sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
+";
+name = ordn;
+},
+{
+automatic = 1;
+code = "sub behDotless-ar by behDotless-ar.init;
+sub beh-ar by beh-ar.init;
+sub peh-ar by peh-ar.init;
+sub teh-ar by teh-ar.init;
+sub theh-ar by theh-ar.init;
+sub tteh-ar by tteh-ar.init;
+sub jeem-ar by jeem-ar.init;
+sub tcheh-ar by tcheh-ar.init;
+sub hah-ar by hah-ar.init;
+sub khah-ar by khah-ar.init;
+sub seen-ar by seen-ar.init;
+sub sheen-ar by sheen-ar.init;
+sub sad-ar by sad-ar.init;
+sub dad-ar by dad-ar.init;
+sub tah-ar by tah-ar.init;
+sub zah-ar by zah-ar.init;
+sub ain-ar by ain-ar.init;
+sub ghain-ar by ghain-ar.init;
+sub feh-ar by feh-ar.init;
+sub veh-ar by veh-ar.init;
+sub fehDotless-ar by fehDotless-ar.init;
+sub qaf-ar by qaf-ar.init;
+sub kaf-ar by kaf-ar.init;
+sub keheh-ar by keheh-ar.init;
+sub gaf-ar by gaf-ar.init;
+sub lam-ar by lam-ar.init;
+sub meem-ar by meem-ar.init;
+sub noon-ar by noon-ar.init;
+sub heh-ar by heh-ar.init;
+sub hehgoal-ar by hehgoal-ar.init;
+sub hehDoachashmee-ar by hehDoachashmee-ar.init;
+sub yeh-ar by yeh-ar.init;
+sub yehHamzaabove-ar by yehHamzaabove-ar.init;
+sub yeh-farsi by yeh-farsi.init;
+";
+name = init;
+},
+{
+automatic = 1;
+code = "sub behDotless-ar by behDotless-ar.medi;
+sub beh-ar by beh-ar.medi;
+sub peh-ar by peh-ar.medi;
+sub teh-ar by teh-ar.medi;
+sub theh-ar by theh-ar.medi;
+sub tteh-ar by tteh-ar.medi;
+sub jeem-ar by jeem-ar.medi;
+sub tcheh-ar by tcheh-ar.medi;
+sub hah-ar by hah-ar.medi;
+sub khah-ar by khah-ar.medi;
+sub seen-ar by seen-ar.medi;
+sub sheen-ar by sheen-ar.medi;
+sub sad-ar by sad-ar.medi;
+sub dad-ar by dad-ar.medi;
+sub tah-ar by tah-ar.medi;
+sub zah-ar by zah-ar.medi;
+sub ain-ar by ain-ar.medi;
+sub ghain-ar by ghain-ar.medi;
+sub feh-ar by feh-ar.medi;
+sub veh-ar by veh-ar.medi;
+sub fehDotless-ar by fehDotless-ar.medi;
+sub qaf-ar by qaf-ar.medi;
+sub kaf-ar by kaf-ar.medi;
+sub keheh-ar by keheh-ar.medi;
+sub gaf-ar by gaf-ar.medi;
+sub lam-ar by lam-ar.medi;
+sub meem-ar by meem-ar.medi;
+sub noon-ar by noon-ar.medi;
+sub heh-ar by heh-ar.medi;
+sub hehgoal-ar by hehgoal-ar.medi;
+sub hehDoachashmee-ar by hehDoachashmee-ar.medi;
+sub yeh-ar by yeh-ar.medi;
+sub yehHamzaabove-ar by yehHamzaabove-ar.medi;
+sub yeh-farsi by yeh-farsi.medi;
+";
+name = medi;
+},
+{
+automatic = 1;
+code = "sub alef-ar by alef-ar.fina;
+sub alefHamzaabove-ar by alefHamzaabove-ar.fina;
+sub alefHamzabelow-ar by alefHamzabelow-ar.fina;
+sub alefMadda-ar by alefMadda-ar.fina;
+sub alefWasla-ar by alefWasla-ar.fina;
+sub behDotless-ar by behDotless-ar.fina;
+sub beh-ar by beh-ar.fina;
+sub peh-ar by peh-ar.fina;
+sub teh-ar by teh-ar.fina;
+sub theh-ar by theh-ar.fina;
+sub tteh-ar by tteh-ar.fina;
+sub jeem-ar by jeem-ar.fina;
+sub tcheh-ar by tcheh-ar.fina;
+sub hah-ar by hah-ar.fina;
+sub khah-ar by khah-ar.fina;
+sub dal-ar by dal-ar.fina;
+sub thal-ar by thal-ar.fina;
+sub ddal-ar by ddal-ar.fina;
+sub reh-ar by reh-ar.fina;
+sub zain-ar by zain-ar.fina;
+sub rreh-ar by rreh-ar.fina;
+sub jeh-ar by jeh-ar.fina;
+sub seen-ar by seen-ar.fina;
+sub sheen-ar by sheen-ar.fina;
+sub sad-ar by sad-ar.fina;
+sub dad-ar by dad-ar.fina;
+sub tah-ar by tah-ar.fina;
+sub zah-ar by zah-ar.fina;
+sub ain-ar by ain-ar.fina;
+sub ghain-ar by ghain-ar.fina;
+sub feh-ar by feh-ar.fina;
+sub veh-ar by veh-ar.fina;
+sub fehDotless-ar by fehDotless-ar.fina;
+sub qafDotless-ar by qafDotless-ar.fina;
+sub qaf-ar by qaf-ar.fina;
+sub kafDotless-ar by kafDotless-ar.fina;
+sub kaf-ar by kaf-ar.fina;
+sub keheh-ar by keheh-ar.fina;
+sub gaf-ar by gaf-ar.fina;
+sub lam-ar by lam-ar.fina;
+sub meem-ar by meem-ar.fina;
+sub noon-ar by noon-ar.fina;
+sub noonghunna-ar by noonghunna-ar.fina;
+sub heh-ar by heh-ar.fina;
+sub hehgoal-ar by hehgoal-ar.fina;
+sub hehgoalHamzaabove-ar by hehgoalHamzaabove-ar.fina;
+sub hehDoachashmee-ar by hehDoachashmee-ar.fina;
+sub tehMarbuta-ar by tehMarbuta-ar.fina;
+sub tehMarbutagoal-ar by tehMarbutagoal-ar.fina;
+sub waw-ar by waw-ar.fina;
+sub wawHamzaabove-ar by wawHamzaabove-ar.fina;
+sub alefMaksura-ar by alefMaksura-ar.fina;
+sub yeh-ar by yeh-ar.fina;
+sub yehHamzaabove-ar by yehHamzaabove-ar.fina;
+sub yeh-farsi by yeh-farsi.fina;
+sub yehbarree-ar by yehbarree-ar.fina;
+sub yehbarreeHamzaabove-ar by yehbarreeHamzaabove-ar.fina;
+sub lam_alef-ar by lam_alef-ar.fina;
+sub lam_alefHamzaabove-ar by lam_alefHamzaabove-ar.fina;
+sub lam_alefHamzabelow-ar by lam_alefHamzabelow-ar.fina;
+sub lam_alefMadda-ar by lam_alefMadda-ar.fina;
+sub lam_alefWasla-ar by lam_alefWasla-ar.fina;
+sub seen_reh-ar by seen_reh-ar.fina;
+sub seen_alefMaksura-ar by seen_alefMaksura-ar.fina;
+sub seen_yeh-ar by seen_yeh-ar.fina;
+sub seen_zain-ar by seen_zain-ar.fina;
+sub seen_yehHamzaabove-ar by seen_yehHamzaabove-ar.fina;
+sub sheen_reh-ar by sheen_reh-ar.fina;
+sub sheen_zain-ar by sheen_zain-ar.fina;
+sub sheen_alefMaksura-ar by sheen_alefMaksura-ar.fina;
+sub sheen_yeh-ar by sheen_yeh-ar.fina;
+sub sheen_yehHamzaabove-ar by sheen_yehHamzaabove-ar.fina;
+sub sad_reh-ar by sad_reh-ar.fina;
+sub sad_zain-ar by sad_zain-ar.fina;
+sub sad_alefMaksura-ar by sad_alefMaksura-ar.fina;
+sub sad_yeh-ar by sad_yeh-ar.fina;
+sub sad_yehHamzaabove-ar by sad_yehHamzaabove-ar.fina;
+sub dad_reh-ar by dad_reh-ar.fina;
+sub dad_zain-ar by dad_zain-ar.fina;
+sub dad_alefMaksura-ar by dad_alefMaksura-ar.fina;
+sub dad_yeh-ar by dad_yeh-ar.fina;
+sub dad_yehHamzaabove-ar by dad_yehHamzaabove-ar.fina;
+sub lam_alefMaksura-ar by lam_alefMaksura-ar.fina;
+sub lam_yeh-ar by lam_yeh-ar.fina;
+sub lam_yehHamzaabove-ar by lam_yehHamzaabove-ar.fina;
+";
+name = fina;
+},
+{
+automatic = 1;
+code = "pos @Uppercase <5 0 10 0>;
+";
+name = cpsp;
+},
+{
+code = "lookupflag IgnoreMarks RightToLeft;
+sub alef-ar lam-ar.init lam-ar.medi heh-ar.fina by allah-ar;
+	sub lam-ar.init alef-ar.fina by lam_alef-ar;
+	sub lam-ar.medi alef-ar.fina by lam_alef-ar.fina;
+	sub lam-ar.init alefHamzaabove-ar.fina by lam_alefHamzaabove-ar;
+	sub lam-ar.medi alefHamzaabove-ar.fina by lam_alefHamzaabove-ar.fina;
+	sub lam-ar.init alefHamzabelow-ar.fina by lam_alefHamzabelow-ar;
+	sub lam-ar.medi alefHamzabelow-ar.fina by lam_alefHamzabelow-ar.fina;
+	sub lam-ar.init alefMadda-ar.fina by lam_alefMadda-ar;
+	sub lam-ar.medi alefMadda-ar.fina by lam_alefMadda-ar.fina;
+	sub lam-ar.init alefWasla-ar.fina by lam_alefWasla-ar;
+	sub lam-ar.medi alefWasla-ar.fina by lam_alefWasla-ar.fina;
+	sub lam-ar.init alefMaksura-ar.fina by lam_alefMaksura-ar;
+	sub lam-ar.medi alefMaksura-ar.fina by lam_alefMaksura-ar.fina;
+	sub beh-ar.medi reh-ar.fina by beh_reh-ar.fina;
+	sub beh-ar.medi zain-ar.fina by beh_zain-ar.fina;
+	sub beh-ar.medi noon-ar.fina by beh_noon-ar.fina;
+	sub beh-ar.medi alefMaksura-ar.fina by beh_alefMaksura-ar.fina;
+	sub beh-ar.medi yeh-ar.fina by beh_yeh-ar.fina;
+	sub beh-ar.medi yehHamzaabove-ar.fina by beh_yehHamzaabove-ar.fina;
+	sub peh-ar.medi reh-ar.fina by peh_reh-ar.fina;
+	sub peh-ar.medi zain-ar.fina by peh_zain-ar.fina;
+	sub peh-ar.medi noon-ar.fina by peh_noon-ar.fina;
+	sub peh-ar.medi alefMaksura-ar.fina by peh_alefMaksura-ar.fina;
+	sub peh-ar.medi yeh-ar.fina by peh_yeh-ar.fina;
+	sub peh-ar.medi yehHamzaabove-ar.fina by peh_yehHamzaabove-ar.fina;
+	sub teh-ar.medi reh-ar.fina by teh_reh-ar.fina;
+	sub teh-ar.medi zain-ar.fina by teh_zain-ar.fina;
+	sub teh-ar.medi noon-ar.fina by teh_noon-ar.fina;
+	sub teh-ar.medi alefMaksura-ar.fina by teh_alefMaksura-ar.fina;
+	sub teh-ar.medi yeh-ar.fina by teh_yeh-ar.fina;
+	sub teh-ar.medi yehHamzaabove-ar.fina by teh_yehHamzaabove-ar.fina;
+	sub theh-ar.medi reh-ar.fina by theh_reh-ar.fina;
+	sub theh-ar.medi zain-ar.fina by theh_zain-ar.fina;
+	sub theh-ar.medi noon-ar.fina by theh_noon-ar.fina;
+	sub theh-ar.medi alefMaksura-ar.fina by theh_alefMaksura-ar.fina;
+	sub theh-ar.medi yeh-ar.fina by theh_yeh-ar.fina;
+	sub theh-ar.medi yehHamzaabove-ar.fina by theh_yehHamzaabove-ar.fina;
+	sub seen-ar.init reh-ar.fina by seen_reh-ar;
+	sub seen-ar.medi reh-ar.fina by seen_reh-ar.fina;
+	sub seen-ar.init alefMaksura-ar.fina by seen_alefMaksura-ar;
+	sub seen-ar.medi alefMaksura-ar.fina by seen_alefMaksura-ar.fina;
+	sub seen-ar.init yeh-ar.fina by seen_yeh-ar;
+	sub seen-ar.medi yeh-ar.fina by seen_yeh-ar.fina;
+	sub seen-ar.init zain-ar.fina by seen_zain-ar;
+	sub seen-ar.medi zain-ar.fina by seen_zain-ar.fina;
+	sub seen-ar.init yehHamzaabove-ar.fina by seen_yehHamzaabove-ar;
+	sub seen-ar.medi yehHamzaabove-ar.fina by seen_yehHamzaabove-ar.fina;
+	sub sheen-ar.init reh-ar.fina by sheen_reh-ar;
+	sub sheen-ar.medi reh-ar.fina by sheen_reh-ar.fina;
+	sub sheen-ar.init zain-ar.fina by sheen_zain-ar;
+	sub sheen-ar.medi zain-ar.fina by sheen_zain-ar.fina;
+	sub sheen-ar.init alefMaksura-ar.fina by sheen_alefMaksura-ar;
+	sub sheen-ar.medi alefMaksura-ar.fina by sheen_alefMaksura-ar.fina;
+	sub sheen-ar.init yeh-ar.fina by sheen_yeh-ar;
+	sub sheen-ar.medi yeh-ar.fina by sheen_yeh-ar.fina;
+	sub sheen-ar.init yehHamzaabove-ar.fina by sheen_yehHamzaabove-ar;
+	sub sheen-ar.medi yehHamzaabove-ar.fina by sheen_yehHamzaabove-ar.fina;
+	sub sad-ar.init reh-ar.fina by sad_reh-ar;
+	sub sad-ar.medi reh-ar.fina by sad_reh-ar.fina;
+	sub sad-ar.init zain-ar.fina by sad_zain-ar;
+	sub sad-ar.medi zain-ar.fina by sad_zain-ar.fina;
+	sub sad-ar.init alefMaksura-ar.fina by sad_alefMaksura-ar;
+	sub sad-ar.medi alefMaksura-ar.fina by sad_alefMaksura-ar.fina;
+	sub sad-ar.init yeh-ar.fina by sad_yeh-ar;
+	sub sad-ar.medi yeh-ar.fina by sad_yeh-ar.fina;
+	sub sad-ar.init yehHamzaabove-ar.fina by sad_yehHamzaabove-ar;
+	sub sad-ar.medi yehHamzaabove-ar.fina by sad_yehHamzaabove-ar.fina;
+	sub dad-ar.init reh-ar.fina by dad_reh-ar;
+	sub dad-ar.medi reh-ar.fina by dad_reh-ar.fina;
+	sub dad-ar.init zain-ar.fina by dad_zain-ar;
+	sub dad-ar.medi zain-ar.fina by dad_zain-ar.fina;
+	sub dad-ar.init alefMaksura-ar.fina by dad_alefMaksura-ar;
+	sub dad-ar.medi alefMaksura-ar.fina by dad_alefMaksura-ar.fina;
+	sub dad-ar.init yeh-ar.fina by dad_yeh-ar;
+	sub dad-ar.medi yeh-ar.fina by dad_yeh-ar.fina;
+	sub dad-ar.init yehHamzaabove-ar.fina by dad_yehHamzaabove-ar;
+	sub dad-ar.medi yehHamzaabove-ar.fina by dad_yehHamzaabove-ar.fina;
+	sub lam-ar.init alefMaksura-ar.fina by lam_alefMaksura-ar;
+	sub lam-ar.medi alefMaksura-ar.fina by lam_alefMaksura-ar.fina;
+	sub lam-ar.init yeh-ar.fina by lam_yeh-ar;
+	sub lam-ar.medi yeh-ar.fina by lam_yeh-ar.fina;
+	sub lam-ar.init yehHamzaabove-ar.fina by lam_yehHamzaabove-ar;
+	sub lam-ar.medi yehHamzaabove-ar.fina by lam_yehHamzaabove-ar.fina;
+	sub noon-ar.medi reh-ar.fina by noon_reh-ar.fina;
+	sub noon-ar.medi zain-ar.fina by noon_zain-ar.fina;
+	sub noon-ar.medi noon-ar.fina by noon_noon-ar.fina;
+	sub noon-ar.medi alefMaksura-ar.fina by noon_alefMaksura-ar.fina;
+	sub noon-ar.medi yeh-ar.fina by noon_yeh-ar.fina;
+	sub noon-ar.medi yehHamzaabove-ar.fina by noon_yehHamzaabove-ar.fina;
+	sub alefMaksura-ar reh-ar.fina by alefMaksura_reh-ar.fina;
+	sub alefMaksura-ar.fina reh-ar.fina by alefMaksura_reh-ar.fina.001;
+	sub alefMaksura-ar zain-ar.fina by alefMaksura_zain-ar.fina;
+	sub alefMaksura-ar noon-ar.fina by alefMaksura_noon-ar.fina;
+	sub alefMaksura-ar alefMaksura-ar.fina by alefMaksura_alefMaksura-ar.fina;
+	sub yeh-ar.medi reh-ar.fina by yeh_reh-ar.fina;
+	sub yeh-ar.medi zain-ar.fina by yeh_zain-ar.fina;
+	sub yeh-ar.medi noon-ar.fina by yeh_noon-ar.fina;
+	sub yehHamzaabove-ar.medi reh-ar.fina by yehHamzaabove_reh-ar.fina;
+	sub yehHamzaabove-ar.medi zain-ar.fina by yehHamzaabove_zain-ar.fina;
+	sub yehHamzaabove-ar.medi noon-ar.fina by yehHamzaabove_noon-ar.fina;
+	sub yehHamzaabove-ar.medi alefMaksura-ar.fina by yehHamzaabove_alefMaksura-ar.fina;
+	sub yehHamzaabove-ar.medi yeh-ar.fina by yehHamzaabove_yeh-ar.fina;
+	sub yehHamzaabove-ar.medi yehHamzaabove-ar.fina by yehHamzaabove_yehHamzaabove-ar.fina;
+	sub alef-ar lam-ar.init lam-ar.medi heh-ar.fina by allah-ar;
+";
+name = rlig;
+},
+{
+code = "lookup dlig_RTL {
+lookupflag IgnoreMarks RightToLeft;
+} dlig_RTL;
+";
+name = dlig;
+}
+);
 fontMaster = (
 {
+alignmentZones = (
+"{1240, 9}",
+"{709, -9}",
+"{670, -9}",
+"{500, 9}",
+"{0, -9}",
+"{-520, -9}"
+);
 ascender = 1240;
 capHeight = 700;
 custom = Extra;
@@ -107,6 +607,14 @@ weightValue = 35;
 xHeight = 500;
 },
 {
+alignmentZones = (
+"{1240, 9}",
+"{709, -9}",
+"{670, -9}",
+"{500, 9}",
+"{0, -9}",
+"{-520, -9}"
+);
 ascender = 1240;
 capHeight = 680;
 customParameters = (
@@ -46318,7 +46826,7 @@ instances = (
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web ExtraLight Italic";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 35;
@@ -46332,7 +46840,7 @@ weightClass = ExtraLight;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Light Italic";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 59;
@@ -46347,7 +46855,7 @@ weightClass = Light;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Italic";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 75;
@@ -46362,7 +46870,7 @@ name = Italic;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web SemiBold Italic";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 109;
@@ -46377,13 +46885,15 @@ weightClass = SemiBold;
 customParameters = (
 {
 name = familyName;
-value = "Titillium Web Bold Italic";
+value = "Titillium Web";
 }
 );
 interpolationWeight = 134;
 instanceInterpolations = {
 "6F771D6B-58AC-4073-A542-FF52B938F09A" = 1;
 };
+isBold = 1;
+isItalic = 1;
 name = "Bold Italic";
 weightClass = Bold;
 }
@@ -46403,6 +46913,7 @@ kerning = {
 "@MMK_R_guilsinglleft" = -10;
 "@MMK_R_hyphen" = -20;
 "@MMK_R_hyphen.cap" = -23;
+"@MMK_R_i" = 31;
 "@MMK_R_o" = -8;
 "@MMK_R_quoteleft" = -49;
 "@MMK_R_quoteright" = -50;
@@ -46424,7 +46935,6 @@ question = -34;
 registered = -42;
 trademark = -53;
 v = -26;
-"@MMK_R_i" = 31;
 };
 "@MMK_L_C" = {
 "@MMK_R_J" = 0;
@@ -46435,6 +46945,7 @@ v = -26;
 "@MMK_R_guilsinglright" = 0;
 "@MMK_R_hyphen" = -28;
 "@MMK_R_hyphen.cap" = -25;
+"@MMK_R_i" = 17;
 "@MMK_R_n" = 0;
 "@MMK_R_o" = -11;
 "@MMK_R_t" = 0;
@@ -46448,7 +46959,6 @@ imacron = 26;
 itilde = 43;
 registered = 0;
 v = 0;
-"@MMK_R_i" = 17;
 };
 "@MMK_L_D" = {
 "@MMK_R_A" = -23;
@@ -46479,6 +46989,7 @@ slash = -17;
 "@MMK_R_guilsinglleft" = -17;
 "@MMK_R_hyphen" = -25;
 "@MMK_R_hyphen.cap" = -17;
+"@MMK_R_i" = 55;
 "@MMK_R_o" = -14;
 "@MMK_R_t" = 0;
 "@MMK_R_u" = -12;
@@ -46489,13 +47000,13 @@ f = 0;
 imacron = 17;
 itilde = 34;
 v = -6;
-"@MMK_R_i" = 55;
 };
 "@MMK_L_G" = {
 "@MMK_R_J" = -9;
 "@MMK_R_W" = 0;
 "@MMK_R_Y" = -17;
 "@MMK_R_g" = -6;
+"@MMK_R_i" = 22;
 "@MMK_R_t" = -6;
 "@MMK_R_w" = -7;
 "@MMK_R_y" = -8;
@@ -46504,7 +47015,6 @@ braceright.cap = -17;
 bracketright.cap = -23;
 f = 0;
 v = -8;
-"@MMK_R_i" = 22;
 };
 "@MMK_L_I" = {
 "@MMK_R_J" = -5;
@@ -46522,6 +47032,7 @@ bracketright.cap = -18;
 "@MMK_R_guilsinglleft" = -26;
 "@MMK_R_hyphen" = -37;
 "@MMK_R_hyphen.cap" = -39;
+"@MMK_R_i" = 36;
 "@MMK_R_o" = -22;
 "@MMK_R_t" = 0;
 "@MMK_R_u" = -15;
@@ -46532,7 +47043,6 @@ imacron = 25;
 itilde = 41;
 registered = 0;
 v = -14;
-"@MMK_R_i" = 36;
 };
 "@MMK_L_L" = {
 "@MMK_R_O" = -41;
@@ -46554,6 +47064,7 @@ v = -14;
 "@MMK_R_u" = -15;
 "@MMK_R_w" = -41;
 "@MMK_R_y" = -52;
+Tbar = -61;
 V = -61;
 asterisk = -88;
 backslash = -75;
@@ -46565,11 +47076,10 @@ f = 0;
 periodcentered = -90;
 periodcentered.cap = -91;
 question = -25;
+quotedblleft = -20;
 registered = -91;
 trademark = -88;
 v = -52;
-Tbar = -61;
-quotedblleft = -20;
 };
 "@MMK_L_O" = {
 "@MMK_R_A" = -23;
@@ -46615,6 +47125,7 @@ question = -17;
 "@MMK_R_W" = 0;
 "@MMK_R_Y" = -16;
 "@MMK_R_g" = -10;
+"@MMK_R_i" = 25;
 "@MMK_R_t" = -5;
 "@MMK_R_w" = -8;
 "@MMK_R_y" = -9;
@@ -46626,7 +47137,6 @@ bracketright.cap = -22;
 f = 0;
 v = -9;
 x = 0;
-"@MMK_R_i" = 25;
 };
 "@MMK_L_T" = {
 "@MMK_R_A" = -53;
@@ -46640,6 +47150,7 @@ x = 0;
 "@MMK_R_guilsinglright" = -58;
 "@MMK_R_hyphen" = -63;
 "@MMK_R_hyphen.cap" = -62;
+"@MMK_R_i" = -85;
 "@MMK_R_n" = -85;
 "@MMK_R_o" = -94;
 "@MMK_R_period" = -61;
@@ -46650,34 +47161,33 @@ x = 0;
 "@MMK_R_y" = -69;
 "@MMK_R_z" = -89;
 at = -29;
+ccircumflex = -4;
+ecircumflex = -4;
 egrave = -67;
+emdash = -26;
+emdash.cap = -26;
+endash = -26;
+endash.cap = -26;
 eth = -41;
 f = -11;
+gbreve = -51;
+gcircumflex = -35;
 iacute = -9;
 ibreve = 45;
 idieresis = 42;
 igrave = 90;
 imacron = 51;
 itilde = 62;
+ohungarumlaut = -36;
 otilde = -88;
 racute = -72;
 rcaron = -51;
 registered = 0;
+scircumflex = -33;
 slash = -56;
 v = -69;
 x = -72;
 ygrave = -61;
-"@MMK_R_i" = -85;
-ccircumflex = -4;
-ecircumflex = -4;
-emdash = -26;
-emdash.cap = -26;
-endash = -26;
-endash.cap = -26;
-gbreve = -51;
-gcircumflex = -35;
-ohungarumlaut = -36;
-scircumflex = -33;
 };
 "@MMK_L_U" = {
 "@MMK_R_A" = -6;
@@ -46700,6 +47210,7 @@ bracketright.cap = -23;
 "@MMK_R_guilsinglright" = -22;
 "@MMK_R_hyphen" = -32;
 "@MMK_R_hyphen.cap" = -28;
+"@MMK_R_i" = 0;
 "@MMK_R_n" = -12;
 "@MMK_R_o" = -23;
 "@MMK_R_period" = -48;
@@ -46716,11 +47227,10 @@ ibreve = 15;
 igrave = 55;
 imacron = 16;
 itilde = 34;
-slash = -42;
-v = -8;
-"@MMK_R_i" = 0;
 racute = -9;
 rcaron = -9;
+slash = -42;
+v = -8;
 };
 "@MMK_L_Y" = {
 "@MMK_R_A" = -48;
@@ -46734,6 +47244,7 @@ rcaron = -9;
 "@MMK_R_guilsinglright" = -59;
 "@MMK_R_hyphen" = -76;
 "@MMK_R_hyphen.cap" = -71;
+"@MMK_R_i" = -54;
 "@MMK_R_n" = -54;
 "@MMK_R_o" = -65;
 "@MMK_R_period" = -76;
@@ -46747,39 +47258,38 @@ at = -36;
 at.cap = -24;
 braceright.cap = -23;
 bracketright.cap = -33;
+ecircumflex = -59;
+edieresis = -49;
+egrave = -25;
+emacron = -50;
 eth = -44;
 f = -11;
+gbreve = -43;
 ibreve = 38;
 idieresis = 33;
 igrave = 70;
 imacron = 30;
 itilde = 44;
 ntilde = -48;
-racute = -35;
-rcaron = -34;
-registered = -24;
-slash = -71;
-uni1EF9 = -26;
-v = -45;
-x = -41;
-ycircumflex = -38;
-ydieresis = -28;
-ygrave = -26;
-"@MMK_R_i" = -54;
-ecircumflex = -59;
-edieresis = -49;
-egrave = -25;
-emacron = -50;
-gbreve = -43;
 obreve = -43;
 ograve = -54;
 ohungarumlaut = -40;
 omacron = -57;
 otilde = -43;
+racute = -35;
+rcaron = -34;
+registered = -24;
+slash = -71;
 udieresis = -40;
 uhungarumlaut = -43;
 umacron = -43;
+uni1EF9 = -26;
 utilde = -39;
+v = -45;
+x = -41;
+ycircumflex = -38;
+ydieresis = -28;
+ygrave = -26;
 zacute = -39;
 };
 "@MMK_L_Z" = {
@@ -46790,6 +47300,7 @@ zacute = -39;
 "@MMK_R_guilsinglright" = 0;
 "@MMK_R_hyphen" = -26;
 "@MMK_R_hyphen.cap" = -23;
+"@MMK_R_i" = 17;
 "@MMK_R_n" = 0;
 "@MMK_R_o" = -10;
 "@MMK_R_t" = 0;
@@ -46802,7 +47313,6 @@ imacron = 24;
 itilde = 42;
 registered = 0;
 v = 0;
-"@MMK_R_i" = 17;
 };
 "@MMK_L_a" = {
 "@MMK_R_J" = -19;
@@ -46925,11 +47435,11 @@ X = 0;
 "@MMK_R_w" = -13;
 "@MMK_R_y" = -15;
 "@MMK_R_z" = -31;
+Tbar = -34;
 V = -34;
 X = -13;
 v = -15;
 x = -27;
-Tbar = -34;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_A" = -18;
@@ -46946,6 +47456,7 @@ Tbar = -34;
 "@MMK_R_w" = -18;
 "@MMK_R_y" = -21;
 "@MMK_R_z" = -50;
+Tbar = -35;
 V = -39;
 X = -24;
 eight.pnum = -14;
@@ -46957,7 +47468,6 @@ three.pnum = -31;
 two.pnum = -53;
 v = -21;
 x = -41;
-Tbar = -35;
 };
 "@MMK_L_hyphen.cap" = {
 "@MMK_R_A" = -22;
@@ -46967,9 +47477,9 @@ Tbar = -35;
 "@MMK_R_W" = -24;
 "@MMK_R_Y" = -70;
 "@MMK_R_Z" = -14;
+Tbar = -36;
 V = -35;
 X = -30;
-Tbar = -36;
 };
 "@MMK_L_i" = {
 "@MMK_R_J" = -18;
@@ -46977,18 +47487,18 @@ Tbar = -36;
 "@MMK_R_h" = 9;
 "@MMK_R_i" = 0;
 "@MMK_R_l" = 0;
+"@MMK_R_n" = 34;
 "@MMK_R_quotesingle" = 12;
 backslash = 45;
 bar = 59;
 braceright = 37;
 bracketright = 35;
 exclam = 0;
+iacute = 51;
 j = 8;
 parenright = 24;
 question = 46;
 thorn = 7;
-"@MMK_R_n" = 34;
-iacute = 51;
 };
 "@MMK_L_k" = {
 "@MMK_R_T" = -74;
@@ -47094,12 +47604,12 @@ v = -44;
 "@MMK_R_J" = -26;
 "@MMK_R_a" = -21;
 "@MMK_R_g" = -16;
+"@MMK_R_i" = 47;
 "@MMK_R_o" = -20;
 "@MMK_R_period" = -124;
 "@MMK_R_s" = -10;
 eth = -16;
 itilde = 21;
-"@MMK_R_i" = 47;
 };
 "@MMK_L_quoteright" = {
 "@MMK_R_A" = -61;
@@ -47109,6 +47619,7 @@ itilde = 21;
 "@MMK_R_guilsinglleft" = -82;
 "@MMK_R_guilsinglright" = -58;
 "@MMK_R_hyphen" = -75;
+"@MMK_R_i" = 50;
 "@MMK_R_n" = 0;
 "@MMK_R_o" = -22;
 "@MMK_R_period" = -126;
@@ -47116,9 +47627,8 @@ itilde = 21;
 at = -18;
 eth = -16;
 itilde = 22;
-slash = -72;
-"@MMK_R_i" = 50;
 racute = -8;
+slash = -72;
 };
 "@MMK_L_quotesingle" = {
 "@MMK_R_A" = -55;
@@ -47128,6 +47638,7 @@ racute = -8;
 "@MMK_R_guilsinglleft" = -71;
 "@MMK_R_guilsinglright" = -48;
 "@MMK_R_hyphen" = -67;
+"@MMK_R_i" = 32;
 "@MMK_R_o" = -13;
 "@MMK_R_period" = -118;
 at = 0;
@@ -47138,7 +47649,6 @@ nine.pnum = 0;
 six.pnum = -12;
 slash = -65;
 zero.pnum = -12;
-"@MMK_R_i" = 32;
 };
 "@MMK_L_r" = {
 "@MMK_R_A" = -39;
@@ -47266,6 +47776,9 @@ eth = -12;
 question = -17;
 trademark = -15;
 };
+Aogonek = {
+braceright = -6;
+};
 B = {
 "@MMK_R_A" = -13;
 "@MMK_R_J" = -19;
@@ -47295,6 +47808,7 @@ F = {
 "@MMK_R_g" = -13;
 "@MMK_R_guilsinglright" = -9;
 "@MMK_R_hyphen" = 0;
+"@MMK_R_i" = -14;
 "@MMK_R_n" = -14;
 "@MMK_R_o" = -14;
 "@MMK_R_period" = -63;
@@ -47315,18 +47829,20 @@ itilde = 47;
 slash = -35;
 v = -7;
 x = -12;
-"@MMK_R_i" = -14;
+};
+Icircumflex = {
+braceright.cap = 36;
 };
 Lcaron = {
 "@MMK_R_T" = -58;
-"@MMK_R_Y" = -66;
-asterisk = -63;
 "@MMK_R_W" = -20;
+"@MMK_R_Y" = -66;
 "@MMK_R_quoteleft" = -22;
 "@MMK_R_quoteright" = -21;
 "@MMK_R_quotesingle" = -28;
 "@MMK_R_y" = -21;
 V = -17;
+asterisk = -63;
 backslash = -36;
 registered = -41;
 trademark = -42;
@@ -47352,6 +47868,11 @@ bracketright = -33;
 bracketright.cap = -37;
 eth = -10;
 slash = -36;
+};
+Tbar = {
+"@MMK_R_guilsinglleft" = -36;
+"@MMK_R_hyphen" = -33;
+"@MMK_R_hyphen.cap" = -32;
 };
 Thorn = {
 "@MMK_R_A" = -27;
@@ -47386,6 +47907,7 @@ V = {
 "@MMK_R_guilsinglright" = -29;
 "@MMK_R_hyphen" = -40;
 "@MMK_R_hyphen.cap" = -36;
+"@MMK_R_i" = -26;
 "@MMK_R_n" = -26;
 "@MMK_R_o" = -33;
 "@MMK_R_period" = -61;
@@ -47411,7 +47933,6 @@ registered = -16;
 slash = -52;
 v = -10;
 x = -11;
-"@MMK_R_i" = -26;
 };
 X = {
 "@MMK_R_O" = -23;
@@ -47420,6 +47941,7 @@ X = {
 "@MMK_R_guilsinglleft" = -24;
 "@MMK_R_hyphen" = -35;
 "@MMK_R_hyphen.cap" = -37;
+"@MMK_R_i" = 38;
 "@MMK_R_o" = -22;
 "@MMK_R_t" = 0;
 "@MMK_R_u" = -15;
@@ -47432,7 +47954,14 @@ imacron = 28;
 itilde = 44;
 registered = 0;
 v = -12;
-"@MMK_R_i" = 38;
+};
+"alefMaksura_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"alefMaksura_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
 };
 asterisk = {
 "@MMK_R_A" = -48;
@@ -47477,11 +48006,20 @@ v = -25;
 bar = {
 "@MMK_R_i" = -11;
 };
+"beh_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"beh_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
 braceleft = {
 "@MMK_R_A" = -40;
 "@MMK_R_O" = -31;
 "@MMK_R_S" = -13;
 "@MMK_R_a" = -39;
+"@MMK_R_i" = 23;
 "@MMK_R_n" = -36;
 "@MMK_R_o" = -40;
 "@MMK_R_s" = -34;
@@ -47499,6 +48037,8 @@ igrave = 57;
 nine.pnum = -35;
 one.pnum = -36;
 parenleft = -13;
+racute = -12;
+rcaron = 8;
 seven.pnum = -31;
 six.pnum = -39;
 three.pnum = -34;
@@ -47506,9 +48046,6 @@ two.pnum = -32;
 v = -35;
 x = -24;
 zero.pnum = -39;
-"@MMK_R_i" = 23;
-racute = -12;
-rcaron = 8;
 };
 braceleft.cap = {
 "@MMK_R_A" = -33;
@@ -47518,9 +48055,9 @@ braceleft.cap = {
 "@MMK_R_U" = -16;
 "@MMK_R_W" = -11;
 "@MMK_R_Y" = 0;
-V = -15;
 Icircumflex = 54;
 Itilde = 33;
+V = -15;
 };
 braceright = {
 braceright = -24;
@@ -47532,6 +48069,7 @@ bracketleft = {
 "@MMK_R_O" = -33;
 "@MMK_R_S" = -16;
 "@MMK_R_a" = -44;
+"@MMK_R_i" = 20;
 "@MMK_R_n" = -41;
 "@MMK_R_o" = -44;
 "@MMK_R_s" = -40;
@@ -47549,6 +48087,7 @@ igrave = 54;
 nine.pnum = -41;
 one.pnum = -43;
 parenleft = -14;
+rcaron = 7;
 seven.pnum = -36;
 six.pnum = -44;
 three.pnum = -38;
@@ -47556,8 +48095,6 @@ two.pnum = -38;
 v = -40;
 x = -31;
 zero.pnum = -44;
-"@MMK_R_i" = 20;
-rcaron = 7;
 };
 bracketleft.cap = {
 "@MMK_R_A" = -38;
@@ -47567,8 +48104,28 @@ bracketleft.cap = {
 "@MMK_R_U" = -20;
 "@MMK_R_W" = -14;
 "@MMK_R_Y" = -14;
-V = -16;
 Itilde = 32;
+V = -16;
+};
+ccaron = {
+braceright = -4;
+bracketright = -4;
+};
+"dad_reh-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"dad_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"dad_zain-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"dad_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
 };
 eight.pnum = {
 "@MMK_R_hyphen" = -10;
@@ -47577,6 +48134,18 @@ backslash = -32;
 braceright = -38;
 bracketright = -41;
 parenright = 0;
+};
+emdash = {
+"@MMK_R_T" = -38;
+};
+emdash.cap = {
+"@MMK_R_T" = -32;
+};
+endash = {
+"@MMK_R_T" = -38;
+};
+endash.cap = {
+"@MMK_R_T" = -32;
 };
 eth = {
 "@MMK_R_A" = -8;
@@ -47615,6 +48184,7 @@ f = {
 "@MMK_R_guilsinglleft" = -38;
 "@MMK_R_guilsinglright" = -30;
 "@MMK_R_hyphen" = -47;
+"@MMK_R_i" = 50;
 "@MMK_R_o" = -15;
 "@MMK_R_period" = -44;
 X = -16;
@@ -47622,7 +48192,6 @@ eth = -32;
 igrave = 91;
 itilde = 31;
 slash = -24;
-"@MMK_R_i" = 50;
 };
 five.pnum = {
 backslash = -19;
@@ -47686,12 +48255,32 @@ bracketright = 0;
 parenright = 0;
 question = 30;
 };
+"jeh-ar" = {
+"jeh-ar" = 80;
+"peh-ar.init" = 80;
+"rreh-ar" = 80;
+space = 0;
+"yeh-ar.init" = 80;
+};
+"jeh-ar.fina" = {
+"jeh-ar" = 80;
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
 nine.pnum = {
 "@MMK_R_quotesingle" = -30;
 backslash = -39;
 braceright = -40;
 bracketright = -44;
 parenright = -13;
+};
+"noon_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"noon_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
 };
 one.pnum = {
 backslash = -20;
@@ -47701,6 +48290,7 @@ bracketright = -38;
 parenleft = {
 "@MMK_R_O" = -12;
 "@MMK_R_a" = -17;
+"@MMK_R_i" = 45;
 "@MMK_R_o" = -17;
 "@MMK_R_u" = -15;
 "@MMK_R_w" = -10;
@@ -47711,7 +48301,6 @@ nine.pnum = 0;
 one.pnum = -15;
 six.pnum = -16;
 zero.pnum = -17;
-"@MMK_R_i" = 45;
 };
 parenleft.cap = {
 "@MMK_R_O" = -12;
@@ -47719,6 +48308,14 @@ parenleft.cap = {
 parenright = {
 braceright = -14;
 bracketright = -14;
+};
+"peh_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"peh_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
 };
 periodcentered = {
 "@MMK_R_l" = -46;
@@ -47768,6 +48365,10 @@ questiondown.cap = {
 "@MMK_R_Y" = -35;
 V = -31;
 };
+rcaron = {
+braceright = -5;
+bracketright = -5;
+};
 registered = {
 "@MMK_R_A" = -31;
 "@MMK_R_J" = -28;
@@ -47776,6 +48377,57 @@ registered = {
 "@MMK_R_Z" = -29;
 V = -19;
 X = -28;
+};
+"reh-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"rreh-ar" = {
+"jeh-ar" = 110;
+"peh-ar.init" = 80;
+"rreh-ar" = 110;
+"yeh-ar.init" = 80;
+};
+"rreh-ar.fina" = {
+"peh-ar.init" = 80;
+"rreh-ar" = 110;
+"yeh-ar.init" = 80;
+};
+"sad_reh-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"sad_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"sad_zain-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"sad_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"seen_reh-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"seen_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"seen_zain-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"seen_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
 };
 seven.pnum = {
 "@MMK_R_hyphen" = -24;
@@ -47786,6 +48438,22 @@ bracketright = -40;
 four.pnum = -30;
 parenright = -12;
 slash = -29;
+};
+"sheen_reh-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"sheen_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"sheen_zain-ar" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"sheen_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
 };
 six.pnum = {
 backslash = -22;
@@ -47798,6 +48466,7 @@ slash = {
 "@MMK_R_J" = -28;
 "@MMK_R_a" = -14;
 "@MMK_R_g" = -11;
+"@MMK_R_i" = 15;
 "@MMK_R_n" = -11;
 "@MMK_R_o" = -13;
 "@MMK_R_s" = 0;
@@ -47817,7 +48486,6 @@ six.pnum = -13;
 three.pnum = -15;
 v = 0;
 zero.pnum = -13;
-"@MMK_R_i" = 15;
 };
 tcaron = {
 "@MMK_R_a" = -21;
@@ -47827,6 +48495,22 @@ tcaron = {
 "@MMK_R_hyphen" = -61;
 "@MMK_R_o" = -20;
 eth = -36;
+};
+"teh_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"teh_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"theh_reh-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
+};
+"theh_zain-ar.fina" = {
+"peh-ar.init" = 80;
+"yeh-ar.init" = 80;
 };
 three.pnum = {
 "@MMK_R_hyphen" = -11;
@@ -47889,187 +48573,6 @@ braceright = -21;
 bracketright = -22;
 eth = -20;
 };
-zero.pnum = {
-"@MMK_R_quotesingle" = -31;
-backslash = -39;
-braceright = -41;
-bracketright = -44;
-parenright = -14;
-};
-Aogonek = {
-braceright = -6;
-};
-Icircumflex = {
-braceright.cap = 36;
-};
-Tbar = {
-"@MMK_R_guilsinglleft" = -36;
-"@MMK_R_hyphen" = -33;
-"@MMK_R_hyphen.cap" = -32;
-};
-"alefMaksura_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"alefMaksura_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"beh_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"beh_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-ccaron = {
-braceright = -4;
-bracketright = -4;
-};
-"dad_reh-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"dad_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"dad_zain-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"dad_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-emdash = {
-"@MMK_R_T" = -38;
-};
-emdash.cap = {
-"@MMK_R_T" = -32;
-};
-endash = {
-"@MMK_R_T" = -38;
-};
-endash.cap = {
-"@MMK_R_T" = -32;
-};
-"jeh-ar" = {
-"jeh-ar" = 80;
-"peh-ar.init" = 80;
-"rreh-ar" = 80;
-space = 0;
-"yeh-ar.init" = 80;
-};
-"jeh-ar.fina" = {
-"jeh-ar" = 80;
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"noon_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"noon_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"peh_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"peh_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-rcaron = {
-braceright = -5;
-bracketright = -5;
-};
-"reh-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"rreh-ar" = {
-"jeh-ar" = 110;
-"peh-ar.init" = 80;
-"rreh-ar" = 110;
-"yeh-ar.init" = 80;
-};
-"rreh-ar.fina" = {
-"peh-ar.init" = 80;
-"rreh-ar" = 110;
-"yeh-ar.init" = 80;
-};
-"sad_reh-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"sad_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"sad_zain-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"sad_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"seen_reh-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"seen_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"seen_zain-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"seen_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"sheen_reh-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"sheen_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"sheen_zain-ar" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"sheen_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"teh_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"teh_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"theh_reh-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
-"theh_zain-ar.fina" = {
-"peh-ar.init" = 80;
-"yeh-ar.init" = 80;
-};
 "yehHamzaabove_reh-ar.fina" = {
 "peh-ar.init" = 80;
 "yeh-ar.init" = 80;
@@ -48094,6 +48597,13 @@ bracketright = -5;
 "peh-ar.init" = 80;
 "yeh-ar.init" = 80;
 };
+zero.pnum = {
+"@MMK_R_quotesingle" = -31;
+backslash = -39;
+braceright = -41;
+bracketright = -44;
+parenright = -14;
+};
 };
 "6F771D6B-58AC-4073-A542-FF52B938F09A" = {
 "@MMK_L_A" = {
@@ -48109,6 +48619,7 @@ bracketright = -5;
 "@MMK_R_guilsinglleft" = -14;
 "@MMK_R_hyphen" = -15;
 "@MMK_R_hyphen.cap" = -18;
+"@MMK_R_i" = 49;
 "@MMK_R_o" = -7;
 "@MMK_R_quoteleft" = -35;
 "@MMK_R_quoteright" = -35;
@@ -48130,7 +48641,6 @@ question = -17;
 registered = -28;
 trademark = -33;
 v = -15;
-"@MMK_R_i" = 49;
 };
 "@MMK_L_C" = {
 "@MMK_R_J" = 0;
@@ -48141,6 +48651,7 @@ v = -15;
 "@MMK_R_guilsinglright" = 0;
 "@MMK_R_hyphen" = -32;
 "@MMK_R_hyphen.cap" = -31;
+"@MMK_R_i" = 31;
 "@MMK_R_n" = 0;
 "@MMK_R_o" = -12;
 "@MMK_R_t" = 0;
@@ -48154,7 +48665,6 @@ imacron = 39;
 itilde = 53;
 registered = 0;
 v = 0;
-"@MMK_R_i" = 31;
 };
 "@MMK_L_D" = {
 "@MMK_R_A" = -15;
@@ -48185,6 +48695,7 @@ slash = -17;
 "@MMK_R_guilsinglleft" = -24;
 "@MMK_R_hyphen" = -23;
 "@MMK_R_hyphen.cap" = -22;
+"@MMK_R_i" = 69;
 "@MMK_R_o" = -9;
 "@MMK_R_t" = 0;
 "@MMK_R_u" = -5;
@@ -48195,13 +48706,13 @@ f = 0;
 imacron = 31;
 itilde = 52;
 v = -7;
-"@MMK_R_i" = 69;
 };
 "@MMK_L_G" = {
 "@MMK_R_J" = 0;
 "@MMK_R_W" = -7;
 "@MMK_R_Y" = -16;
 "@MMK_R_g" = 0;
+"@MMK_R_i" = 33;
 "@MMK_R_t" = 0;
 "@MMK_R_w" = -5;
 "@MMK_R_y" = 0;
@@ -48210,7 +48721,6 @@ braceright.cap = -12;
 bracketright.cap = -11;
 f = -5;
 v = 0;
-"@MMK_R_i" = 33;
 };
 "@MMK_L_I" = {
 "@MMK_R_J" = 0;
@@ -48228,17 +48738,17 @@ bracketright.cap = -11;
 "@MMK_R_guilsinglleft" = -29;
 "@MMK_R_hyphen" = -30;
 "@MMK_R_hyphen.cap" = -34;
+"@MMK_R_i" = 54;
 "@MMK_R_o" = -22;
 "@MMK_R_t" = -7;
 "@MMK_R_u" = -18;
 "@MMK_R_w" = -15;
 "@MMK_R_y" = -12;
 igrave = 76;
+imacron = 25;
 itilde = 72;
 registered = 0;
 v = -12;
-"@MMK_R_i" = 54;
-imacron = 25;
 };
 "@MMK_L_L" = {
 "@MMK_R_O" = -12;
@@ -48260,6 +48770,7 @@ imacron = 25;
 "@MMK_R_u" = 0;
 "@MMK_R_w" = -15;
 "@MMK_R_y" = -34;
+Tbar = -16;
 V = -56;
 asterisk = -63;
 backslash = -64;
@@ -48271,11 +48782,10 @@ f = -6;
 periodcentered = -40;
 periodcentered.cap = -55;
 question = -10;
+quotedblleft = -20;
 registered = -64;
 trademark = -63;
 v = -34;
-Tbar = -16;
-quotedblleft = -20;
 };
 "@MMK_L_O" = {
 "@MMK_R_A" = -14;
@@ -48321,6 +48831,7 @@ question = 0;
 "@MMK_R_W" = -8;
 "@MMK_R_Y" = -19;
 "@MMK_R_g" = -6;
+"@MMK_R_i" = 28;
 "@MMK_R_t" = 0;
 "@MMK_R_w" = -6;
 "@MMK_R_y" = -5;
@@ -48332,7 +48843,6 @@ bracketright.cap = -21;
 f = -6;
 v = -5;
 x = 0;
-"@MMK_R_i" = 28;
 };
 "@MMK_L_T" = {
 "@MMK_R_A" = -31;
@@ -48346,6 +48856,7 @@ x = 0;
 "@MMK_R_guilsinglright" = -41;
 "@MMK_R_hyphen" = -45;
 "@MMK_R_hyphen.cap" = -45;
+"@MMK_R_i" = -46;
 "@MMK_R_n" = -46;
 "@MMK_R_o" = -55;
 "@MMK_R_period" = -45;
@@ -48359,6 +48870,10 @@ at = 0;
 ccircumflex = -49;
 ecircumflex = -39;
 egrave = -31;
+emdash = -26;
+emdash.cap = -26;
+endash = -26;
+endash.cap = -26;
 eth = -13;
 f = -9;
 gbreve = -51;
@@ -48370,6 +48885,7 @@ igrave = 95;
 imacron = 57;
 itilde = 77;
 ohungarumlaut = -36;
+otilde = -44;
 racute = -7;
 rcaron = -32;
 registered = 0;
@@ -48378,12 +48894,6 @@ slash = -42;
 v = -39;
 x = -36;
 ygrave = -26;
-"@MMK_R_i" = -46;
-emdash = -26;
-emdash.cap = -26;
-endash = -26;
-endash.cap = -26;
-otilde = -44;
 };
 "@MMK_L_U" = {
 "@MMK_R_A" = -5;
@@ -48406,6 +48916,7 @@ bracketright.cap = -13;
 "@MMK_R_guilsinglright" = -26;
 "@MMK_R_hyphen" = -31;
 "@MMK_R_hyphen.cap" = -29;
+"@MMK_R_i" = -15;
 "@MMK_R_n" = -15;
 "@MMK_R_o" = -22;
 "@MMK_R_period" = -42;
@@ -48426,7 +48937,6 @@ racute = -9;
 rcaron = -9;
 slash = -36;
 v = -5;
-"@MMK_R_i" = -15;
 };
 "@MMK_L_Y" = {
 "@MMK_R_A" = -49;
@@ -48440,6 +48950,7 @@ v = -5;
 "@MMK_R_guilsinglright" = -50;
 "@MMK_R_hyphen" = -62;
 "@MMK_R_hyphen.cap" = -58;
+"@MMK_R_i" = -56;
 "@MMK_R_n" = -56;
 "@MMK_R_o" = -66;
 "@MMK_R_period" = -65;
@@ -48465,6 +48976,7 @@ idieresis = 73;
 igrave = 89;
 imacron = 66;
 itilde = 87;
+ntilde = -48;
 obreve = -43;
 ograve = -54;
 ohungarumlaut = -40;
@@ -48485,8 +48997,6 @@ ycircumflex = -20;
 ydieresis = -18;
 ygrave = -15;
 zacute = -39;
-"@MMK_R_i" = -56;
-ntilde = -48;
 };
 "@MMK_L_Z" = {
 "@MMK_R_O" = 0;
@@ -48496,6 +49006,7 @@ ntilde = -48;
 "@MMK_R_guilsinglright" = 0;
 "@MMK_R_hyphen" = -31;
 "@MMK_R_hyphen.cap" = -30;
+"@MMK_R_i" = 32;
 "@MMK_R_n" = 0;
 "@MMK_R_o" = -10;
 "@MMK_R_t" = 0;
@@ -48504,11 +49015,10 @@ ntilde = -48;
 "@MMK_R_y" = 0;
 eth = -9;
 igrave = 67;
+imacron = 24;
 itilde = 50;
 registered = 0;
 v = 0;
-"@MMK_R_i" = 32;
-imacron = 24;
 };
 "@MMK_L_a" = {
 "@MMK_R_J" = 0;
@@ -48683,6 +49193,7 @@ X = -29;
 "@MMK_R_h" = 19;
 "@MMK_R_i" = 20;
 "@MMK_R_l" = 19;
+"@MMK_R_n" = 47;
 "@MMK_R_quotesingle" = 52;
 backslash = 36;
 bar = 55;
@@ -48690,11 +49201,10 @@ braceright = 55;
 bracketright = 55;
 exclam = 50;
 iacute = 51;
+j = 8;
 parenright = 33;
 question = 50;
 thorn = 17;
-"@MMK_R_n" = 47;
-j = 8;
 };
 "@MMK_L_k" = {
 "@MMK_R_T" = -56;
@@ -48800,12 +49310,12 @@ v = -30;
 "@MMK_R_J" = -20;
 "@MMK_R_a" = -21;
 "@MMK_R_g" = -13;
+"@MMK_R_i" = 91;
 "@MMK_R_o" = -21;
 "@MMK_R_period" = -79;
 "@MMK_R_s" = -15;
 eth = -14;
 itilde = 75;
-"@MMK_R_i" = 91;
 };
 "@MMK_L_quoteright" = {
 "@MMK_R_A" = -53;
@@ -48815,6 +49325,7 @@ itilde = 75;
 "@MMK_R_guilsinglleft" = -62;
 "@MMK_R_guilsinglright" = -26;
 "@MMK_R_hyphen" = -52;
+"@MMK_R_i" = 89;
 "@MMK_R_n" = -19;
 "@MMK_R_o" = -27;
 "@MMK_R_period" = -90;
@@ -48824,7 +49335,6 @@ eth = -16;
 itilde = 76;
 racute = -8;
 slash = -75;
-"@MMK_R_i" = 89;
 };
 "@MMK_L_quotesingle" = {
 "@MMK_R_A" = -44;
@@ -48834,6 +49344,7 @@ slash = -75;
 "@MMK_R_guilsinglleft" = -46;
 "@MMK_R_guilsinglright" = 0;
 "@MMK_R_hyphen" = -36;
+"@MMK_R_i" = 85;
 "@MMK_R_o" = -15;
 "@MMK_R_period" = -74;
 at = -11;
@@ -48844,7 +49355,6 @@ nine.pnum = -11;
 six.pnum = -17;
 slash = -61;
 zero.pnum = -18;
-"@MMK_R_i" = 85;
 };
 "@MMK_L_r" = {
 "@MMK_R_A" = -19;
@@ -49004,6 +49514,7 @@ F = {
 "@MMK_R_g" = -7;
 "@MMK_R_guilsinglright" = -18;
 "@MMK_R_hyphen" = -14;
+"@MMK_R_i" = -11;
 "@MMK_R_n" = -11;
 "@MMK_R_o" = -9;
 "@MMK_R_period" = -41;
@@ -49024,7 +49535,6 @@ itilde = 66;
 slash = -31;
 v = 0;
 x = 0;
-"@MMK_R_i" = -11;
 };
 Icircumflex = {
 braceright.cap = 36;
@@ -49103,6 +49613,7 @@ V = {
 "@MMK_R_guilsinglright" = -28;
 "@MMK_R_hyphen" = -35;
 "@MMK_R_hyphen.cap" = -32;
+"@MMK_R_i" = -17;
 "@MMK_R_n" = -17;
 "@MMK_R_o" = -26;
 "@MMK_R_period" = -46;
@@ -49121,14 +49632,13 @@ ibreve = 55;
 igrave = 79;
 imacron = 52;
 itilde = 72;
+ntilde = -18;
 racute = -10;
 rcaron = -10;
 registered = -10;
 slash = -41;
 v = -5;
 x = -6;
-"@MMK_R_i" = -17;
-ntilde = -18;
 };
 X = {
 "@MMK_R_O" = -16;
@@ -49137,6 +49647,7 @@ X = {
 "@MMK_R_guilsinglleft" = -31;
 "@MMK_R_hyphen" = -32;
 "@MMK_R_hyphen.cap" = -34;
+"@MMK_R_i" = 62;
 "@MMK_R_o" = -27;
 "@MMK_R_t" = -6;
 "@MMK_R_u" = -19;
@@ -49145,11 +49656,10 @@ X = {
 eth = -16;
 idieresis = 66;
 igrave = 83;
+imacron = 28;
 itilde = 80;
 registered = 0;
 v = -12;
-"@MMK_R_i" = 62;
-imacron = 28;
 };
 "alefMaksura_reh-ar.fina" = {
 "peh-ar.init" = 80;
@@ -49215,6 +49725,7 @@ braceleft = {
 "@MMK_R_O" = -29;
 "@MMK_R_S" = -19;
 "@MMK_R_a" = -29;
+"@MMK_R_i" = 65;
 "@MMK_R_n" = -25;
 "@MMK_R_o" = -29;
 "@MMK_R_s" = -26;
@@ -49241,7 +49752,6 @@ two.pnum = -11;
 v = -17;
 x = 0;
 zero.pnum = -22;
-"@MMK_R_i" = 65;
 };
 braceleft.cap = {
 "@MMK_R_A" = 0;
@@ -49265,6 +49775,7 @@ bracketleft = {
 "@MMK_R_O" = -32;
 "@MMK_R_S" = -20;
 "@MMK_R_a" = -31;
+"@MMK_R_i" = 67;
 "@MMK_R_n" = -15;
 "@MMK_R_o" = -31;
 "@MMK_R_s" = -25;
@@ -49290,7 +49801,6 @@ two.pnum = 0;
 v = -18;
 x = 0;
 zero.pnum = -27;
-"@MMK_R_i" = 67;
 };
 bracketleft.cap = {
 "@MMK_R_A" = 0;
@@ -49380,6 +49890,7 @@ f = {
 "@MMK_R_guilsinglleft" = -34;
 "@MMK_R_guilsinglright" = 0;
 "@MMK_R_hyphen" = -28;
+"@MMK_R_i" = 57;
 "@MMK_R_o" = 0;
 "@MMK_R_period" = -33;
 X = 0;
@@ -49387,7 +49898,6 @@ eth = -17;
 igrave = 89;
 itilde = 73;
 slash = -16;
-"@MMK_R_i" = 57;
 };
 five.pnum = {
 backslash = -33;
@@ -49486,6 +49996,7 @@ bracketright = 0;
 parenleft = {
 "@MMK_R_O" = -30;
 "@MMK_R_a" = -31;
+"@MMK_R_i" = 67;
 "@MMK_R_o" = -31;
 "@MMK_R_u" = -29;
 "@MMK_R_w" = -26;
@@ -49496,7 +50007,6 @@ nine.pnum = -19;
 one.pnum = -25;
 six.pnum = -25;
 zero.pnum = -25;
-"@MMK_R_i" = 67;
 };
 parenleft.cap = {
 "@MMK_R_O" = -31;
@@ -49544,6 +50054,7 @@ questiondown = {
 "@MMK_R_w" = -20;
 "@MMK_R_y" = -22;
 "@MMK_R_z" = -18;
+Iogonek = -18;
 V = -34;
 X = -19;
 eth = -22;
@@ -49552,7 +50063,6 @@ j = 36;
 jcircumflex = 36;
 v = -22;
 x = -18;
-Iogonek = -18;
 };
 questiondown.cap = {
 "@MMK_R_O" = -24;
@@ -49662,6 +50172,7 @@ slash = {
 "@MMK_R_J" = 0;
 "@MMK_R_a" = -20;
 "@MMK_R_g" = -13;
+"@MMK_R_i" = 37;
 "@MMK_R_n" = -16;
 "@MMK_R_o" = -20;
 "@MMK_R_s" = -14;
@@ -49673,6 +50184,7 @@ eth = 0;
 five.pnum = -33;
 four.pnum = -44;
 igrave = 73;
+imacron = 19;
 itilde = 57;
 nine.pnum = -28;
 one.pnum = -31;
@@ -49680,8 +50192,6 @@ six.pnum = -34;
 three.pnum = -25;
 v = 0;
 zero.pnum = -34;
-"@MMK_R_i" = 37;
-imacron = 19;
 };
 tcaron = {
 "@MMK_R_a" = -7;
@@ -49802,8 +50312,8 @@ parenright = -24;
 };
 };
 };
-manufacturer = "Kief Type Foundry, Accademia di Belle Arti di Urbino and others";
-manufacturerURL = "http://kieftype.com/";
+manufacturer = "Kief Type Foundry, Accademia di Belle Arti di Urbino, Eli Heuer";
+manufacturerURL = "https://elih.blog";
 unitsPerEm = 1000;
 versionMajor = 3;
 versionMinor = 0;
