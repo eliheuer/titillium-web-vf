@@ -6,6 +6,7 @@ familyName="TitilliumWeb"
 
 echo "[INFO] Preparing a new $familyName pull request at $prDir"
 
+echo "[INFO] Moving variable fonts"
 cp fonts/TitilliumWeb-Roman-VF.ttf ~/Google/fonts/ofl/titilliumweb/TitilliumWeb[wght].ttf
 cp fonts/TitilliumWeb-Italic-VF.ttf ~/Google/fonts/ofl/titilliumweb/TitilliumWeb-Italic[wght].ttf
 

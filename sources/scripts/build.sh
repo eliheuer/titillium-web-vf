@@ -79,6 +79,16 @@ for font in fonts/static-fonts/*.ttf; do
   mv $font.fix $font
 done
 
+echo "[INFO] Removing MVAR table"
+for font in fonts/*.ttf; do
+  echo "[INFO] Removing MVAR table for $font ";
+  python3 sources/scripts/helpers/remove-mvar-table.py $font
+done
+for font in fonts/static-fonts/*.ttf; do
+  echo "[INFO] Removing MVAR table for $font ";
+  python3 sources/scripts/helpers/remove-mvar-table.py $font
+done
+
 #echo "[INFO] Running fix-name-table.py"
 #python3 sources/scripts/helpers/fix-name-table.py fonts/vf/$familyName-VF.ttf
 
