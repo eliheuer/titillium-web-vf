@@ -9,17 +9,20 @@ VAR_WGHT = 100        # VARIABLE FONT WEIGHT
 U = 32                # ONE GRID UNIT
 
 def set_font_roman():
+    print("Roman font set")
     font("fonts/TitilliumWeb-Roman-VF.ttf")
     for axis, data in listFontVariations().items():
         print((axis, data))
 
 def set_font_italic():
-    font("fonts/TitilliumWeb-Roman-VF.ttf")
-    for axis, data in listFontVariations().items():
-        print((axis, data))
+    print("italic font set")
+    font("fonts/TitilliumWeb-Italic-VF.ttf")
+    for i in listFontVariations().items():
+        print(i)
+        print(dir(font))
 
 def grid(inc):
-    stroke(0)
+    stroke(0.2)
     stpX, stpY = 0, 0
     incX, incY = (W-(M*2))/inc, (H-(M*2))/inc
     for x in range(inc+1):
@@ -29,73 +32,48 @@ def grid(inc):
         polygon((M, M+stpY), (H-M, M+stpY))
         stpY += incY
 
-def set_box_style_a():
-    fill(0)
-    stroke(0)
-
-def set_box_style_b():
-    fill(1)
-    stroke(0)
-
-def draw_boxes():
-    # HEADLINE
-    set_box_style_b()
-    rect(M, M+(U*26), (U*30), (U*4))
-    # ROW 1
-    rect(M+(U*1),  M+(U*15), (U*13), (U*10))
-    rect(M+(U*16), M+(U*15), (U*13), (U*10))
-    # ROW 2
-    rect(M+(U*1),  M+(U*8), (U*13), (U*6))
-    rect(M+(U*16), M+(U*8), (U*13), (U*6))
-    # ROW 3
-    rect(M+(U*1),  M+(U*1), (U*13), (U*6))
-    rect(M+(U*16), M+(U*1), (U*13), (U*6))
-
 # DRAW NEW PAGE
 newPage(W, H)
-fill(1)
-rect(0, 0, W, H)
-grid(30)
-draw_boxes()
-set_font_roman()
 fill(0)
+rect(0, 0, W, H)
+#grid(30)
+#draw_boxes()
+set_font_roman()
+fill(1)
 
 # HEADLINE
-fontSize(100)
+fontSize(123)
 fontVariations(wght=800)
 stroke(None)
-text("Titillium Web VF", ( M+(U*1), M+(U*27) ))
+text("Titillium Web VF", ( M+(U*1), M+(U*24) ))
 
 # ART
-fontSize(240)
+fontSize(290)
 wght_var = 200
-stroke(1)
+stroke(0)
 strokeWidth(1)
 for i in range(4):
     fontVariations(wght=wght_var)
-    text("a",      (M+(U*2)+(U*(i*2.3)), (M+5+(U*20))))
+    text("a",      (M+(U*0.6)+(U*(i*2.9)), (M+2+(U*20))))
     wght_var += 200
 
-stroke(0)
-fontSize(57)
-fontVariations(wght=200)
-textBox("الخط العربي", 
-        (M+(U*0), M+(U*12), M+10+(U*12), M+(U*8)), align="right")
-
-fontVariations(wght=800)
-textBox("الخط العربي", 
-        (M+(U*0), M+(U*10.1), M+10+(U*12), M+(U*8)), align="right")
+stroke(None)
+fontSize(115)
+fontVariations(wght=900)
+textBox("الكتاب", 
+        (M+(U*1.2), M+(U*13), M+10+(U*12), M+(U*8)), align="right")
 
 fontSize(30)
 stroke(None)
+tracking(2)
 for i in range(8):
     VAR_WGHT += 100
     fontVariations(wght=VAR_WGHT)
     print("VAR_WGHT=", VAR_WGHT) 
-    text("Variable Font Weight: %s" %VAR_WGHT, ( M+(U*17), ((M+(U*23))-(U*i)) ))
+    text("Variable Font Weight: %s" %VAR_WGHT, ( M+(U*16), ((M+(U*23.5))-(U*i)) ))
 tracking(0)
 
-fill(0)
+fill(1)
 fontVariations(wght=400)
 text("A B C D E F G H I J K L M N O ",        (M+(U*17), M+(U*12)))
 text("P Q R S T U V W X Y Z  a b c ",         (M+(U*17), M+(U*11)))
@@ -118,6 +96,7 @@ fontSize(30)
 font("fonts/TitilliumWeb-Italic-VF.ttf")
 for axis, data in listFontVariations().items():
     print((axis, data))
+set_font_italic()
 text("A B C D E F G H I J K L M N O ",        (M+(U*17), M+(U*5)))
 text("P Q R S T U V W X Y Z  a b c ",         (M+(U*17), M+(U*4)))
 text("d e f g h i j k l m n o p q r s t u",   (M+(U*17), M+(U*3)))
