@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'TitilliumWeb';
-    src: url('https://github.com/eliheuer/titillium-web-vf/blob/master/fonts/TitilliumWeb-Italic-VF.ttf');
+    font-family: 'TitilliumWeb-Roman';
+    src: url('.../fonts/TitilliumWeb-Roman-VF.ttf');
     format("truetype");
     font-weight: bold;
 }
@@ -8,12 +8,12 @@ body {
     background-color: #111111;
     color: #ffffff;
     direction: rtl;
-    font-family: 'TitilliumWeb';
+    font-family: 'TitilliumWeb-Roman';
 }
 h1 {font-size: 6em;}
 P {font-size: 3em;}
 .variable {
-    font-family: 'TitilliumWeb';
+    font-family: 'TitilliumWeb-Roman';
     --wght: 0;
     font-variation-settings: 'wght' var(--wght);
 }
