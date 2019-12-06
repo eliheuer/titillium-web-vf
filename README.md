@@ -1,5 +1,5 @@
 # Titillium Web Variable Fonts
-This repo contains the [fonts](fonts), [source files](sources), and specimens(docs)
+This repo contains the [fonts](fonts), [source files](sources), and [specimens](docs)
 for a remastered Titillium Web font family available on
 [Google Fonts](https://fonts.google.com/specimen/Titillium+Web).
 It started as a fork of [Cario](https://github.com/Gue3bara/Cairo)
@@ -16,8 +16,10 @@ is here: [https://elih.blog/titillium-web-vf/](https://elih.blog/titillium-web-v
 
 ## Building New Fonts From Source
 A BASH build script is located in the sources directory.
-To build new font files, open a Unix terminal, navigate to the root of this repository,
-and run the following:
+To build new font files, open a Unix terminal and activate a
+[Python3 virtual environment](https://docs.python.org/3/library/venv.html)
+with the packages from [requirements.txt](requirements.txt) installed.
+Then, navigate to the root of this repository, and run the following:
 ```
 sources/scripts/build.sh
 ```
@@ -32,6 +34,6 @@ Font files are in the fonts directory, please follow the install inscructions fo
 ## Getting Involved
 Would you like to contribute to the development of this font? Here is how **you** can help:
 
-1. Tell us about any bugs you find, or enhancements you would like to see on the Google Fonts issue tracker: [https://github.com/googlefonts/issues](https://github.com/googlefonts/issues)
+- Tell us about any bugs you find, or enhancements you would like to see on the Google Fonts issue tracker: [https://github.com/googlefonts/issues](https://github.com/googlefonts/issues)
 
-2. Contribute directly to the fonts. This repository contains a complete set of source files. Make changes and submit a pull request.
+- Contribute directly to the fonts. This repository contains a complete set of source files. Make changes and submit a pull request.
