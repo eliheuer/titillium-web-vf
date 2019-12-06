@@ -10,12 +10,12 @@ that adds support for the Arabic Script.
 An [interactive web specimen](https://elih.blog/titillium-web-vf)
 hosted from this repository
 ( [docs/index.html](https://github.com/eliheuer/titillium-web-vf/blob/master/docs/index.html) )
-is here: [https://elih.blog/titillium-web-vf/](https://elih.blog/titillium-web-vf/)
+is here: [https://elih.blog/titillium-web-vf](https://elih.blog/titillium-web-vf)
 
 ![basic specimen](https://github.com/eliheuer/titillium-web-vf/blob/master/docs/specimens/basic-specimen.gif)
 
-## Building New Fonts From Source
-A BASH build script is located in the sources directory.
+## Building New Fonts from Source
+A Bash build script is located in the sources directory.
 To build new font files, open a Unix terminal and activate a
 [Python3 virtual environment](https://docs.python.org/3/library/venv.html)
 with the packages from [requirements.txt](requirements.txt) installed.
