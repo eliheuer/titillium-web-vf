@@ -21,7 +21,7 @@ To build new font files, open a Unix terminal and activate a
 with the packages from [requirements.txt](requirements.txt) installed.
 Then, navigate to the root of this repository, and run the following:
 ```
-sources/scripts/build.sh
+scripts/build.sh
 ```
 
 ## Installation Instructions
