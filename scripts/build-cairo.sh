@@ -26,24 +26,24 @@ for sources in $glyphsSource; do
     --verbose ERROR
 done
 
-#echo "[INFO] Building static fonts"
-#fontmake -g sources/TitilliumWeb-Roman.glyphs -i "Titillium Web ExtraLight" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Roman.glyphs -i "Titillium Web Light" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Roman.glyphs -i "Titillium Web Regular" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Roman.glyphs -i "Titillium Web SemiBold" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Roman.glyphs -i "Titillium Web Bold" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Roman.glyphs -i "Titillium Web Black" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Italic.glyphs -i "Titillium Web ExtraLight Italic" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Italic.glyphs -i "Titillium Web Light Italic" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Italic.glyphs -i "Titillium Web Italic" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Italic.glyphs -i "Titillium Web SemiBold Italic" --verbose ERROR
-#fontmake -g sources/TitilliumWeb-Italic.glyphs -i "Titillium Web Bold Italic" --verbose ERROR
+echo "[INFO] Building static fonts"
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo ExtraLight" --verbose ERROR
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Light" --verbose ERROR
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Regular" --verbose ERROR
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo SemiBold" --verbose ERROR
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Bold" --verbose ERROR
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Black" --verbose ERROR
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo ExtraLight Italic" --verbose ERROR
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Light Italic" --verbose ERROR
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Italic" --verbose ERROR
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo SemiBold Italic" --verbose ERROR
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Bold Italic" --verbose ERROR
 
-#echo "[INFO] Moving static fonts"
-#for font in instance_ttf/*.ttf; do
-#  echo "[INFO] Moving $font ..."
-#  mv $font fonts/static-fonts/
-#done
+echo "[INFO] Moving static fonts"
+for font in instance_ttf/*.ttf; do
+  echo "[INFO] Moving $font ..."
+  mv $font fonts/static-fonts/
+done
 
 echo "[INFO] Removing build directories"
 rm -rf instance_ufo instance_otf instance_ttf master_ufo
@@ -57,37 +57,38 @@ for sources in $glyphsSource; do
   fi
 done
 
-#echo "[INFO] Fixing Static DSIG tables"
-#for font in fonts/static-fonts/*.ttf; do
-#  echo "[INFO] Fixing DSIG table for $font ..."
-#  gftools fix-dsig -f $font >/dev/null
-#done
+echo "[INFO] Fixing Static DSIG tables"
+for font in fonts/static-fonts/*.ttf; do
+  echo "[INFO] Fixing DSIG table for $font ..."
+  gftools fix-dsig -f $font >/dev/null
+done
 
 echo "[INFO] Autohinting with ttfautohint"
 for font in fonts/*.ttf; do
   echo "[INFO] Hinting $font ";
   ttfautohint $font temp.ttf
   mv temp.ttf $font
-  gftools fix-hinting $font
-  mv $font.fix $font
+  #gftools fix-hinting $font
+  #mv $font.fix $font
 done
-#for font in fonts/static-fonts/*.ttf; do
-#  echo "[INFO] Hinting $font ";
-#  ttfautohint $font temp.ttf
-#  mv temp.ttf $font
+
+for font in fonts/static-fonts/*.ttf; do
+  echo "[INFO] Hinting $font ";
+  ttfautohint $font temp.ttf
+  mv temp.ttf $font
 #  gftools fix-hinting $font
 #  mv $font.fix $font
-#done
+done
 
 echo "[INFO] Removing MVAR table"
 for font in fonts/*.ttf; do
   echo "[INFO] Removing MVAR table for $font ";
   python3 scripts/helpers/remove-mvar-table.py $font
 done
-#for font in fonts/static-fonts/*.ttf; do
-#  echo "[INFO] Removing MVAR table for $font ";
-#  python3 scripts/helpers/remove-mvar-table.py $font
-#done
+for font in fonts/static-fonts/*.ttf; do
+  echo "[INFO] Removing MVAR table for $font ";
+  python3 scripts/helpers/remove-mvar-table.py $font
+done
 
 #echo "[INFO] Running fix-name-table.py"
 #python3 sources/scripts/helpers/fix-name-table.py fonts/vf/$familyName-VF.ttf
