@@ -15,15 +15,24 @@ is here: [https://elih.blog/titillium-web-vf](https://elih.blog/titillium-web-vf
 ![basic specimen](https://github.com/eliheuer/titillium-web-vf/blob/master/docs/specimens/basic-specimen.gif)
 
 ## Building New Fonts from Source
-A Bash build script is located in the sources directory.
-To build new font files, open a Unix terminal and activate a
+A Bash build script is located in the [scripts](scripts) directory.
+To build new font files, open a Unix(macOS, Linux, WSL, etc) terminal and activate a
 [Python3 virtual environment](https://docs.python.org/3/library/venv.html)
 with the packages from [requirements.txt](requirements.txt) installed.
 Then, navigate to the root of this repository, and run the following:
 ```
 scripts/build.sh
 ```
-
+If you want to make a new pull request to [Google Fonts](https://github.com/google/fonts),
+ clone the [git repository](https://github.com/google/fonts)
+ to `~/Google/`, and run the following:
+```
+scripts/build.sh && scripts/pull-request.sh
+```
+If you want to build similar fonts, but with the name `Cairo`, run the following:
+```
+scripts/build-cairo.sh && scripts/pull-request-cairo.sh
+```
 ## Installation Instructions
 Font files are in the fonts directory, please follow the install inscructions for your operating system of choice:
 
