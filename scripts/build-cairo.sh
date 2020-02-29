@@ -23,22 +23,21 @@ for sources in $glyphsSource; do
   echo "[INFO] Building $sources.glyphs with Fontmake, this might take some time..."
   fontmake -g sources/$sources.glyphs -o variable \
     --output-path $outputDir/$sources-VF.ttf \
-    --verbose ERROR
+    --verbose INFO
 done
 
 echo "[INFO] Building static fonts"
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo ExtraLight" --verbose ERROR
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Light" --verbose ERROR
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Regular" --verbose ERROR
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo SemiBold" --verbose ERROR
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Bold" --verbose ERROR
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Black" --verbose ERROR
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo ExtraLight Italic" --verbose ERROR
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Light Italic" --verbose ERROR
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Italic" --verbose ERROR
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo SemiBold Italic" --verbose ERROR
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Bold Italic" --verbose ERROR
-
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo ExtraLight" --verbose INFO
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Light" --verbose INFO
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Regular" --verbose INFO
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo SemiBold" --verbose INFO
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Bold" --verbose INFO
+fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Black" --verbose INFO
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo ExtraLight Italic" --verbose INFO
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Light Italic" --verbose INFO
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Italic" --verbose INFO
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo SemiBold Italic" --verbose INFO
+fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Bold Italic" --verbose INFO
 echo "[INFO] Moving static fonts"
 for font in instance_ttf/*.ttf; do
   echo "[INFO] Moving $font ..."
@@ -63,21 +62,22 @@ for font in fonts/static-fonts/*.ttf; do
   gftools fix-dsig -f $font >/dev/null
 done
 
-echo "[INFO] Autohinting with ttfautohint"
-for font in fonts/*.ttf; do
+echo "[INFO] Autohinting variable fonts with ttfautohint"
+for font in fonts/Cairo-*; do
   echo "[INFO] Hinting $font ";
   ttfautohint $font temp.ttf
   mv temp.ttf $font
-  #gftools fix-hinting $font
-  #mv $font.fix $font
+  gftools fix-hinting $font
+  mv $font.fix $font
 done
 
-for font in fonts/static-fonts/*.ttf; do
+echo "[INFO] Autohinting static fonts with ttfautohint"
+for font in fonts/static-fonts/Cairo-*; do
   echo "[INFO] Hinting $font ";
   ttfautohint $font temp.ttf
   mv temp.ttf $font
-#  gftools fix-hinting $font
-#  mv $font.fix $font
+  gftools fix-hinting $font
+  mv $font.fix $font
 done
 
 echo "[INFO] Removing MVAR table"
