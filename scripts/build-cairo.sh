@@ -1,11 +1,12 @@
 #!/bin/bash
 set -e
 
-glyphsSource="Cairo-Roman Cairo-Italic"
-outputDir="fonts"
-familyName="Cairo"
+glyphs_source="Cairo-Roman Cairo-Italic"
+output_dir="fonts"
+family_name="Cairo"
+build_static_fonts=true
 
-echo "[INFO] Starting build script for $familyName font family"
+echo "[INFO] Starting build script for $family_name font family"
 
 if [ -d .git ]; then
   echo "[TEST] Running from a Git root directory, looks good"
@@ -15,40 +16,45 @@ else
   exit 1
 fi
 
-for sources in $glyphsSource; do
+for sources in $glyphs_source; do
   echo "[TEST] Queued source file: $sources.glyphs"
 done
 
-for sources in $glyphsSource; do
-  echo "[INFO] Building $sources.glyphs with Fontmake, this might take some time..."
+for sources in $glyphs_source; do
+  echo "[INFO] Building $sources.glyphs with Fontmake..."
   fontmake -g sources/$sources.glyphs -o variable \
-    --output-path $outputDir/$sources-VF.ttf \
+    --output-path $output_dir/$sources-VF.ttf \
     --verbose INFO
 done
 
-echo "[INFO] Building static fonts"
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo ExtraLight" --verbose INFO
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Light" --verbose INFO
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Regular" --verbose INFO
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo SemiBold" --verbose INFO
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Bold" --verbose INFO
-fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Black" --verbose INFO
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo ExtraLight Italic" --verbose INFO
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Light Italic" --verbose INFO
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Italic" --verbose INFO
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo SemiBold Italic" --verbose INFO
-fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Bold Italic" --verbose INFO
-echo "[INFO] Moving static fonts"
-for font in instance_ttf/*.ttf; do
-  echo "[INFO] Moving $font ..."
-  mv $font fonts/static-fonts/
-done
+if [ "$build_static_fonts" = true ]; then
+  echo "[INFO] Building static fonts"
+  fontmake -g sources/Cairo-Roman.glyphs -i "Cairo ExtraLight" --verbose INFO
+  fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Light" --verbose INFO
+  fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Regular" --verbose INFO
+  fontmake -g sources/Cairo-Roman.glyphs -i "Cairo SemiBold" --verbose INFO
+  fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Bold" --verbose INFO
+  fontmake -g sources/Cairo-Roman.glyphs -i "Cairo Black" --verbose INFO
+  fontmake -g sources/Cairo-Italic.glyphs -i "Cairo ExtraLight Italic" --verbose INFO
+  fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Light Italic" --verbose INFO
+  fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Italic" --verbose INFO
+  fontmake -g sources/Cairo-Italic.glyphs -i "Cairo SemiBold Italic" --verbose INFO
+  fontmake -g sources/Cairo-Italic.glyphs -i "Cairo Bold Italic" --verbose INFO
+fi
+
+if [ "$build_static_fonts" = true ]; then
+  echo "[INFO] Moving static fonts"
+  for font in instance_ttf/Cairo-*; do
+    echo "[INFO] Moving $font ..."
+    mv $font fonts/static-fonts/
+  done
+fi
 
 echo "[INFO] Removing build directories"
 rm -rf instance_ufo instance_otf instance_ttf master_ufo
 
 echo "[INFO] Fixing VF DSIG tables"
-for sources in $glyphsSource; do
+for sources in $glyphs_source; do
   if gftools fix-dsig -f fonts/$sources-VF.ttf >/dev/null; then
     echo "[INFO] DSIG fixed for $sources-VF.ttf"
   else
@@ -56,11 +62,13 @@ for sources in $glyphsSource; do
   fi
 done
 
-echo "[INFO] Fixing Static DSIG tables"
-for font in fonts/static-fonts/*.ttf; do
-  echo "[INFO] Fixing DSIG table for $font ..."
-  gftools fix-dsig -f $font >/dev/null
-done
+if [ "$build_static_fonts" = true ]; then
+  echo "[INFO] Fixing Static DSIG tables"
+  for font in fonts/static-fonts/Cairo-*; do
+    echo "[INFO] Fixing DSIG table for $font ..."
+    gftools fix-dsig -f $font >/dev/null
+  done
+fi
 
 echo "[INFO] Autohinting variable fonts with ttfautohint"
 for font in fonts/Cairo-*; do
@@ -71,26 +79,28 @@ for font in fonts/Cairo-*; do
   mv $font.fix $font
 done
 
-echo "[INFO] Autohinting static fonts with ttfautohint"
-for font in fonts/static-fonts/Cairo-*; do
-  echo "[INFO] Hinting $font ";
-  ttfautohint $font temp.ttf
-  mv temp.ttf $font
-  gftools fix-hinting $font
-  mv $font.fix $font
-done
+if [ "$build_static_fonts" = true ]; then
+  echo "[INFO] Autohinting static fonts with ttfautohint"
+  for font in fonts/static-fonts/Cairo-*; do
+    echo "[INFO] Hinting $font ";
+    ttfautohint $font temp.ttf
+    mv temp.ttf $font
+    gftools fix-hinting $font
+    mv $font.fix $font
+  done
+fi
 
 echo "[INFO] Removing MVAR table"
-for font in fonts/*.ttf; do
-  echo "[INFO] Removing MVAR table for $font ";
-  python3 scripts/helpers/remove-mvar-table.py $font
-done
-for font in fonts/static-fonts/*.ttf; do
+for font in fonts/Cairo-*; do
   echo "[INFO] Removing MVAR table for $font ";
   python3 scripts/helpers/remove-mvar-table.py $font
 done
 
-#echo "[INFO] Running fix-name-table.py"
-#python3 sources/scripts/helpers/fix-name-table.py fonts/vf/$familyName-VF.ttf
+if [ "$build_static_fonts" = true ]; then
+  for font in fonts/static-fonts/Cairo-*; do
+    echo "[INFO] Removing MVAR table for $font ";
+    python3 scripts/helpers/remove-mvar-table.py $font
+  done
+fi
 
-echo "[INFO] Done building $familyName font family"
+echo "[INFO] Done building $family_name font family"
