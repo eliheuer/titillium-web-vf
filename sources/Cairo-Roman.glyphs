@@ -1,5 +1,5 @@
 {
-.appVersion = "1277";
+.appVersion = "1300";
 classes = (
 {
 automatic = 1;
@@ -37,17 +37,8 @@ code = "zerosuperior onesuperior twosuperior threesuperior foursuperior fivesupe
 name = frac4;
 }
 );
-copyright = "Copyright 2009 The Cairo Project Authors (gaber@gaberism.net)";
+copyright = "Copyright 2009 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)";
 customParameters = (
-{
-name = "Disable Last Change";
-value = 1;
-},
-{
-name = fsType;
-value = (
-);
-},
 {
 name = license;
 value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL";
@@ -55,6 +46,15 @@ value = "This Font Software is licensed under the SIL Open Font License, Version
 {
 name = licenseURL;
 value = "http://scripts.sil.org/OFL";
+},
+{
+name = fsType;
+value = (
+);
+},
+{
+name = "Disable Last Change";
+value = 1;
 },
 {
 name = "Use Line Breaks";
