@@ -1,8 +1,5 @@
 {
 .appVersion = "1300";
-DisplayStrings = (
-""
-);
 classes = (
 {
 automatic = 1;
@@ -66691,10 +66688,9 @@ value = (
 );
 }
 );
-interpolationWeight = 138;
 instanceInterpolations = {
-"5E4DD32C-6BC9-4010-93B4-D8C61BED16DC" = 0.61842;
-"EA657207-4E15-4023-BA2A-6FA5407A60CD" = 0.38158;
+"5E4DD32C-6BC9-4010-93B4-D8C61BED16DC" = 0.86842;
+"EA657207-4E15-4023-BA2A-6FA5407A60CD" = 0.13158;
 };
 name = SemiBold;
 weightClass = SemiBold;
@@ -66713,10 +66709,10 @@ value = (
 );
 }
 );
-interpolationWeight = 190;
+interpolationWeight = 150;
 instanceInterpolations = {
-"5E4DD32C-6BC9-4010-93B4-D8C61BED16DC" = 0.27632;
-"EA657207-4E15-4023-BA2A-6FA5407A60CD" = 0.72368;
+"5E4DD32C-6BC9-4010-93B4-D8C61BED16DC" = 0.53947;
+"EA657207-4E15-4023-BA2A-6FA5407A60CD" = 0.46053;
 };
 isBold = 1;
 name = Bold;

@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-glyphs_source="Cairo-Roman Cairo-Italic"
+glyphs_source="Cairo-Roman"
+#glyphs_source="Cairo-Roman Cairo-Italic"
 output_dir="fonts"
 family_name="Cairo"
 build_static_fonts=true
