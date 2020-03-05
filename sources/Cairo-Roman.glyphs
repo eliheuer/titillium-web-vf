@@ -1,7 +1,7 @@
 {
 .appVersion = "1300";
 DisplayStrings = (
-A
+""
 );
 classes = (
 {
@@ -85,7 +85,7 @@ Tag = wght;
 );
 }
 );
-date = "2020-03-04 06:30:23 +0000";
+date = "2020-03-04 19:30:27 +0000";
 designer = "Mohamed Gaber, Accademia di Belle Arti di Urbino";
 designerURL = "https://gaber.design";
 disablesNiceNames = 1;
@@ -687,7 +687,6 @@ verticalStems = (
 83
 );
 weightValue = 80;
-widthValue = 100;
 xHeight = 500;
 },
 {
@@ -735,7 +734,7 @@ name = winDescent;
 value = 571;
 }
 );
-descender = -200;
+descender = -520;
 horizontalStems = (
 178,
 181,
@@ -76255,5 +76254,5 @@ manufacturer = "Kief Type Foundry, Accademia di Belle Arti di Urbino";
 manufacturerURL = "https://gaber.design";
 unitsPerEm = 1000;
 versionMajor = 3;
-versionMinor = 100;
+versionMinor = 111;
 }
